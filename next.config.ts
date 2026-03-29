@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     unoptimized: true, // GitHub Pages không hỗ trợ Next.js Image Optimization mặc định
   },
   basePath: "/MinhHungPortfolio",
+  assetPrefix: "/MinhHungPortfolio/",
 };
 
 export default nextConfig;

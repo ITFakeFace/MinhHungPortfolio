@@ -295,7 +295,7 @@ const HotTopicSection = () => {
           <div className="absolute inset-0 w-full h-full bg-black flex items-center justify-center">
             <video
               ref={videoRef}
-              src="/MinhHungPortfolio/videos/SHEVideo-1.mp4"
+              src="/videos/SHEVideo-1.mp4"
               // SỬA Ở ĐÂY: h-full và object-cover (hoặc object-contain nếu muốn hiện hết toàn bộ nội dung video)
               className="w-full h-full object-cover"
               controls={hasStarted}
