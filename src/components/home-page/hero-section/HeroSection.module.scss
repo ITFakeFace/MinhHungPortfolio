@@ -1,0 +1,13 @@
+$bg-image-url: url("../../../assets/home-page/background/bg-banner-1.gif");
+$gradient-start: #000000;
+$gradient-end: #4c5409;
+
+.container {
+  width: 100%;
+  background-image: $bg-image-url;
+  background-repeat: no-repeat;
+  background-position: center, center;
+
+  background-size: cover, cover; // 🔥 QUAN TRỌNG
+  background-blend-mode: overlay;
+}

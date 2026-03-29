@@ -1,0 +1,41 @@
+@import "tailwindcss";
+/* Theme*/
+@import "primereact/resources/themes/lara-light-cyan/theme.css";
+/* Core CSS*/
+@import "primereact/resources/primereact.min.css";
+/* Icons*/
+@import "primeicons/primeicons.css";
+/* PrimeFlex*/
+@import "primeflex/primeflex.css";
+
+:root {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+@theme {
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  --animate-marquee: marquee linear infinite;
+  --animate-marquee-reverse: marquee linear infinite reverse;
+}
+
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.pause-hover:hover {
+  animation-play-state: paused;
+}

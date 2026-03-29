@@ -1,0 +1,107 @@
+$primary-green: #61652f;
+$light-green: #aac9aa;
+$bg-line-url: url("../../../assets/home-page/background/bg-line-1.png");
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+
+  // Cấu hình chung cho Item của PrimeReact
+  :global(.p-carousel-item) {
+    display: flex !important;
+    width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  :global(.p-carousel-items-container) {
+    display: flex !important;
+    align-items: stretch !important;
+  }
+
+  // --- STYLE NÚT BẤM (PREV/NEXT) ---
+  :global(.p-carousel-prev),
+  :global(.p-carousel-next) {
+    background-color: $light-green !important;
+    border-radius: 50% !important;
+    width: 45px !important;
+    height: 45px !important;
+    color: $primary-green !important;
+    z-index: 10;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1) translateY(-50%);
+    }
+  }
+
+  // --- RESPONSIVE LOGIC ---
+
+  // Desktop: Nút nằm 2 bên ngoài Card
+  @media (min-width: 768px) {
+    padding: 0 60px; // Chừa chỗ cho nút ở 2 bên
+
+    :global(.p-carousel-prev) {
+      left: 0 !important;
+      position: absolute !important;
+      top: 50% !important;
+      transform: translateY(-50%);
+    }
+    :global(.p-carousel-next) {
+      right: 0 !important;
+      position: absolute !important;
+      top: 50% !important;
+      transform: translateY(-50%);
+    }
+  }
+
+  // Mobile: Nút nhảy lên đè lên ảnh (Tính theo tỉ lệ 11/8)
+  @media (max-width: 767px) {
+    :global(.p-carousel-content) {
+      position: relative;
+    }
+
+    :global(.p-carousel-prev),
+    :global(.p-carousel-next) {
+      position: absolute !important;
+      // Công thức tính tâm của ảnh 11:8 dựa trên chiều rộng màn hình (vw)
+      top: calc(100vw * 8 / 11 / 2) !important;
+      transform: translateY(-50%);
+    }
+
+    :global(.p-carousel-prev) {
+      left: 10px !important;
+    }
+    :global(.p-carousel-next) {
+      right: 10px !important;
+    }
+  }
+
+  // Cấu hình Indicators (Dấu chấm)
+  :global(.p-carousel-indicators) {
+    padding: 1.5rem 0;
+    :global(.p-carousel-indicator.p-highlight) button {
+      background-color: $primary-green !important;
+    }
+    button {
+      background-color: $light-green;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      margin: 0 5px;
+    }
+  }
+
+  // Các helper class cho ImageBox
+  .imageBox {
+    aspect-ratio: 11 / 8;
+  }
+}
+
+.sectionContainer {
+  background-image: $bg-line-url;
+  background-size: 100% 100%; // Ép chiều rộng 100% và chiều cao 100% của container
+  background-repeat: no-repeat;
+  background-position: bottom;
+}

@@ -1,0 +1,43 @@
+$bg-image-url: url("../../../assets/home-page/background/bg-partner-1.png");
+$color-start: #030301;
+$color-middle: #747428;
+$color-middle2: #aaaa57;
+$color-end: #fcfcdc;
+
+.container {
+  width: 100%;
+  padding-top: 2.5rem;
+  min-height: 100vh; // Đảm bảo container luôn đủ cao để thấy gradient
+
+  // Thiết lập đa nền (Multi-background)
+  background:
+    $bg-image-url no-repeat center top,
+    // Ảnh nằm trên cùng, căn giữa và sát đỉnh
+    linear-gradient(
+        to bottom,
+        $color-start 0%,
+        $color-middle 50%,
+        $color-middle2 70%,
+        $color-end 100%
+      ); // Gradient 3 màu
+
+  // Cấu hình kích thước riêng biệt cho từng lớp:
+  // Lớp 1 (Ảnh): 100% width, tự động height
+  // Lớp 2 (Gradient): phủ kín (cover) toàn bộ container
+  background-size:
+    100% auto,
+    cover;
+
+  background-attachment: scroll; // Để ảnh trượt theo nội dung (hoặc fixed tùy bạn)
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  .container {
+    // Trên mobile có thể thu nhỏ ảnh lại để không bị chiếm quá nhiều diện tích
+    background-size:
+      100% auto,
+      cover;
+    background-position: center top;
+  }
+}
