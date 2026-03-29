@@ -123,7 +123,7 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
           lang === "Viet"
             ? "Yêu cầu của bạn đã được gửi đi!"
             : "Your request has been sent!",
-        life: 500000,
+        life: 5000,
       });
       reset();
     } catch (error) {
