@@ -26,7 +26,7 @@ const EducationMethodSection = () => {
             alt="Title"
             className=" mx-auto"
           />
-          <div className="text-7xl text-center text-white font-semibold my-8">
+          <div className="text-7xl text-center text-white font-semibold my-8 leading-relaxed">
             {lang == "Viet"
               ? "CUNG CẤP GIẢI PHÁP THÔNG QUA HÌNH THỨC ĐÀO TẠO THỰC CHIẾN"
               : "PROVIDING SOLUTIONS THROUGH PRACTICAL, HANDS-ON TRAINING"}
@@ -43,8 +43,8 @@ const EducationMethodSection = () => {
       >
         <div className="flex flex-col w-4/5 mx-auto items-center justify-center mt-5">
           <Image src={MethodText1} alt="Title" className=" mx-auto" />
-          <Image src={MethodMobile1} alt="Title" className=" mx-auto" />
-          <div className="text-3xl text-center text-white font-semibold mt-5 mb-5">
+          <Image src={MethodMobile1} alt="Title" className="mx-auto my-10" />
+          <div className="text-2xl sm:text-4xl text-center text-white font-semibold mt-5 mb-5">
             {lang == "Viet"
               ? "CUNG CẤP GIẢI PHÁP THÔNG QUA HÌNH THỨC ĐÀO TẠO THỰC CHIẾN"
               : "PROVIDING SOLUTIONS THROUGH PRACTICAL, HANDS-ON TRAINING"}
@@ -52,12 +52,12 @@ const EducationMethodSection = () => {
           <Image
             src={lang == "Viet" ? MethodMobile2 : MethodMobile2EN}
             alt="Title"
-            className="mx-auto w-4/5 mb-3"
+            className="mx-auto w-full mb-3"
           />
           <Image
             src={lang == "Viet" ? MethodMobile3 : MethodMobile3EN}
             alt="Title"
-            className="mx-auto w-4/5"
+            className="mx-auto w-full"
           />
         </div>
       </div>

@@ -104,14 +104,14 @@ const HotTopicSection = () => {
   const renderLeftColItem = (item: TopicData) => {
     return (
       <div
-        className="w-7/10 flex flex-row gap-3 md:gap-5 self-end"
+        className="w-19/20 sm:w-9/10 flex flex-row gap-3 md:gap-5 self-end"
         key={item[lang].index}
       >
         <div className="flex flex-col">
-          <div className="text-white w-full text-right md:text-left border-b-2 md:border-b-3 border-white text-4xl md:text-4xl font-bold pb-1 md:pb-2">
+          <div className="text-white w-full text-right md:text-left border-b-2 md:border-b-3 border-white text-xl md:text-3xl font-bold pb-1 md:pb-2">
             {item[lang].title}
           </div>
-          <div className="text-white w-full text-right md:text-left mt-2 md:mt-3 font-semibold text-xl md:text-2xl">
+          <div className="text-white w-full text-right md:text-left mt-2 md:mt-3 font-semibold text-lg md:text-2xl">
             {item[lang].description}
           </div>
         </div>
@@ -127,7 +127,7 @@ const HotTopicSection = () => {
   const renderRightColItem = (item: TopicData) => {
     return (
       <div
-        className="w-7/10 flex flex-row gap-3 md:gap-5 self-start"
+        className="w-19/20 sm:w-9/10 flex flex-row gap-3 md:gap-5 self-start"
         key={item[lang].index}
       >
         <div
@@ -136,10 +136,10 @@ const HotTopicSection = () => {
           {item[lang].index}
         </div>
         <div className="flex flex-col ">
-          <div className="text-white w-full text-left border-b-2 md:border-b-3 border-white text-4xl md:text-4xl font-bold pb-2">
+          <div className="text-white w-full text-left border-b-2 md:border-b-3 border-white text-xl md:text-3xl font-bold pb-2">
             {item[lang].title}
           </div>
-          <div className="text-white w-full mt-3 font-semibold text-xl md:text-2xl">
+          <div className="text-white w-full mt-3 font-semibold text-lg md:text-2xl">
             {item[lang].description}
           </div>
         </div>
@@ -149,6 +149,39 @@ const HotTopicSection = () => {
 
   const BaseButton = ({ label }: { label: string }) => {
     return (
+      <div className="group relative w-full max-w-[500px] cursor-pointer transition-all duration-300 hover:scale-105 active:scale-100 mx-auto md:mx-0 -mt-10">
+        {/* Lớp nền Gradient */}
+        <div
+          className="flex items-center justify-center border-1 border-white rounded-[15px] md:rounded-[20px] h-[60px] md:h-[90px] w-full shadow-lg"
+          style={{
+            backgroundImage:
+              "linear-gradient(90.04deg, rgb(118, 127, 19) 0%, rgb(0, 0, 0) 134.48%)",
+          }}
+        >
+          {/* Text được căn giữa tự nhiên bằng Flexbox, không dùng absolute px */}
+          <span className="text-white font-bold text-2xl sm:text-4xl md:text-[36px] lg:text-[40px]! leading-none uppercase tracking-wider px-4 text-center">
+            {label}
+          </span>
+        </div>
+      </div>
+    );
+  };
+
+  // Sử dụng lại:
+  const ConsultationButton = () => (
+    <a href="#consultation-form">
+      <BaseButton
+        label={lang === "Viet" ? "Liên hệ tư vấn" : "Book a Consultation"}
+      />
+    </a>
+  );
+
+  const MoreInfoButton = () => (
+    <a
+      href="https://www.linkedin.com/company/she-global-community/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <div className="group relative w-full max-w-[500px] cursor-pointer transition-all duration-300 hover:scale-105 active:scale-100 mx-auto md:mx-0 mt-10">
         {/* Lớp nền Gradient */}
         <div
@@ -159,23 +192,12 @@ const HotTopicSection = () => {
           }}
         >
           {/* Text được căn giữa tự nhiên bằng Flexbox, không dùng absolute px */}
-          <span className="text-white font-bold text-4xl md:text-[36px] lg:text-[40px] leading-none uppercase tracking-wider px-4 text-center">
-            {label}
+          <span className="text-white font-bold text-2xl sm:text-4xl md:text-[36px] lg:text-[40px]! leading-none uppercase tracking-wider px-4 text-center">
+            {lang === "Viet" ? "Tìm hiểu thêm" : "Learn More"}
           </span>
         </div>
       </div>
-    );
-  };
-
-  // Sử dụng lại:
-  const ConsultationButton = () => (
-    <BaseButton
-      label={lang === "Viet" ? "Liên hệ tư vấn" : "Book a Consultation"}
-    />
-  );
-
-  const MoreInfoButton = () => (
-    <BaseButton label={lang === "Viet" ? "Tìm hiểu thêm" : "Learn More"} />
+    </a>
   );
 
   const HotTopicBlock = () => {
@@ -194,7 +216,7 @@ const HotTopicSection = () => {
   const HotTopicBlockDesktop = () => (
     <div className="w-full flex-row items-center flex">
       {/* Phần bên trái: Chiếm 1 phần diện tích còn lại (3.5/10) */}
-      <div className="flex-1 min-w-0 flex flex-col gap-50 items-end">
+      <div className="flex-1 min-w-0 flex flex-col gap-20 items-end">
         {topics
           .filter((item) => parseInt(item.Viet.index) % 2 !== 0)
           .map((item) => renderLeftColItem(item))}
@@ -207,7 +229,7 @@ const HotTopicSection = () => {
       </div>
 
       {/* Phần bên phải: Chiếm 1 phần diện tích còn lại (3.5/10) */}
-      <div className="flex-1 min-w-0 flex flex-col gap-50 items-start">
+      <div className="flex-1 min-w-0 flex flex-col gap-30 items-start">
         {topics
           .filter((item) => parseInt(item[lang].index) % 2 === 0)
           .map((item) => renderRightColItem(item))}
@@ -216,7 +238,7 @@ const HotTopicSection = () => {
   );
   const HotTopicBlockMobile = () => (
     <div>
-      <div className="flex flex-col mt-10 gap-20 mx-10">
+      <div className="flex flex-col mt-10 gap-10 sm:gap-20 mx-5 sm:mx-10">
         {topics.map((item) =>
           parseInt(item[lang].index) % 2 == 0
             ? renderRightColItem(item)
@@ -258,22 +280,22 @@ const HotTopicSection = () => {
         <Image
           src={lang == "Viet" ? TopicImage2VN : TopicImage2EN}
           alt="text"
-          className="w-4/5 md:w-3/5 mx-auto md:mx-5 mb-10 mt-20 hidden md:block"
+          className="w-4/5 md:w-7/10 mx-auto md:mx-5 mb-10 mt-20 hidden md:block"
         />
         <Image
           src={lang == "Viet" ? TopicImage3VN : TopicImage3EN}
           alt="text"
-          className="w-4/5 md:w-3/5 mx-auto md:mx-5 mb-10 mt-20 md:hidden block"
+          className="w-9/10 md:w-3/5 mx-auto md:mx-5 mb-10 mt-20 md:hidden block"
         />
       </div>
       <div className="flex flex-col md:flex-row w-full gap-5 md:gap-10">
         {/* Container bọc ngoài giữ tỉ lệ */}
-        <div className="w-4/5 md:w-1/2 mx-auto bg-black md:ml-10! md:mr-0! overflow-hidden relative aspect-video md:aspect-9/5">
+        <div className="w-19/20 sm:w-4/5 md:w-1/2 mx-auto bg-black md:ml-10! md:mr-0! overflow-hidden relative aspect-video md:aspect-9/5">
           {/* Container Video nội bộ - Quan trọng: Phải full height/width */}
           <div className="absolute inset-0 w-full h-full bg-black flex items-center justify-center">
             <video
               ref={videoRef}
-              src="/videos/SHEVideo-1.mp4"
+              src="/MinhHungPorfolio/videos/SHEVideo-1.mp4"
               // SỬA Ở ĐÂY: h-full và object-cover (hoặc object-contain nếu muốn hiện hết toàn bộ nội dung video)
               className="w-full h-full object-cover"
               controls={hasStarted}
@@ -304,7 +326,7 @@ const HotTopicSection = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row w-full gap-10 mb-5 justify-center items-center">
-        <div className="w-1/2 ml-10 flex flex-col gap-10 ">
+        <div className="w-2/3 sm:w-1/2 md:ml-10 flex flex-col gap-0 sm:gap-10 ">
           <Image
             src={lang == "Viet" ? TopicImage3VN : TopicImage3EN}
             alt="text"
@@ -333,7 +355,7 @@ const HotTopicSection = () => {
         <Image
           src={Event2Image}
           alt="text"
-          className="w-1/3 mx-auto  -rotate-12 scale-125 z-10 hover:z-20 hover:scale-150 transition-all duration-300"
+          className="w-1/3 mx-auto -rotate-12 scale-125 z-10 hover:z-20 hover:scale-150 transition-all duration-300"
         />
         <Image
           src={Event3Image}

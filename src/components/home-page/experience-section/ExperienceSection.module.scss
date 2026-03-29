@@ -1,6 +1,6 @@
 $bg-image-url: url("../../../assets/home-page/background/bg-1.png");
-$gradient-start: #000000;
-$gradient-end: #4c5409;
+$gradient-start: #0a0803;
+$gradient-end: #0a0803;
 
 .container {
   width: 100%;
@@ -8,7 +8,7 @@ $gradient-end: #4c5409;
   background-image:
     linear-gradient(
       to bottom,
-      $gradient-start 0%,
+      $gradient-end 0%,
       $gradient-end 70%,
       $gradient-end 100%
     ),
@@ -25,12 +25,15 @@ $gradient-end: #4c5409;
   margin: 0 auto;
   padding: 17rem 0 0rem 0;
   overflow: hidden; // Chặn các đoạn line dài làm tràn trang
+  @media (max-width: 767px) {
+    padding: 10rem 0 0rem 0;
+  }
 }
 
 .customTimeline {
   // 1. SỬA LỖI CONNECTOR ĐỨT ĐOẠN: Cho nó dài ra và đâm vào tâm node
   :global(.p-timeline-event-connector) {
-    background-color: #ffffff !important;
+    background-color: #fdefac !important;
     width: 5px !important;
     // Đẩy connector lên cao một chút để nó luôn chạm vào chân node phía trên
     margin-top: -2px !important;
@@ -61,6 +64,7 @@ $gradient-end: #4c5409;
         text-align: left !important;
         padding: 0 0 4rem 1rem !important;
         width: 100% !important;
+        margin: 0;
       }
     }
 
@@ -70,7 +74,7 @@ $gradient-end: #4c5409;
         content: "";
         position: absolute;
         width: 5px;
-        background: linear-gradient(to bottom, transparent, #ffffff);
+        background: linear-gradient(to bottom, transparent, #fdefac);
         left: 50%;
         transform: translateX(-50%);
         top: -300px;
@@ -78,10 +82,10 @@ $gradient-end: #4c5409;
         z-index: 1;
 
         @media (max-width: 767px) {
-          left: 20px !important;
+          left: 18px !important;
           transform: none !important;
-          top: -150px;
-          height: 150px;
+          top: -50px;
+          height: 50px;
         }
       }
     }
@@ -106,7 +110,7 @@ $gradient-end: #4c5409;
         content: "";
         position: absolute;
         width: 5px;
-        background: linear-gradient(to top, transparent, #ffffff);
+        background: linear-gradient(to top, transparent, #fdefac);
 
         // Căn giữa theo trục 40px
         left: 50% !important;
@@ -120,7 +124,7 @@ $gradient-end: #4c5409;
         @media (max-width: 767px) {
           left: 20px !important; // Khớp hoàn toàn với trục separator mobile
           top: 1.25rem !important;
-          height: 800px !important;
+          height: 400px !important;
         }
       }
     }
@@ -133,12 +137,18 @@ $gradient-end: #4c5409;
   height: 2.5rem;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: #d8c361;
+  background: #d8c361 !important;
   border-radius: 50%;
   z-index: 10; // Đảm bảo marker nằm trên mọi loại line
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 
   i {
     font-size: 1.2rem;
+  }
+
+  @media (max-width: 767px) {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }

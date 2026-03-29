@@ -125,7 +125,7 @@ const CoreValueSection = () => {
     return (
       <div
         key={item[lang].index}
-        className="flex flex-row w-full gap-4 px-20 md:px-0"
+        className="flex flex-row w-full gap-4 px-5 sm:px-20 md:px-5"
       >
         <div className="max-w-30">
           <div
@@ -134,7 +134,7 @@ const CoreValueSection = () => {
             {item[lang].index}
           </div>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-3">
           <div className="text-2xl md:text-4xl text-white font-semibold">
             {item[lang].title}
           </div>
@@ -148,7 +148,7 @@ const CoreValueSection = () => {
   return (
     <div>
       <div
-        className={`w-full flex flex-col md:flex-row bg-linear-to-b from-[#828c15] to-[#000000]/60 gap-5 pb-10 ${styles.container}`}
+        className={`w-full flex flex-col md:flex-row gap-5 pb-10 ${styles.container}`}
       >
         <div className="w-full md:w-7/15 mt-20 md:mt-0 md:min-h-250 flex flex-col-reverse md:flex-col relative">
           <Image
@@ -156,19 +156,23 @@ const CoreValueSection = () => {
             alt="Ms Hung"
             className="w-full h-auto md:absolute static"
           />
-          <div className="w-full flex flex-col absolute bottom-0 items-center">
+          <div className="w-full flex flex-col absolute -bottom-10 md:bottom-30 items-center">
             <Image
               src={QuoteEndText}
               alt="Quote End Text"
               className="w-4/5 md:w-full h-auto mx-auto mt-10 md:mt-0"
             />
-            <Button
-              unstyled
-              label={
-                lang == "Viet" ? "Trao đổi trực tiếp" : "One-on-one discussion"
-              }
-              className="hidden md:block bg-linear-to-r from-[#757e13] to-[#1c1e04] text-white text-4xl font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300"
-            />
+            <a href="#consultation-form">
+              <Button
+                unstyled
+                label={
+                  lang == "Viet"
+                    ? "Trao đổi trực tiếp"
+                    : "One-on-one discussion"
+                }
+                className="hidden md:block bg-linear-to-r from-[#757e13] to-[#1c1e04] text-white text-2xl sm:text-4xl font-bold rounded-2xl w-fit px-10 py-3 border-2 border-white cursor-pointer hover:scale-110 transition-all duration-300"
+              />
+            </a>
           </div>
         </div>
         <div className="w-full md:w-8/15 flex flex-col mt-0 md:mt-5 gap-5 md:gap-10 justify-center items-center md:items-start">
@@ -181,13 +185,15 @@ const CoreValueSection = () => {
             return renderCoreValueItem(item);
           })}
         </div>
-        <Button
-          unstyled
-          label={
-            lang == "Viet" ? "Trao đổi trực tiếp" : "One-on-one discussion"
-          }
-          className="md:hidden block bg-linear-to-r from-[#757e13] to-[#1c1e04] text-white text-4xl font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto border-2 border-[#f4ff88]"
-        />
+        <a href="#consultation-form">
+          <Button
+            unstyled
+            label={
+              lang == "Viet" ? "Trao đổi trực tiếp" : "One-on-one discussion"
+            }
+            className="md:hidden block bg-linear-to-r from-[#757e13] to-[#1c1e04] text-white text-2xl sm:text-4xl font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto border-2 border-[#f4ff88]"
+          />
+        </a>
       </div>
       <ImageFilmTrip images={films} speed="120s" />
     </div>

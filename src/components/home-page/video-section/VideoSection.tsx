@@ -30,6 +30,9 @@ const VideoSection = () => {
     UpperFooterScrollImage11,
   ];
 
+  const basePath =
+    process.env.NODE_ENV == "production" ? "/MinhHungPorfolio" : "";
+
   // Ref để điều khiển video
   const videoRef = useRef<HTMLVideoElement>(null);
   // State để ẩn/hiện nút Play lớn ở giữa
@@ -51,7 +54,7 @@ const VideoSection = () => {
       <div className="relative w-full group overflow-hidden bg-black">
         <video
           ref={videoRef}
-          src="/videos/FinalVideo-1.mp4"
+          src={`/MinhHungPorfolio/videos/FinalVideo-1.mp4`}
           className="w-full h-auto max-h-[80vh] object-contain"
           controls={hasStarted} // Chỉ hiện controls sau khi đã bấm Play
           playsInline

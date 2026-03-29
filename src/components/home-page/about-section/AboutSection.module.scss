@@ -1,7 +1,6 @@
 $bg-image-url: url("../../../assets/home-page/background/bg-about-1.webp");
-$bg-about-box-image-url: url("../../../assets/home-page/assets/AboutBox-1.png");
 $bg-about-box-image-effect-url: url("../../../assets/home-page/background/bg-about-box-1.png");
-$gradient-start: #000000;
+$gradient-start: #0a0803;
 $gradient-end: #4c5409;
 
 .container {
@@ -15,12 +14,21 @@ $gradient-end: #4c5409;
 }
 
 .aboutBox {
-  background-image: $bg-about-box-image-url, $bg-about-box-image-effect-url;
+  background-image: 
+    // Lớp phủ màu xanh rêu (0.7 là độ trong suốt, bạn có thể chỉnh)
+
+    linear-gradient(rgba(39, 49, 14, 0.7), rgba(39, 49, 14, 0.7)),
+    $bg-about-box-image-effect-url;
+
   background-repeat: no-repeat;
   background-position: center, center;
-
   background-size:
     100% 100%,
-    100% 100%; // 🔥 QUAN TRỌNG
-  background-blend-mode: overlay;
+    100% 100%;
+
+  // Quan trọng: Dùng 'multiply' để màu xanh trộn sâu vào ảnh
+  background-blend-mode: multiply;
+
+  border: solid #202020 2px;
+  border-radius: 48px;
 }

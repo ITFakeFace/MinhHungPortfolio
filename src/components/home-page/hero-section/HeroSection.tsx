@@ -6,7 +6,9 @@ import FacebookButtonImage from "@/assets/home-page/assets/FacebookButton-1.png"
 import LinkedInButtonImage from "@/assets/home-page/assets/LinkedInButton-1.png";
 import YoutubeButtonImage from "@/assets/home-page/assets/YoutubeButton-1.png";
 import ConsultingNowButtonImage from "@/assets/home-page/assets/ConsultingNowButton-1.png";
-import NewestEventButtonImage from "@/assets/home-page/assets/NewestCourseButton-1.png";
+import ConsultingNowButtonImageEN from "@/assets/home-page/assets/ConsultingNowButtonEN-1.png";
+import NewestEventButtonImage from "@/assets/home-page/assets/NewestEventButton-1.png";
+import NewestEventButtonImageEN from "@/assets/home-page/assets/NewestEventButtonEN-1.png";
 import QuoteText from "@/assets/home-page/text/BannerQuoteText-1.png";
 import NameTextVN from "@/assets/home-page/text/BannerNameTextVN-1.png";
 import NameTextVNMobile from "@/assets/home-page/text/BannerNameTextVNMobile-1.png";
@@ -18,8 +20,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { Button } from "primereact/button";
 
+const ExpButton = ({ className }: { className?: string }) => {
+  const { lang } = useLanguage();
+  return (
+    <div className={className}>
+      <div
+        className={`w-full aspect-9/5 bg-[linear-gradient(135deg,#374919_0%,#242804_50%,#374919_100%)] p-2 border-3 md:border-5! border-[#454d09] text-white rounded-2xl md:rounded-4xl flex flex-col items-center justify-center gap-2`}
+      >
+        <div className="text-3xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl animate-blink-resize text-center font-bold">
+          +18 năm
+        </div>
+        <div className="w-9/10 text-center text-[10px] sm:text-lg md:text-xl lg:text-xl font-semibold">
+          {lang == "Viet"
+            ? "Lãnh đạo và quản lý ngành FMCG và Bán lẻ"
+            : "FMCG and Retail Leadership & Management"}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const HeroSection = () => {
   const { lang } = useLanguage();
+
   return (
     <div
       className={`${styles.container} w-full overflow-hidden flex-flex-col items-center justify-center`}
@@ -27,11 +50,7 @@ const HeroSection = () => {
       <div className="max-w-480 md:aspect-384/222">
         <div className="w-full flex relative flex-row mx-auto">
           <div className="md:w-1/3 hidden md:block">
-            <Image
-              src={ExpButtonImage}
-              alt="Exp Button"
-              className="md:w-3/5 md:mx-auto md:mt-20"
-            />
+            <ExpButton className="w-7/10 mt-[30%] ml-[20%]" />
           </div>
           <div className="w-3/5 md:w-1/3">
             <Image
@@ -40,18 +59,14 @@ const HeroSection = () => {
               className="md:h-full w-auto md:mx-auto"
             />
           </div>
-          <div className="w-2/5 md:w-1/3 relative flex flex-col md:pr-10 md:p-5 md:mt-30 gap-5 md:gap-12! z-10 items-center mt-20 mr-3">
+          <div className="w-2/5 md:w-1/3 relative flex flex-col md:pr-10 md:p-5 md:mt-20 gap-3 sm:gap-5 md:gap-7! z-10 items-center mt-10 sm:mt-20 mr-3">
             <Image
               src={QuoteText}
               alt="Exp Button"
-              className=" md:h-auto w-full md:mx-auto right-15"
+              className=" md:h-auto w-full md:mx-auto right-15 scale-115 sm:scale-100"
             />
-            <div className="flex md:mt-0 flex-col md:flex-row gap-0 md:gap-2 items-center justify-center w-full">
-              <Image
-                src={ExpButtonImage}
-                alt="Exp Button"
-                className="block md:hidden w-4/5 md:w-3/5 md:mx-auto md:mt-20"
-              />
+            <div className="flex md:mt-0 flex-col md:flex-row! gap-0 md:gap-2 items-center justify-center w-full">
+              <ExpButton className="block md:hidden" />
               <a
                 href="https://www.facebook.com/khungtroi.binhyen.7"
                 target="_blank"
@@ -61,7 +76,7 @@ const HeroSection = () => {
                 <Image
                   src={FacebookButtonImage}
                   alt="Exp Button"
-                  className="md:h-auto w-24 md:w-32 md:mx-auto "
+                  className="md:h-auto w-15! sm:w-24! md:w-32! md:mx-auto "
                 />
               </a>
               <a
@@ -73,7 +88,7 @@ const HeroSection = () => {
                 <Image
                   src={LinkedInButtonImage}
                   alt="Exp Button"
-                  className="md:h-auto w-24 md:w-32 md:mx-auto "
+                  className="md:h-auto w-15! sm:w-24! md:w-32! md:mx-auto "
                 />
               </a>
               <a
@@ -85,38 +100,42 @@ const HeroSection = () => {
                 <Image
                   src={YoutubeButtonImage}
                   alt="Exp Button"
-                  className="md:h-auto w-24 md:w-32 md:mx-auto "
+                  className="md:h-auto w-15! sm:w-24! md:w-32! md:mx-auto "
                 />
               </a>
             </div>
             <div className="w-full md:flex flex-col gap-3 items-center justify-center hidden">
               <Button
                 unstyled
-                className="cursor-pointer hover:scale-110 transition-all duration-300 mx-auto w-3/4"
+                className="cursor-pointer hover:scale-110 transition-all duration-300 mx-auto w-9/10"
               >
-                <Image
-                  src={
-                    lang == "Viet"
-                      ? ConsultingNowButtonImage
-                      : ConsultingNowButtonImage
-                  }
-                  alt="Exp Button"
-                  className="md:h-auto w-full md:mx-auto"
-                />
+                <a href="#consultation-form">
+                  <Image
+                    src={
+                      lang == "Viet"
+                        ? ConsultingNowButtonImage
+                        : ConsultingNowButtonImageEN
+                    }
+                    alt="Exp Button"
+                    className="md:h-auto w-full md:mx-auto animate-heartbeat"
+                  />
+                </a>
               </Button>
               <Button
                 unstyled
                 className="cursor-pointer hover:scale-110 transition-all duration-300 mx-auto w-3/4"
               >
-                <Image
-                  src={
-                    lang == "Viet"
-                      ? NewestEventButtonImage
-                      : NewestEventButtonImage
-                  }
-                  alt="Exp Button"
-                  className="md:h-auto w-full md:mx-auto "
-                />
+                <a href="#latest-events">
+                  <Image
+                    src={
+                      lang == "Viet"
+                        ? NewestEventButtonImage
+                        : NewestEventButtonImageEN
+                    }
+                    alt="Exp Button"
+                    className="md:h-auto w-full md:mx-auto "
+                  />
+                </a>
               </Button>
             </div>
           </div>
@@ -140,32 +159,38 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="md:hidden w-full flex flex-col gap-2 items-center justify-center mt-5 mb-3">
+        <div className="md:hidden w-full flex flex-col gap-2 items-center justify-center mt-2 sm:mt-5 mb-1 sm:mb-3">
           <Button
             unstyled
             className="cursor-pointer hover:scale-110 transition-all duration-300 mx-auto w-3/5"
           >
-            <Image
-              src={
-                lang == "Viet"
-                  ? ConsultingNowButtonImage
-                  : ConsultingNowButtonImage
-              }
-              alt="Exp Button"
-              className="md:h-auto w-full md:mx-auto"
-            />
+            <a href="#consultation-form">
+              <Image
+                src={
+                  lang == "Viet"
+                    ? ConsultingNowButtonImage
+                    : ConsultingNowButtonImageEN
+                }
+                alt="Exp Button"
+                className="md:h-auto w-full md:mx-auto animate-heartbeat"
+              />
+            </a>
           </Button>
           <Button
             unstyled
             className="cursor-pointer hover:scale-110 transition-all duration-300 mx-auto w-2/4"
           >
-            <Image
-              src={
-                lang == "Viet" ? NewestEventButtonImage : NewestEventButtonImage
-              }
-              alt="Exp Button"
-              className="md:h-auto w-full md:mx-auto "
-            />
+            <a href="#latest-events">
+              <Image
+                src={
+                  lang == "Viet"
+                    ? NewestEventButtonImage
+                    : NewestEventButtonImageEN
+                }
+                alt="Exp Button"
+                className="md:h-auto w-full md:mx-auto "
+              />
+            </a>
           </Button>
         </div>
       </div>

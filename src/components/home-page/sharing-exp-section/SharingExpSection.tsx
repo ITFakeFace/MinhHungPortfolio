@@ -18,6 +18,7 @@ interface ExpsItem {
   source: string;
   content: string;
   image: string | StaticImageData;
+  url: string;
 }
 
 interface ExpsData {
@@ -37,6 +38,7 @@ const SharingExpSection = () => {
         content:
           "Với tôi văn hóa là “cách doanh nghiệp sống mỗi ngày” - Đó là “DNA” của tổ chức, là \“không khí\” mà chúng ta hít thở mỗi ngày khi đi làm",
         image: Exp1Image,
+        url: "https://www.linkedin.com/posts/minh-hung-le-2a76111a9_trong-b%E1%BB%91i-c%E1%BA%A3nh-hi%E1%BB%87n-nay-v%C4%83n-ho%C3%A1-doanh-nghi%E1%BB%87p-activity-7406643758693478400-qghx",
       },
       Eng: {
         title:
@@ -45,6 +47,7 @@ const SharingExpSection = () => {
         content:
           "To me, corporate culture is “how a company lives every day” — it is the “DNA” of an organization, the “air” we breathe every day at work.",
         image: Exp1Image,
+        url: "https://www.linkedin.com/posts/minh-hung-le-2a76111a9_trong-b%E1%BB%91i-c%E1%BA%A3nh-hi%E1%BB%87n-nay-v%C4%83n-ho%C3%A1-doanh-nghi%E1%BB%87p-activity-7406643758693478400-qghx",
       },
     },
     {
@@ -54,6 +57,7 @@ const SharingExpSection = () => {
         content:
           "Khi thành công ngày hôm qua có thể là rào cản của ngày mai, người dẫn dắt bạn đi xa hơn không phải là người khen bạn, mà là người đặt đúng câu hỏi khiến bạn… giật mình.",
         image: Exp2Image,
+        url: "https://doanhnhansaigon.vn/tu-gioi-den-vi-dai-ai-se-chieu-sang-diem-mu-cua-ban-bai-2-319871.html?utm_source=zalo&utm_medium=zalomsg&B.hidePostFeed=true",
       },
       Eng: {
         title: "From “Good” to “Great”: Who Will Illuminate Your Blind Spots?",
@@ -61,18 +65,19 @@ const SharingExpSection = () => {
         content:
           "Yesterday's success can become tomorrow's barrier. The person who takes you further is not someone who praises you, but someone who asks the right questions that make you pause and reflect.",
         image: Exp2Image,
+        url: "https://doanhnhansaigon.vn/tu-gioi-den-vi-dai-ai-se-chieu-sang-diem-mu-cua-ban-bai-2-319871.html?utm_source=zalo&utm_medium=zalomsg&B.hidePostFeed=true",
       },
     },
   ];
 
   const renderExpsItem = (item: ExpsData) => {
     return (
-      <div className="w-4/5 md:w-full flex flex-col md:flex-row md:gap-10 md:items-stretch mx-auto">
-        <div className="w-full md:w-3/5! flex-none flex items-center justify-center overflow-hidden">
+      <div className="w-7/10 md:w-full flex flex-col md:flex-row md:gap-10 md:items-stretch mx-auto">
+        <div className="w-full md:w-3/5! flex-none flex items-center justify-center overflow-visible md:overflow-hidden">
           <Image
             src={item[lang].image}
             alt="Partner Image"
-            className="w-full h-auto object-cover object-center"
+            className="w-full h-auto object-cover object-center scale-115 md:scale-100"
           />
         </div>
 
@@ -92,12 +97,14 @@ const SharingExpSection = () => {
             {item[lang].content}
           </div>
           <div className="pt-10 w-full flex">
-            <Button
-              unstyled
-              label={lang == "Viet" ? "Xem bài viết" : "Read more"}
-              // Bỏ mx-auto nếu muốn nút căn trái cùng text
-              className="bg-linear-to-r from-[#757e13] to-[#1c1e04]/80 text-white text-2xl md:text-4xl font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto"
-            />
+            <a href={item[lang].url} target="_blank" rel="noopener noreferrer">
+              <Button
+                unstyled
+                label={lang == "Viet" ? "Xem bài viết" : "Read more"}
+                // Bỏ mx-auto nếu muốn nút căn trái cùng text
+                className="bg-linear-to-r from-[#757e13] to-[#1c1e04]/80 text-white text-2xl md:text-4xl font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -110,7 +117,7 @@ const SharingExpSection = () => {
         <Image
           src={lang == "Viet" ? SharingExpTextVN : SharingExpTextEN}
           alt="title text"
-          className="w-4/5 md:w-3/5 mx-auto mb-10 mt-20"
+          className="w-9/10 md:w-3/5 mx-auto mb-10 mt-20"
         />
       </div>
       <div className={`${styles.carouselWrapper} w-full`}>

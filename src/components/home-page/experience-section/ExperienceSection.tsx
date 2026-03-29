@@ -2,13 +2,14 @@
 import Image, { StaticImageData } from "next/image";
 import { Timeline } from "primereact/timeline";
 import styles from "./ExperienceSection.module.scss";
-import RealtimeExperienceText from "@/assets/RealtimeExperienceText.png";
+import RealtimeExperienceText from "@/assets/home-page/text/RealtimeExperienceText.png";
+import RealtimeExperienceTextEN from "@/assets/home-page/text/ExpTextEN-1.png";
 import { useLanguage } from "@/context/LanguageContext";
 import YupiLogo from "@/assets/home-page/logo/YupiLogo-1.png";
 import ThpLogo from "@/assets/home-page/logo/THPGroupLogo-1.png";
 import SheLogo from "@/assets/home-page/logo/SheLogo-1.png";
 import LogoLine from "@/assets/home-page/logo/LogoLine-1.png";
-import CocaColaLogo from "@/assets/home-page/logo/CocaColaLogo-1.png";
+import CocaColaLogo from "@/assets/home-page/logo/CocaColaLogo-2.png";
 import NestleWatersLogo from "@/assets/home-page/logo/NestleWatersLogo-1.png";
 import LogoLine2 from "@/assets/home-page/logo/LogoLine-2.png";
 import QuoteEndText from "@/assets/QuoteEndText-1.png";
@@ -18,14 +19,15 @@ import ExpScrollImage3 from "@/assets/home-page/assets/ExpScroll-3.png";
 import ExpScrollImage4 from "@/assets/home-page/assets/ExpScroll-4.png";
 import ExpScrollImage5 from "@/assets/home-page/assets/ExpScroll-5.png";
 import ImageFilmTrip from "@/components/general/ImageFilmTrip";
+import { motion } from "framer-motion";
 
 const ExperienceSection = () => {
   const { lang, setLang, t } = useLanguage();
 
   const durationClass =
-    "text-4xl md:text-7xl font-black text-white tracking-tighter transition-all";
+    "text-4xl sm:text-6xl md:text-7xl font-bold text-[#776b1e] tracking-tighter transition-all";
   const contentTextClass =
-    "text-xl md:text-3xl text-white font-semibold leading-snug";
+    "text-xl md:text-3xl text-[#4C5409] font-semibold leading-snug ";
   // Giả sử đây là mảng dữ liệu của bạn
   const events = [
     { id: "yupi_group", color: "#4c5409", icon: "pi pi-users" },
@@ -51,12 +53,12 @@ const ExperienceSection = () => {
     return (
       <div className="flex flex-col gap-3">
         <div className={durationClass}>{durationText}</div>
-        <div className={contentTextClass}>{text1}</div>
+        <div className={`${contentTextClass} text-center`}>{text1}</div>
         <div className="flex justify-center items-center w-full mt-2">
           <Image
             src={YupiLogo}
             alt="Yupi"
-            className="h-20 md:h-30 w-auto object-contain"
+            className="h-30 sm:h-40 md:h-30 w-auto object-contain"
           />
         </div>
       </div>
@@ -82,16 +84,22 @@ const ExperienceSection = () => {
     return (
       <div className="flex flex-col gap-3">
         {/* Thời gian */}
-        <div className={durationClass}>{durationText}</div>
+        <div className={`${durationClass} text-left md:text-right`}>
+          {durationText}
+        </div>
         <div>
-          <div className={contentTextClass + " text-center"}>{text1}</div>
+          <div className={`${contentTextClass} text-center md:text-center`}>
+            {text1}
+          </div>
         </div>
         {/* Logo */}
         <div className="flex justify-center items-center w-full">
           <Image src={ThpLogo} alt="Tân Hiệp Phát" className="h-30 w-auto" />
         </div>
         <div>
-          <div className={contentTextClass + " text-center"}>{text2}</div>
+          <div className={`${contentTextClass} text-left md:text-center`}>
+            {text2}
+          </div>
         </div>
         {/* Logo */}
         <div className="flex justify-center items-center w-full">
@@ -102,11 +110,13 @@ const ExperienceSection = () => {
           />
         </div>
         <div>
-          <div className={contentTextClass + " text-center"}>{text3}</div>
+          <div className={`${contentTextClass} text-left md:text-center`}>
+            {text3}
+          </div>
         </div>
         {/* Logo */}
         <div className="flex justify-center items-center w-full">
-          <Image src={LogoLine} alt="Logo Line" className="h-30 w-auto" />
+          <Image src={LogoLine} alt="Logo Line" className="h-auto w-full" />
         </div>
       </div>
     );
@@ -124,7 +134,7 @@ const ExperienceSection = () => {
         {/* Thời gian */}
         <div className={durationClass}>{durationText}</div>
         <div>
-          <div className={contentTextClass}>{text1}</div>
+          <div className={`${contentTextClass} text-center`}>{text1}</div>
         </div>
         {/* Logo */}
         <div className="flex justify-center items-center w-full">
@@ -144,9 +154,11 @@ const ExperienceSection = () => {
     return (
       <div className="flex flex-col gap-3">
         {/* Thời gian */}
-        <div className={durationClass}>{durationText}</div>
+        <div className={`${durationClass} text-right`}>{durationText}</div>
         <div>
-          <div className={contentTextClass}>{text1}</div>
+          <div className={`${contentTextClass} text-center md:text-center`}>
+            {text1}
+          </div>
         </div>
         {/* Logo */}
         <div className="flex justify-center items-center w-full">
@@ -172,14 +184,16 @@ const ExperienceSection = () => {
         {/* Thời gian */}
         <div className={durationClass}>{durationText}</div>
         <div>
-          <div className={contentTextClass}>{text1}</div>
+          <div className={`${contentTextClass} text-center md:text-center`}>
+            {text1}
+          </div>
         </div>
         {/* Logo */}
         <div className="flex justify-center items-center w-full">
           <Image
             src={LogoLine2}
             alt="Nestlé Waters"
-            className="md:w-full md:h-auto h-50 w-auto object-contain"
+            className="md:w-full md:h-auto h-30 sm:h-50 w-auto object-contain"
           />
         </div>
       </div>
@@ -251,16 +265,25 @@ const ExperienceSection = () => {
 
     return (
       <div
-        className={`flex w-full mb-12 ${isLeft ? "p-4 md:p-10" : "p-4 md:p-10"}`}
+        className={`flex w-full md:mb-12 md:mr-0 ${isLeft ? "p-2 md:p-10" : "p-2 md:p-10"}`}
       >
-        {/* max-w-[750px] nhưng w-full để nó co lại trên mobile */}
-        <div className="relative group w-full max-w-[90vw] md:max-w-[750px]">
+        <motion.div
+          className="relative group w-full max-w-[70vw] sm:max-w-[80vw] md:max-w-[750px]"
+          initial={{ opacity: 0, y: 50 }} // Trạng thái ban đầu: mờ và nằm dưới 50px
+          whileInView={{ opacity: 1, y: 0 }} // Khi cuộn tới: hiện rõ và trồi lên
+          viewport={{ once: true, margin: "-100px" }} // Chạy 1 lần, kích hoạt sớm hơn 100px
+          transition={{
+            duration: 0.8,
+            delay: index * 0.1, // Hiệu ứng lần lượt (stagger) dựa trên index
+            ease: "easeOut",
+          }}
+        >
           <div
             className={`
-                p-6 md:p-8 rounded-[30px] md:rounded-[40px] 
-                bg-linear-to-br from-[#7c822b]/80 via-[#5a5f1f]/50 to-[#4c5409]/30
+                p-4 md:p-4 rounded-[30px] md:rounded-[40px] 
+                bg-linear-to-br from-[#fdffe5]/100 via-[#fefdbe]/100 to-[#ddd07b]/100
                 border-2 border-[#b5bc4f]/30
-                shadow-[0_0_30px_15px_rgba(181,188,79,0.2)]
+                shadow-[0_0_30px_15px_rgba(181,188,79,0.1)]
                 backdrop-blur-xl
                 hover:scale-105 hover:border-[#7c822b]/50
                 transition-all duration-500
@@ -269,7 +292,7 @@ const ExperienceSection = () => {
           >
             {renderInnerContent()}
           </div>
-        </div>
+        </motion.div>
       </div>
     );
   };
@@ -282,18 +305,23 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <div id="experience" className={`${styles.container} relative pt-32 pb-20`}>
+    <div
+      id="experience"
+      className={`${styles.container} relative pt-16 md:pt-32`}
+    >
       {/* Background Text */}
-      <div className="absolute top-30 left-0 w-1/2 pointer-events-none">
+      <div className="absolute md:top-30 left-0 md:w-1/2 pointer-events-none">
         <Image
-          src={RealtimeExperienceText}
+          src={
+            lang == "Viet" ? RealtimeExperienceText : RealtimeExperienceTextEN
+          }
           alt="Realtime Experience"
           className="w-9/10 h-auto mx-auto"
         />
       </div>
 
       {/* Timeline Container */}
-      <div className={`${styles.timelineWrapper}`}>
+      <div className={`${styles.timelineWrapper} ml-5 md:ml-0`}>
         <Timeline
           value={events}
           align="alternate"
@@ -306,7 +334,7 @@ const ExperienceSection = () => {
         <Image
           src={QuoteEndText}
           alt="Realtime Experience"
-          className="w-5/10 h-auto mx-auto"
+          className="w-4/5 md:w-5/10 h-auto mx-auto -mt-10 mb-10 md:my-0"
         />
       </div>
       <div>

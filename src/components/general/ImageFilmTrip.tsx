@@ -19,7 +19,7 @@ const ImageFilmTrip = ({
 
   return (
     <div
-      className="relative w-full overflow-hidden py-6 bg-black/5 backdrop-blur-sm group"
+      className="relative w-full overflow-hidden py-0 bg-black/5 backdrop-blur-sm group"
       aria-hidden
     >
       {/* Container chính - Sử dụng CSS Variable để truyền speed động */}
@@ -28,7 +28,7 @@ const ImageFilmTrip = ({
         style={{ animationDuration: speed }}
       >
         {/* Track 1 */}
-        <div className="flex gap-20">
+        <div className="flex gap-0">
           {[
             ...images,
             ...images,
@@ -40,11 +40,11 @@ const ImageFilmTrip = ({
             ...images,
           ].map((img, index) => (
             <div key={`track1-${index}`} className="flex-shrink-0">
-              <div className="relative overflow-hidden rounded-xl shadow-lg border border-white/10 hover:scale-105 transition-transform duration-300">
+              <div className="relative overflow-hidden rounded-none shadow-lg border border-white/10 hover:scale-105 transition-transform duration-300">
                 <Image
                   src={img}
                   alt={`Gallery ${index}`}
-                  className="h-40 md:h-64 w-auto object-cover"
+                  className="h-24 sm:h-40 md:h-64 w-auto object-cover"
                 />
               </div>
             </div>

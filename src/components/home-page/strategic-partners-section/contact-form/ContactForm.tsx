@@ -24,7 +24,8 @@ interface FormField {
   keyfilter?: KeyFilterType;
   pattern?: { value: RegExp; message: string };
   // Thêm thuộc tính để xác định chiều rộng trên mobile
-  mobileWidth?: string;
+  mobileMDWidth?: string;
+  mobileSMWidth?: string;
 }
 
 const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
@@ -61,13 +62,14 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
       name: "organization",
       label: lang === "Viet" ? "Đơn vị/ Tổ chức" : "Company/ Organization",
       type: "text",
-      mobileWidth: "w-3/5", // Chiếm 3/5 width trên mobile
+      mobileMDWidth: "w-full md:3/5", // Chiếm 3/5 width trên mobile
     },
     {
       name: "content",
       label: lang === "Viet" ? "Nội dung tư vấn" : "Consultation Content",
       type: "textarea",
-      mobileWidth: "w-3/5", // Chiếm 3/5 width trên mobile
+      mobileMDWidth: "w-3/5 md:w-full", // Chiếm 3/5 width trên mobile
+      mobileSMWidth: "w-3/5 ", // Chiếm 3/5 width trên mobile
     },
   ];
   const toast = useRef<Toast>(null);
@@ -180,12 +182,12 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
           </h2>
 
           {fields.map((field) => (
-            /* Sử dụng class động: Nếu có mobileWidth thì áp dụng, 
+            /* Sử dụng class động: Nếu có mobileMDWidth thì áp dụng, 
                mặc định md:w-full để đảm bảo trên desktop vẫn đầy đủ 
             */
             <div
               key={field.name}
-              className={`flex flex-col ${field.mobileWidth || "w-full"} md:w-full`}
+              className={`flex flex-col ${field.mobileSMWidth || "w-full "} ${field.mobileMDWidth || "md:w-full "}`}
             >
               <Controller
                 name={field.name}
@@ -236,8 +238,8 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
           <div className="mt-4 flex justify-center md:hidden w-3/5">
             <Button
               type="submit"
-              label={lang === "Viet" ? "Đặt lịch!" : "Book now!"}
-              className="px-5! md:px-16! py-3! text-4xl bg-white bg-linear-to-r! from-[#737c12] to-[#202305] text-white font-bold rounded-3xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 border-white! border-3! shadow-lg!"
+              label={lang === "Viet" ? "Gửi đi!" : "Book now!"}
+              className="px-10! md:px-16! py-3! text-2xl md:text-4xl bg-white bg-linear-to-r! from-[#737c12] to-[#202305] text-white font-bold rounded-xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 border-none shadow-lg!"
             />
           </div>
         </div>
@@ -245,8 +247,8 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
         <div className="mt-4 md:flex justify-center hidden">
           <Button
             type="submit"
-            label={lang === "Viet" ? "Đặt lịch!" : "Book now!"}
-            className="px-16! py-3! text-4xl bg-white bg-linear-to-r! from-[#737c12] to-[#202305] text-white font-bold rounded-3xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 border-white! border-3! shadow-lg!"
+            label={lang === "Viet" ? "Gửi đi!" : "Book now!"}
+            className="px-16! py-3! text-4xl bg-white bg-linear-to-r! from-[#737c12] to-[#202305] text-white font-bold rounded-3xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 border-none shadow-lg!"
           />
         </div>
       </form>

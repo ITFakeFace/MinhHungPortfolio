@@ -23,8 +23,44 @@
       transform: translateX(-100%);
     }
   }
+  @keyframes blink-resize {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2); /* Phóng to 20% */
+      opacity: 0.9; /* Mờ đi */
+    }
+  }
+  @keyframes heartbeat {
+    0%,
+    100% {
+      transform: scale(1.1); /* Lên 110% */
+    }
+    50% {
+      transform: scale(0.9); /* Xuống 90% */
+    }
+  }
+
+  @keyframes light-heartbeat {
+    0%,
+    100% {
+      transform: scale(1.02); /* Lên 110% */
+    }
+    50% {
+      transform: scale(0.98); /* Xuống 90% */
+    }
+  }
+
+  /* Tạo class tiện ích cho Tailwind */
+  /* 1.5s là tốc độ, bạn có thể chỉnh thành 1s nếu muốn nhanh hơn */
   --animate-marquee: marquee linear infinite;
   --animate-marquee-reverse: marquee linear infinite reverse;
+  --animate-blink-resize: blink-resize 1.5s ease-in-out infinite;
+  --animate-heartbeat: heartbeat 1.5s ease-in-out infinite;
+  --animate-light-heartbeat: light-heartbeat 2s ease-in-out infinite;
 }
 
 html,

@@ -122,17 +122,17 @@ const TrainingPartnersSection = () => {
 
   const renderPartnerItem = (item: TrainingPartnerData) => {
     return (
-      <div className="w-4/5 md:w-full h-full flex flex-col md:flex-row md:gap-10 md:items-stretch mx-auto my-auto">
-        <div className="w-full md:w-3/5! flex-none flex items-center justify-center overflow-hidden">
+      <div className="w-4/5 md:w-full h-full flex flex-col gap-5 md:flex-row md:gap-10 md:items-stretch mx-auto my-auto px-2">
+        <div className="w-full md:w-3/5! flex-none flex items-center justify-center h-fit">
           <Image
             src={item[lang].partnerImage}
             alt="Partner Image"
-            className="w-full h-auto object-cover object-center"
+            className="w-full h-auto object-cover object-center scale-110 md:scale-100 "
           />
         </div>
 
         <div className="w-full md:flex-1 flex flex-col items-start gap-3 md:gap-10 my-auto">
-          <div className="w-full text-2xl md:text-4xl font-bold leading-snug">
+          <div className="w-full text-xl md:text-4xl font-bold leading-snug">
             {item[lang].title}
           </div>
 
@@ -161,14 +161,18 @@ const TrainingPartnersSection = () => {
             </div>
 
             <div className="pt-10 w-full flex items-center">
-              <Button
-                unstyled
-                label={
-                  lang == "Viet" ? "Liên hệ tư vấn" : "Contact for Consultation"
-                }
-                // Bỏ mx-auto nếu muốn nút căn trái cùng text
-                className="bg-linear-to-r from-[#757e13] to-[#1c1e04]/80 text-white text-4xl font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto"
-              />
+              <a href="#consultation-form" className="block w-fit mx-auto">
+                <Button
+                  unstyled
+                  label={
+                    lang == "Viet"
+                      ? "Liên hệ tư vấn"
+                      : "Contact for Consultation"
+                  }
+                  // Bỏ mx-auto nếu muốn nút căn trái cùng text
+                  className="bg-linear-to-r from-[#757e13] to-[#1c1e04]/80 text-white text-xl sm:text-4xl font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -177,7 +181,7 @@ const TrainingPartnersSection = () => {
   };
   return (
     <div className="w-full bg-[#feffd4]">
-      <div className="mt-20 md:mt-22 uppercase bg-linear-to-r from-[#505809] to-[#c1c969] bg-clip-text text-transparent font-bold text-5xl md:text-7xl text-center mb-2 md:mb-12! p-3">
+      <div className="mt-15 sm:mt-20 md:mt-22 uppercase bg-linear-to-r from-[#505809] to-[#c1c969] bg-clip-text text-transparent font-bold text-3xl sm:text-5xl md:text-7xl text-center mb-2 md:mb-12! p-3">
         {lang == "Viet"
           ? "ĐỐI TÁC HỢP TÁC ĐÀO TẠO"
           : "TRAINING COLLABORATION PARTNERS"}

@@ -1,4 +1,4 @@
-$bg-image-url: url("../../../assets/home-page/background/bg-partner-1.png");
+$bg-image-url: url("../../../assets/home-page/background/bg-topic-1.png");
 $color-start: #030301;
 $color-middle: #747428;
 $color-middle2: #aaaa57;
@@ -25,11 +25,11 @@ $color-end: #fcfcdc;
   // Lớp 1 (Ảnh): 100% width, tự động height
   // Lớp 2 (Gradient): phủ kín (cover) toàn bộ container
   background-size:
-    100% auto,
+    100% 100%,
     cover;
 
   background-attachment: scroll; // Để ảnh trượt theo nội dung (hoặc fixed tùy bạn)
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 
 @media (max-width: 767px) {

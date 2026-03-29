@@ -120,7 +120,7 @@ const CertificationSection = () => {
     return (
       <div className="flex flex-row items-start w-full max-w-5xl mx-auto gap-3 py-6">
         {/* CỘT LOGO: Cố định độ rộng hoặc dùng flex-basis */}
-        <div className="w-1/4 flex-shrink-0 flex justify-center pt-2">
+        <div className="w-1/4 flex-shrink-0 flex justify-center">
           <Image
             src={item[lang].logoImage}
             alt="Logo"
@@ -129,7 +129,7 @@ const CertificationSection = () => {
         </div>
 
         {/* CỘT TEXT: Chiếm phần còn lại */}
-        <div className="flex-1 flex flex-col gap-3 text-[#4c5409]">
+        <div className="flex-1 flex flex-col gap-3 text-[#4c5409] mr-5">
           {/* Tiêu đề chính: Đậm và lớn nhất */}
           <h2 className="text-3xl font-extrabold uppercase leading-tight tracking-tight">
             {item[lang].title}
@@ -161,7 +161,7 @@ const CertificationSection = () => {
           />
         </div>
         <div className="w-full flex flex-col gap-4">
-          <div className="text-3xl text-center font-bold uppercase">
+          <div className="text-xl text-center font-bold uppercase">
             {item[lang].title}
           </div>
           <div className="text-xl text-center font-semibold uppercase">
@@ -181,7 +181,7 @@ const CertificationSection = () => {
         <Image
           src={item.image}
           alt="Certificate Image"
-          className="w-9/10 mx-auto border-black border-2"
+          className="w-4/5 mx-auto border-black border-2"
         />
       </div>
     );
@@ -194,12 +194,12 @@ const CertificationSection = () => {
         <div className=" mx-auto">
           {/* Header */}
           <div className="text-center mb-10">
-            <h2 className="bg-gradient-to-r  from-[#4c5409] to-[#b0b266] bg-clip-text text-transparent w-3/4 mx-auto text-4xl md:text-7xl font-bold uppercase leading-tight">
+            <h2 className="bg-gradient-to-r  from-[#4c5409] to-[#b0b266] bg-clip-text text-transparent w-3/4 mx-auto text-5xl md:text-7xl font-bold uppercase leading-tight">
               {lang === "Viet"
                 ? "Chứng nhận kỹ năng"
                 : "PROFESSIONALS SKILLS CERTIFICATION"}
             </h2>
-            <p className="text-[#61652f] font-semibold mt-2 uppercase tracking-widest text-md md:text-xl">
+            <p className="text-[#61652f] font-semibold mt-2 uppercase tracking-widest text-md md:text-3xl">
               {lang === "Viet"
                 ? "QUẢN LÝ, ĐÀO TẠO VÀ HUẤN LUYỆN"
                 : "MANAGEMENT, COACHING AND TRAINING"}
@@ -241,7 +241,7 @@ const CertificationSection = () => {
 
           {/* Footer Logo Section (Havard part) */}
           <div className="mt-16 text-center">
-            <h3 className="bg-gradient-to-r from-[#b0b266] to-[#4c5409] bg-clip-text text-transparent text-4xl md:text-6xl font-bold uppercase">
+            <h3 className="bg-gradient-to-r from-[#b0b266] to-[#4c5409] bg-clip-text text-transparent text-4xl md:text-6xl font-bold uppercase md:py-2">
               {lang === "Viet"
                 ? "CHỨNG NHẬN BỞI HARVARD"
                 : "CERTIFIED BY HAVARD UNIVERSITY"}

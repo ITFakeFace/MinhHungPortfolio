@@ -5,6 +5,7 @@ import { PrimeReactProvider } from "primereact/api";
 import Navbar from "@/components/layout/navbar/NavBar";
 import { LanguageProvider } from "@/context/LanguageContext";
 import Footer from "@/components/layout/footer/Footer";
+import ContactSidebar from "@/components/layout/side-button-bar/ContactSidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,6 +47,7 @@ export default function RootLayout({
               <main className="flex-grow">{children}</main>
               <Footer />
               {/* THANH NAVBAR/HEADER NẰM Ở DƯỚI CÙNG */}
+              <ContactSidebar />
             </div>
           </LanguageProvider>
         </PrimeReactProvider>

@@ -34,7 +34,7 @@ const StrategicPartnerSection = () => {
             className="w-full mx-auto h-auto"
           />
         </div>
-        <div className="w-full md:w-1/2! px-10">
+        <div id="consultation-form" className="w-full md:w-1/2! px-10">
           <ContactForm lang={lang} />
         </div>
       </div>

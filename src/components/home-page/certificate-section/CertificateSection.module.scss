@@ -1,5 +1,5 @@
-$primary-green: #61652f;
-$light-green: #aac9aa;
+$primary-green: #ffffff;
+$light-green: #464e09;
 
 .vaultBox {
   width: 100%;
@@ -43,7 +43,7 @@ $light-green: #aac9aa;
     &:hover {
       transform: scale(1.1) translateY(-110%) !important;
       background-color: $primary-green !important;
-      color: white !important;
+      color: $light-green !important;
     }
 
     // Khắc phục lỗi nút bị đẩy ra ngoài trên một số trình duyệt
@@ -96,6 +96,7 @@ $light-green: #aac9aa;
       border-radius: 50%;
       border: none;
       margin: 0 5px;
+      border: $light-green 2px solid;
     }
   }
 }

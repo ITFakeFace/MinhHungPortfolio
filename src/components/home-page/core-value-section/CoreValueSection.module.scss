@@ -1,18 +1,26 @@
-$bg-mobile-image-url: url("../../../assets/home-page/background/bg-core-value-1.png");
-$bg-gradient-start: #1f2105;
+$bg-mobile-image-url1: url("../../../assets/home-page/background/bg-core-value-2.png");
+$bg-mobile-image-url2: url("../../../assets/home-page/background/bg-core-value-1.png");
+$bg-gradient-start: #000000;
 $bg-gradient-end: #828c15;
 
 .container {
+  background:
+    $bg-mobile-image-url1 no-repeat center center / contain,
+    linear-gradient(to bottom, $bg-gradient-start 0%, $bg-gradient-end 100%);
+  background-repeat: no-repeat;
+  background-position: center, center;
+
+  background-size: cover, cover; // 🔥 QUAN TRỌNG
+  background-blend-mode: overlay;
   @media (max-width: 767px) {
     background:
-      $bg-mobile-image-url no-repeat center center / contain,
-      linear-gradient(
-        to bottom,
-        $bg-gradient-start 0%,
-        $bg-gradient-start 70%,
-        $bg-gradient-end 100%
-      );
-    background-size: cover;
+      $bg-mobile-image-url2 no-repeat center center / contain,
+      linear-gradient(to bottom, $bg-gradient-end 0%, $bg-gradient-start 50%);
+    background-repeat: no-repeat;
+    background-position: center, center;
+
+    background-size: cover, cover; // 🔥 QUAN TRỌNG
+    background-blend-mode: overlay;
   }
 }
 

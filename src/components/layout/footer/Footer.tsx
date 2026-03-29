@@ -9,7 +9,7 @@ import { Button } from "primereact/button";
 const Footer = () => {
   return (
     <div
-      className={`${styles.container} flex flex-col-reverse gap-10 md:gap-0 md:flex-row py-20`}
+      className={`${styles.container} flex flex-col-reverse gap-10 md:gap-0 md:flex-row py-20 mb-40 md:mb-0`}
     >
       <div className="w-4/5 md:w-1/2 md:pl-20 mx-auto">
         <Image
@@ -61,8 +61,8 @@ const Footer = () => {
         </div>
         <div className="w-full flex items-center">
           <a
-            href="/documents/my-portfolio.pdf" // Đường dẫn file trong thư mục public
-            download="My_Portfolio.pdf" // Tên file khi tải về máy
+            href="/MinhHungPorfolio/documents/PORTFOLIO.pdf" // Đường dẫn file trong thư mục public
+            download="HelenaPortfolio.pdf" // Tên file khi tải về máy
             className="mx-auto" // Căn giữa thẻ a
           >
             <Button
