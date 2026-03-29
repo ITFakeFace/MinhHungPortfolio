@@ -54,7 +54,6 @@ const VideoSection = () => {
       <div className="relative w-full group overflow-hidden bg-black">
         <video
           ref={videoRef}
-          src={`/MinhHungPortfolio/videos/FinalVideo-1.mp4`}
           className="w-full h-auto max-h-[80vh] object-contain"
           controls={hasStarted} // Chỉ hiện controls sau khi đã bấm Play
           playsInline
@@ -63,7 +62,12 @@ const VideoSection = () => {
             // Tùy chọn: Hiện lại nút Play nếu bạn muốn khi video dừng
             // setHasStarted(false);
           }}
-        />
+        >
+          <source
+            src={`/MinhHungPortfolio/videos/FinalVideo-1.mp4`}
+            type="video/mp4"
+          />
+        </video>
 
         {/* Nút Play lớn giữa màn hình (Chỉ hiện khi chưa chạy) */}
         {!hasStarted && (
