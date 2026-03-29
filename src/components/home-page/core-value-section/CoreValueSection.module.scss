@@ -1,0 +1,60 @@
+$bg-mobile-image-url: url("../../../assets/home-page/background/bg-core-value-1.png");
+$bg-gradient-start: #1f2105;
+$bg-gradient-end: #828c15;
+
+.container {
+  @media (max-width: 767px) {
+    background:
+      $bg-mobile-image-url no-repeat center center / contain,
+      linear-gradient(
+        to bottom,
+        $bg-gradient-start 0%,
+        $bg-gradient-start 70%,
+        $bg-gradient-end 100%
+      );
+    background-size: cover;
+  }
+}
+
+.numberCircle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Kích thước vòng tròn
+  width: 75px;
+  height: 75px;
+  border-radius: 50%; // Tạo hình tròn hoàn hảo
+
+  // Tạo viền Gradient
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 4px; // Độ dày của viền tròn
+
+    // Hướng từ trái dưới lên phải trên
+    background: linear-gradient(to top right, #717627, #181905);
+
+    // Kỹ thuật đục lỗ để nền bên trong trong suốt
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  // Style cho con số bên trong
+  span {
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  @media (max-width: 767px) {
+    width: 60px;
+    height: 60px;
+  }
+}

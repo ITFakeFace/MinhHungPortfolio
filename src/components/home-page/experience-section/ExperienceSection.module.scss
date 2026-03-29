@@ -1,0 +1,144 @@
+$bg-image-url: url("../../../assets/home-page/background/bg-1.png");
+$gradient-start: #000000;
+$gradient-end: #4c5409;
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(
+      to bottom,
+      $gradient-start 0%,
+      $gradient-end 70%,
+      $gradient-end 100%
+    ),
+    $bg-image-url;
+  background-repeat: no-repeat;
+  background-position: center, center;
+
+  background-size: cover, cover; // 🔥 QUAN TRỌNG
+  background-blend-mode: overlay;
+}
+
+.timelineWrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 17rem 0 0rem 0;
+  overflow: hidden; // Chặn các đoạn line dài làm tràn trang
+}
+
+.customTimeline {
+  // 1. SỬA LỖI CONNECTOR ĐỨT ĐOẠN: Cho nó dài ra và đâm vào tâm node
+  :global(.p-timeline-event-connector) {
+    background-color: #ffffff !important;
+    width: 5px !important;
+    // Đẩy connector lên cao một chút để nó luôn chạm vào chân node phía trên
+    margin-top: -2px !important;
+    margin-bottom: -2px !important;
+  }
+
+  :global(.p-timeline-event) {
+    position: relative;
+    min-height: 150px;
+
+    @media (max-width: 767px) {
+      flex-direction: row !important;
+      min-height: 180px;
+
+      :global(.p-timeline-event-opposite) {
+        display: none !important;
+      }
+
+      :global(.p-timeline-event-separator) {
+        flex: 0 !important;
+        min-width: 40px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+
+      :global(.p-timeline-event-content) {
+        text-align: left !important;
+        padding: 0 0 4rem 1rem !important;
+        width: 100% !important;
+      }
+    }
+
+    // --- LINE ĐẦU TRANG (FIRST CHILD) ---
+    &:first-child :global(.p-timeline-event-separator) {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        background: linear-gradient(to bottom, transparent, #ffffff);
+        left: 50%;
+        transform: translateX(-50%);
+        top: -300px;
+        height: 300px;
+        z-index: 1;
+
+        @media (max-width: 767px) {
+          left: 20px !important;
+          transform: none !important;
+          top: -150px;
+          height: 150px;
+        }
+      }
+    }
+
+    // --- LINE CUỐI TRANG (LAST CHILD) ---
+    &:last-child :global(.p-timeline-event-separator) {
+      // Ép separator cuối cùng phải có chiều rộng cố định để căn giữa node
+      min-width: 40px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+
+      // Ẩn connector nhưng vẫn giữ chỗ để node không bị "rơi" tự do
+      :global(.p-timeline-event-connector) {
+        display: block !important;
+        visibility: hidden !important; // Giữ layout nhưng ẩn màu
+        height: 0 !important;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 5px;
+        background: linear-gradient(to top, transparent, #ffffff);
+
+        // Căn giữa theo trục 40px
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+
+        // Bắt đầu từ tâm Marker
+        top: 1.25rem;
+        height: 1000px;
+        z-index: 1;
+
+        @media (max-width: 767px) {
+          left: 20px !important; // Khớp hoàn toàn với trục separator mobile
+          top: 1.25rem !important;
+          height: 800px !important;
+        }
+      }
+    }
+  }
+}
+
+.customMarker {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border-radius: 50%;
+  z-index: 10; // Đảm bảo marker nằm trên mọi loại line
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
+  i {
+    font-size: 1.2rem;
+  }
+}

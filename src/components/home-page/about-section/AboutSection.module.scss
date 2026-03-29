@@ -1,0 +1,26 @@
+$bg-image-url: url("../../../assets/home-page/background/bg-about-1.gif");
+$bg-about-box-image-url: url("../../../assets/home-page/assets/AboutBox-1.png");
+$bg-about-box-image-effect-url: url("../../../assets/home-page/background/bg-about-box-1.png");
+$gradient-start: #000000;
+$gradient-end: #4c5409;
+
+.container {
+  width: 100%;
+  background-image: $bg-image-url;
+  background-repeat: no-repeat;
+  background-position: center, center;
+
+  background-size: cover, cover; // 🔥 QUAN TRỌNG
+  background-blend-mode: overlay;
+}
+
+.aboutBox {
+  background-image: $bg-about-box-image-url, $bg-about-box-image-effect-url;
+  background-repeat: no-repeat;
+  background-position: center, center;
+
+  background-size:
+    100% 100%,
+    100% 100%; // 🔥 QUAN TRỌNG
+  background-blend-mode: overlay;
+}

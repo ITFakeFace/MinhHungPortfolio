@@ -1,0 +1,12 @@
+$bg-image-url: url("../../../assets/home-page/background/bg-footer-1.png");
+
+.container {
+  width: 100%;
+  height: fit-content;
+  background-image: $bg-image-url;
+  background-repeat: no-repeat;
+  background-position: center, center;
+
+  background-size: cover, cover; // 🔥 QUAN TRỌNG
+  background-blend-mode: overlay;
+}
