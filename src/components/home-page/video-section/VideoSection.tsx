@@ -54,7 +54,7 @@ const VideoSection = () => {
       <div className="relative w-full group overflow-hidden bg-black">
         <video
           ref={videoRef}
-          src={`/MinhHungPorfolio/videos/FinalVideo-1.mp4`}
+          src={`/MinhHMinhHungPortfolioungPorfolio/videos/FinalVideo-1.mp4`}
           className="w-full h-auto max-h-[80vh] object-contain"
           controls={hasStarted} // Chỉ hiện controls sau khi đã bấm Play
           playsInline

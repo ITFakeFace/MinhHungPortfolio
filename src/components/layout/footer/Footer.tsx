@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
         <div className="w-full flex items-center">
           <a
-            href="/MinhHungPorfolio/documents/PORTFOLIO.pdf" // Đường dẫn file trong thư mục public
+            href="/MinhHungPortfolio/documents/PORTFOLIO.pdf" // Đường dẫn file trong thư mục public
             download="HelenaPortfolio.pdf" // Tên file khi tải về máy
             className="mx-auto" // Căn giữa thẻ a
           >
