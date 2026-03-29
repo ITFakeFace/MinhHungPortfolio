@@ -76,7 +76,8 @@ $light-green: #464e09;
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      border: none;
+      border: solid 2px $light-green !important;
+
       margin: 0 5px;
     }
   }

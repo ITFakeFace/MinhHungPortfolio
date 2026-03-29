@@ -28,7 +28,7 @@ const ExpButton = ({ className }: { className?: string }) => {
         className={`w-full aspect-9/5 bg-[linear-gradient(135deg,#374919_0%,#242804_50%,#374919_100%)] p-2 border-3 md:border-5! border-[#454d09] text-white rounded-2xl md:rounded-4xl flex flex-col items-center justify-center gap-2`}
       >
         <div className="text-3xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-7xl animate-blink-resize text-center font-bold">
-          +18 năm
+          +18 {lang == "Viet" ? "năm" : "years"}
         </div>
         <div className="w-9/10 text-center text-[10px] sm:text-lg md:text-xl lg:text-xl font-semibold">
           {lang == "Viet"

@@ -13,8 +13,15 @@ const AboutSection = () => {
         <Image
           src={MsHungImage}
           alt={"HungImage"}
+          priority
           className={
-            "absolute w-4/10 z-10 bottom-0 md:left-0 right-0 md:block hidden"
+            "absolute z-10 bottom-0 left-0 " +
+            "h-auto object-contain object-bottom " +
+            "md:block hidden " +
+            // 🔥 CHIÊU THỨ NHẤT: Giới hạn chiều rộng ảnh tối đa là 35% hoặc 40% màn hình
+            "md:w-[35%] lg:w-[40%] " +
+            // 🔥 CHIÊU THỨ HAI: Đảm bảo ảnh không bao giờ cao quá container
+            "max-h-full"
           }
         />
         <div

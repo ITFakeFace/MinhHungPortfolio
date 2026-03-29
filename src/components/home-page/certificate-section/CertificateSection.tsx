@@ -191,10 +191,12 @@ const CertificationSection = () => {
     <section className="bg-[#272a06] pt-20 relative overflow-hidden">
       {/* Box vòm màu vàng */}
       <div className={`${styles.vaultBox} w-full`}>
-        <div className=" mx-auto">
+        <div className=" mx-auto ">
           {/* Header */}
-          <div className="text-center mb-10">
-            <h2 className="bg-gradient-to-r  from-[#4c5409] to-[#b0b266] bg-clip-text text-transparent w-3/4 mx-auto text-5xl md:text-7xl font-bold uppercase leading-tight">
+          <div className="text-center mb-10 ">
+            <h2
+              className={`bg-gradient-to-r  from-[#4c5409] to-[#b0b266] bg-clip-text text-transparent w-3/4 mx-auto ${lang == "Viet" ? "text-5xl" : "text-4xl"} md:text-7xl font-bold uppercase leading-tight `}
+            >
               {lang === "Viet"
                 ? "Chứng nhận kỹ năng"
                 : "PROFESSIONALS SKILLS CERTIFICATION"}
