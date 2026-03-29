@@ -301,7 +301,7 @@ const HotTopicSection = () => {
               onPlay={() => setHasStarted(true)}
             >
               <source
-                src="/MinhHungPortfolio/videos/SHEVideo-1.mp4"
+                src="https://res.cloudinary.com/dxlwfzhnt/video/upload/v1774820644/SHEVideo-1_nrnwt7.mp4"
                 type="video/mp4"
               />
             </video>

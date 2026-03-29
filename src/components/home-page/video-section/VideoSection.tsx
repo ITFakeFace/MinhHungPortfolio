@@ -64,7 +64,7 @@ const VideoSection = () => {
           }}
         >
           <source
-            src={`https://player.cloudinary.com/embed/?cloud_name=dxlwfzhnt&public_id=FinalVideo-1_ususqu`}
+            src={`https://res.cloudinary.com/dxlwfzhnt/video/upload/v1774783282/FinalVideo-1_ususqu.mp4`}
             type="video/mp4"
           />
         </video>
