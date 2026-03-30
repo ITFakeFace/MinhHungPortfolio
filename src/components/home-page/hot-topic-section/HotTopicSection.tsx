@@ -8,12 +8,13 @@ import TopicImage2VN from "@/assets/home-page/text/TopicText-2.png";
 import TopicImage3VN from "@/assets/home-page/text/TopicText-3.png";
 import QuoteVN from "@/assets/home-page/text/Quote-3.png";
 import Event1Image from "@/assets/home-page/assets/event-1.png";
-import Event2Image from "@/assets/home-page/assets/event-2.png";
+import Event2Image from "@/assets/home-page/assets/TopicEvent-1.jpg";
 import Event3Image from "@/assets/home-page/assets/event-3.png";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
 import styles from "./HotTopicSection.module.scss";
 import { useRef, useState } from "react";
+import { useContactForm } from "@/context/ContactContext";
 
 interface TopicItem {
   index: string;
@@ -28,6 +29,7 @@ interface TopicData {
 
 const HotTopicSection = () => {
   const { lang } = useLanguage();
+  const { openContactForm } = useContactForm();
   const topics: TopicData[] = [
     {
       Viet: {
@@ -169,9 +171,9 @@ const HotTopicSection = () => {
 
   // Sử dụng lại:
   const ConsultationButton = () => (
-    <a
-      href="#consultation-form"
+    <button
       className="group relative block w-full max-w-[500px] mx-auto md:-mt-10 transition-all duration-300 hover:scale-105 active:scale-100 no-underline -translate-y-2 md:translate-y-0"
+      onClick={openContactForm}
     >
       {/* Lớp nền Gradient */}
       <div
@@ -186,7 +188,7 @@ const HotTopicSection = () => {
           {lang === "Viet" ? "Liên hệ tư vấn" : "Book a Consultation"}
         </span>
       </div>
-    </a>
+    </button>
   );
 
   const MoreInfoButton = () => (
@@ -354,7 +356,7 @@ const HotTopicSection = () => {
           <div className="my-auto">
             <Image src={Event1Image} alt="text" className="w-full mx-auto" />
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 w-1/2">
             <Image src={Event2Image} alt="text" className="w-full mx-auto" />
             <Image src={Event3Image} alt="text" className="w-full mx-auto" />
           </div>
@@ -376,7 +378,7 @@ const HotTopicSection = () => {
         <Image
           src={Event3Image}
           alt="text"
-          className="w-1/3 mx-auto rotate-12 scale-125 hover:z-20 hover:scale-150 transition-all duration-300"
+          className="w-1/3 h-auto mx-auto rotate-12 scale-125 hover:z-20 hover:scale-150 transition-all duration-300"
         />
       </div>
     </div>

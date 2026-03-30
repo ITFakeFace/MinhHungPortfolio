@@ -1,6 +1,6 @@
 "use client";
 import styles from "./HeroSection.module.scss";
-import MsHungImage from "@/assets/home-page/assets/MsHungBanner-1.png";
+import MsHungImage from "@/assets/home-page/assets/MsHungBanner-2.png";
 import ExpButtonImage from "@/assets/home-page/assets/ExpBox-1.png";
 import FacebookButtonImage from "@/assets/home-page/assets/FacebookButton-1.png";
 import LinkedInButtonImage from "@/assets/home-page/assets/LinkedInButton-1.png";
@@ -20,9 +20,12 @@ import { useLanguage } from "@/context/LanguageContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { Button } from "primereact/button";
+import { useRef } from "react";
+import { useContactForm } from "@/context/ContactContext";
 
 const ExpButton = ({ className }: { className?: string }) => {
   const { lang } = useLanguage();
+
   return (
     <div className={className}>
       <div
@@ -45,6 +48,7 @@ const ExpButton = ({ className }: { className?: string }) => {
 
 const HeroSection = () => {
   const { lang } = useLanguage();
+  const { openContactForm } = useContactForm();
 
   return (
     <div
@@ -111,18 +115,17 @@ const HeroSection = () => {
               <Button
                 unstyled
                 className="cursor-pointer hover:scale-110 transition-all duration-300 mx-auto w-9/10"
+                onClick={openContactForm}
               >
-                <a href="#consultation-form">
-                  <Image
-                    src={
-                      lang == "Viet"
-                        ? ConsultingNowButtonImage
-                        : ConsultingNowButtonImageEN
-                    }
-                    alt="Exp Button"
-                    className="md:h-auto w-full md:mx-auto animate-heartbeat"
-                  />
-                </a>
+                <Image
+                  src={
+                    lang == "Viet"
+                      ? ConsultingNowButtonImage
+                      : ConsultingNowButtonImageEN
+                  }
+                  alt="Exp Button"
+                  className="md:h-auto w-full md:mx-auto animate-heartbeat"
+                />
               </Button>
               <Button
                 unstyled
@@ -161,18 +164,17 @@ const HeroSection = () => {
           <Button
             unstyled
             className="cursor-pointer hover:scale-110 transition-all duration-300 mx-auto w-3/5"
+            onClick={openContactForm}
           >
-            <a href="#consultation-form">
-              <Image
-                src={
-                  lang == "Viet"
-                    ? ConsultingNowButtonImage
-                    : ConsultingNowButtonImageEN
-                }
-                alt="Exp Button"
-                className="md:h-auto w-full md:mx-auto animate-heartbeat"
-              />
-            </a>
+            <Image
+              src={
+                lang == "Viet"
+                  ? ConsultingNowButtonImage
+                  : ConsultingNowButtonImageEN
+              }
+              alt="Exp Button"
+              className="md:h-auto w-full md:mx-auto animate-heartbeat"
+            />
           </Button>
           <Button
             unstyled

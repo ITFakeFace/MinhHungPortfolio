@@ -11,9 +11,10 @@ import ImageFilmTrip from "@/components/general/ImageFilmTrip";
 import CoreValueScrollImage1 from "@/assets/home-page/assets/CoreValueScroll-1.png";
 import CoreValueScrollImage2 from "@/assets/home-page/assets/CoreValueScroll-2.png";
 import CoreValueScrollImage3 from "@/assets/home-page/assets/CoreValueScroll-3.png";
-import CoreValueScrollImage4 from "@/assets/home-page/assets/CoreValueScroll-4.png";
+import CoreValueScrollImage4 from "@/assets/home-page/assets/CoreValueScroll-4.jpg";
 import CoreValueScrollImage5 from "@/assets/home-page/assets/CoreValueScroll-5.png";
 import CoreValueScrollImage6 from "@/assets/home-page/assets/CoreValueScroll-6.png";
+import { useContactForm } from "@/context/ContactContext";
 interface CoreValueItem {
   index: string;
   title: string;
@@ -27,6 +28,7 @@ interface CoreValueData {
 
 const CoreValueSection = () => {
   const { lang } = useLanguage();
+  const { openContactForm } = useContactForm();
   const coreValues: CoreValueData[] = [
     {
       Viet: {
@@ -119,6 +121,7 @@ const CoreValueSection = () => {
     CoreValueScrollImage3,
     CoreValueScrollImage4,
     CoreValueScrollImage5,
+    CoreValueScrollImage6,
   ];
 
   const renderCoreValueItem = (item: CoreValueData) => {
@@ -158,17 +161,14 @@ const CoreValueSection = () => {
               alt="Quote End Text"
               className="w-4/5 md:w-full h-auto mx-auto mt-10 md:mt-0"
             />
-            <a href="#consultation-form">
-              <Button
-                unstyled
-                label={
-                  lang == "Viet"
-                    ? "Trao đổi trực tiếp"
-                    : "One-on-one discussion"
-                }
-                className="hidden md:block bg-linear-to-r from-[#757e13] to-[#1c1e04] text-white text-2xl sm:text-4xl font-bold rounded-2xl w-fit px-10 py-3 border-2 border-white cursor-pointer hover:scale-110 transition-all duration-300"
-              />
-            </a>
+            <Button
+              unstyled
+              label={
+                lang == "Viet" ? "Trao đổi trực tiếp" : "One-on-one discussion"
+              }
+              className="hidden md:block bg-linear-to-r from-[#757e13] to-[#1c1e04] text-white text-2xl sm:text-4xl font-bold rounded-2xl w-fit px-10 py-3 border-2 border-white cursor-pointer hover:scale-110 transition-all duration-300"
+              onClick={openContactForm}
+            />
           </div>
         </div>
         <div className="w-full md:w-8/15 flex flex-col mt-0 md:mt-0 gap-5 md:gap-10 justify-center items-center md:items-start">
@@ -181,15 +181,14 @@ const CoreValueSection = () => {
             return renderCoreValueItem(item);
           })}
         </div>
-        <a href="#consultation-form">
-          <Button
-            unstyled
-            label={
-              lang == "Viet" ? "Trao đổi trực tiếp" : "One-on-one discussion"
-            }
-            className="md:hidden block bg-linear-to-r from-[#757e13] to-[#1c1e04] text-white text-2xl sm:text-4xl font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto border-2 border-[#f4ff88]"
-          />
-        </a>
+        <Button
+          unstyled
+          label={
+            lang == "Viet" ? "Trao đổi trực tiếp" : "One-on-one discussion"
+          }
+          className="md:hidden block bg-linear-to-r from-[#757e13] to-[#1c1e04] text-white text-2xl sm:text-4xl font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto border-2 border-[#f4ff88]"
+          onClick={openContactForm}
+        />
       </div>
       <ImageFilmTrip images={films} speed="120s" />
     </div>

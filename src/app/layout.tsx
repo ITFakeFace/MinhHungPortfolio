@@ -6,6 +6,7 @@ import Navbar from "@/components/layout/navbar/NavBar";
 import { LanguageProvider } from "@/context/LanguageContext";
 import Footer from "@/components/layout/footer/Footer";
 import ContactSidebar from "@/components/layout/side-button-bar/ContactSidebar";
+import EventPopup from "@/components/general/EventPopup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,6 +50,8 @@ export default function RootLayout({
               {/* THANH NAVBAR/HEADER NẰM Ở DƯỚI CÙNG */}
               <ContactSidebar />
             </div>
+            <EventPopup />
+            
           </LanguageProvider>
         </PrimeReactProvider>
       </body>

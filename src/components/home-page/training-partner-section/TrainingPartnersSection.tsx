@@ -6,9 +6,10 @@ import Image, { StaticImageData } from "next/image";
 import Partner1Image from "@/assets/home-page/assets/partner-1.png";
 import Partner2Image from "@/assets/home-page/assets/partner-2.png";
 import Partner3Image from "@/assets/home-page/assets/partner-3.png";
-import Partner4Image from "@/assets/home-page/assets/partner-4.png";
+import Partner4Image from "@/assets/home-page/assets/partner-4.jpg";
 import Partner5Image from "@/assets/home-page/assets/partner-5.png";
 import { Button } from "primereact/button";
+import { useContactForm } from "@/context/ContactContext";
 interface TrainingPartnerItem {
   title: string;
   partnerName: string;
@@ -24,6 +25,7 @@ interface TrainingPartnerData {
 
 const TrainingPartnersSection = () => {
   const { lang } = useLanguage();
+  const { openContactForm } = useContactForm();
   const partners: TrainingPartnerData[] = [
     {
       Viet: {
@@ -161,18 +163,15 @@ const TrainingPartnersSection = () => {
             </div>
 
             <div className="pt-10 w-full flex items-center">
-              <a href="#consultation-form" className="block w-fit mx-auto">
-                <Button
-                  unstyled
-                  label={
-                    lang == "Viet"
-                      ? "Liên hệ tư vấn"
-                      : "Contact for Consultation"
-                  }
-                  // Bỏ mx-auto nếu muốn nút căn trái cùng text
-                  className="bg-linear-to-r from-[#757e13] to-[#1c1e04]/80 text-white text-xl sm:text-4xl font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto"
-                />
-              </a>
+              <Button
+                unstyled
+                label={
+                  lang == "Viet" ? "Liên hệ tư vấn" : "Contact for Consultation"
+                }
+                // Bỏ mx-auto nếu muốn nút căn trái cùng text
+                className="block bg-linear-to-r from-[#757e13] to-[#1c1e04]/80 text-white text-xl sm:text-4xl font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto"
+                onClick={openContactForm}
+              />
             </div>
           </div>
         </div>

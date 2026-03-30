@@ -12,6 +12,18 @@ import UpperFooterScrollImage8 from "@/assets/home-page/assets/UpperFooterScroll
 import UpperFooterScrollImage9 from "@/assets/home-page/assets/UpperFooterScroll-9.png";
 import UpperFooterScrollImage10 from "@/assets/home-page/assets/UpperFooterScroll-10.png";
 import UpperFooterScrollImage11 from "@/assets/home-page/assets/UpperFooterScroll-11.png";
+import FooterScrollImage1 from "@/assets/home-page/assets/FooterFilm-1.jpg";
+import FooterScrollImage2 from "@/assets/home-page/assets/FooterFilm-2.jpg";
+import FooterScrollImage3 from "@/assets/home-page/assets/FooterFilm-3.jpg";
+import FooterScrollImage4 from "@/assets/home-page/assets/FooterFilm-4.jpg";
+import FooterScrollImage5 from "@/assets/home-page/assets/FooterFilm-5.jpg";
+import FooterScrollImage6 from "@/assets/home-page/assets/FooterFilm-6.jpg";
+import FooterScrollImage7 from "@/assets/home-page/assets/FooterFilm-7.jpg";
+import FooterScrollImage8 from "@/assets/home-page/assets/FooterFilm-8.jpg";
+import FooterScrollImage9 from "@/assets/home-page/assets/FooterFilm-9.jpg";
+import FooterScrollImage10 from "@/assets/home-page/assets/FooterFilm-10.jpg";
+import FooterScrollImage11 from "@/assets/home-page/assets/FooterFilm-11.jpg";
+import FooterScrollImage12 from "@/assets/home-page/assets/FooterFilm-12.jpg";
 import ImageFilmTrip from "@/components/general/ImageFilmTrip";
 
 const VideoSection = () => {
@@ -28,6 +40,18 @@ const VideoSection = () => {
     UpperFooterScrollImage9,
     UpperFooterScrollImage10,
     UpperFooterScrollImage11,
+    FooterScrollImage1,
+    FooterScrollImage2,
+    FooterScrollImage3,
+    FooterScrollImage4,
+    FooterScrollImage5,
+    FooterScrollImage6,
+    FooterScrollImage7,
+    FooterScrollImage8,
+    FooterScrollImage9,
+    FooterScrollImage10,
+    FooterScrollImage11,
+    FooterScrollImage12,
   ];
 
   const basePath =
