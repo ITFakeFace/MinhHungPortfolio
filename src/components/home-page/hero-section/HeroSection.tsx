@@ -50,7 +50,7 @@ const HeroSection = () => {
     <div
       className={`${styles.container} w-full overflow-hidden flex flex-col items-center justify-center`}
     >
-      <div className="max-w-480 max-h-[900px] md:aspect-[384/210]!">
+      <div className="max-w-480 md:max-h-[900px] md:aspect-[384/210]!">
         <div className="w-full flex relative flex-row mx-auto h-full">
           <div className="md:w-1/3 hidden md:block">
             <ExpButton className="w-7/10 md:13/20 mt-[30%] ml-[20%]" />
