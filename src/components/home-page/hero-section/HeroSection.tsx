@@ -10,10 +10,10 @@ import ConsultingNowButtonImageEN from "@/assets/home-page/assets/ConsultingNowB
 import NewestEventButtonImage from "@/assets/home-page/assets/NewestEventButton-1.png";
 import NewestEventButtonImageEN from "@/assets/home-page/assets/NewestEventButtonEN-1.png";
 import QuoteText from "@/assets/home-page/text/BannerQuoteText-1.png";
-import NameTextVN from "@/assets/home-page/text/BannerNameTextVN-1.png";
+import NameTextVN from "@/assets/home-page/text/MsHungNameText-1.png";
+import NameTextEN from "@/assets/home-page/text/MsHungNameTextEN-1.png";
 import NameTextVNMobile from "@/assets/home-page/text/MsHungNameTextMobile-1.png";
 import NameTextENMobile from "@/assets/home-page/text/MsHungNameTextMobileEN-1.png";
-import NameTextEN from "@/assets/home-page/text/BannerNameTextEN-1.png";
 import RoleText from "@/assets/home-page/text/BannerRoleText-1.png";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
@@ -50,7 +50,7 @@ const HeroSection = () => {
     <div
       className={`${styles.container} w-full overflow-hidden flex flex-col items-center justify-center`}
     >
-      <div className="max-w-480 md:aspect-[384/200]">
+      <div className="max-w-480 md:aspect-[384/210]">
         <div className="w-full flex relative flex-row mx-auto h-full">
           <div className="md:w-1/3 hidden md:block">
             <ExpButton className="w-7/10 md:13/20 mt-[30%] ml-[20%]" />
@@ -153,11 +153,6 @@ const HeroSection = () => {
                 src={lang == "Viet" ? NameTextVNMobile : NameTextENMobile}
                 alt="Exp Button"
                 className="md:hidden md:w-full md:h-auto md:mx-auto pb-2"
-              />
-              <Image
-                src={RoleText}
-                alt="Exp Button"
-                className="absolute bottom-0 w-9/10 md:w-3/5 md:h-auto md:mx-auto"
               />
             </div>
           </div>
