@@ -148,15 +148,11 @@ const CoreValueSection = () => {
   return (
     <div>
       <div
-        className={`w-full flex flex-col md:flex-row gap-5 pb-10 ${styles.container}`}
+        className={`w-full flex flex-col md:flex-row gap-5 pb-10 md:pb-0 ${styles.container}`}
       >
         <div className="w-full md:w-7/15 mt-20 md:mt-0 md:min-h-250 flex flex-col-reverse md:flex-col relative">
-          <Image
-            src={MsHungImage}
-            alt="Ms Hung"
-            className="w-full h-auto md:absolute static"
-          />
-          <div className="w-full flex flex-col absolute -bottom-10 md:bottom-30 items-center">
+          <Image src={MsHungImage} alt="Ms Hung" className="w-full h-auto" />
+          <div className="w-full flex flex-col  items-center overflow-visible mb-0 md:-translate-y-30">
             <Image
               src={QuoteEndText}
               alt="Quote End Text"
@@ -175,7 +171,7 @@ const CoreValueSection = () => {
             </a>
           </div>
         </div>
-        <div className="w-full md:w-8/15 flex flex-col mt-0 md:mt-5 gap-5 md:gap-10 justify-center items-center md:items-start">
+        <div className="w-full md:w-8/15 flex flex-col mt-0 md:mt-0 gap-5 md:gap-10 justify-center items-center md:items-start">
           <Image
             src={lang == "Viet" ? CoreValueTextVN : CoreValueTextEN}
             alt="Core Value Text"

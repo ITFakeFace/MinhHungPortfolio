@@ -149,7 +149,7 @@ const HotTopicSection = () => {
 
   const BaseButton = ({ label }: { label: string }) => {
     return (
-      <div className="group relative w-full max-w-[500px] cursor-pointer transition-all duration-300 hover:scale-105 active:scale-100 mx-auto md:mx-0 -mt-10">
+      <div className="group relative w-full max-w-[500px] cursor-pointer transition-all duration-300 hover:scale-105 active:scale-100 mx-auto md:mx-auto! -mt-10">
         {/* Lớp nền Gradient */}
         <div
           className="flex items-center justify-center border-1 border-white rounded-[15px] md:rounded-[20px] h-[60px] md:h-[90px] w-full shadow-lg"
@@ -169,10 +169,23 @@ const HotTopicSection = () => {
 
   // Sử dụng lại:
   const ConsultationButton = () => (
-    <a href="#consultation-form">
-      <BaseButton
-        label={lang === "Viet" ? "Liên hệ tư vấn" : "Book a Consultation"}
-      />
+    <a
+      href="#consultation-form"
+      className="group relative block w-full max-w-[500px] mx-auto md:-mt-10 transition-all duration-300 hover:scale-105 active:scale-100 no-underline -translate-y-2 md:translate-y-0"
+    >
+      {/* Lớp nền Gradient */}
+      <div
+        className="flex items-center justify-center border border-white rounded-[15px] md:rounded-[20px] h-[60px] md:h-[90px] w-full shadow-lg overflow-hidden"
+        style={{
+          backgroundImage:
+            "linear-gradient(90.04deg, rgb(118, 127, 19) 0%, rgb(0, 0, 0) 134.48%)",
+        }}
+      >
+        {/* Nội dung Text */}
+        <span className="text-white font-bold text-2xl sm:text-4xl md:text-4xl lg:text-5xl leading-none uppercase tracking-wider px-3 md:px-6 text-center">
+          {lang === "Viet" ? "Liên hệ tư vấn" : "Book a Consultation"}
+        </span>
+      </div>
     </a>
   );
 
