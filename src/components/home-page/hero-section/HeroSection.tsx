@@ -50,7 +50,7 @@ const HeroSection = () => {
     <div
       className={`${styles.container} w-full overflow-hidden flex flex-col items-center justify-center`}
     >
-      <div className="max-w-480 md:aspect-[384/210]">
+      <div className="max-w-480 max-h-[900px] md:aspect-[384/210]!">
         <div className="w-full flex relative flex-row mx-auto h-full">
           <div className="md:w-1/3 hidden md:block">
             <ExpButton className="w-7/10 md:13/20 mt-[30%] ml-[20%]" />
@@ -59,7 +59,7 @@ const HeroSection = () => {
             <Image
               src={MsHungImage}
               alt="Exp Button"
-              className="h-full w-auto md:mx-auto"
+              className="h-full w-auto object-contain object-bottom md:mx-auto"
             />
           </div>
           <div className="w-2/5 md:w-1/3 relative flex flex-col md:pr-10 md:p-5 md:mt-20 gap-3 sm:gap-5 md:gap-7! z-10 items-center mt-20 sm:mt-20 mr-3">

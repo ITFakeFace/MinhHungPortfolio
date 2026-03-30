@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { SelectButton, SelectButtonChangeEvent } from "primereact/selectbutton";
 import { useLanguage } from "@/context/LanguageContext"; // Đảm bảo đúng đường dẫn
 import { Language } from "@/types/content"; // Đảm bảo đúng đường dẫn
@@ -27,6 +27,28 @@ const Navbar = () => {
     { key: "project", id: "she-project" },
   ];
 
+  // LOGIC CHECK OVERFLOW
+  const [isOverflowing, setIsOverflowing] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const checkOverflow = () => {
+      if (navRef.current && containerRef.current) {
+        // Nếu chiều rộng thực tế của Nav > Chiều rộng vùng chứa cho phép
+        const hasOverflow =
+          navRef.current.scrollWidth > containerRef.current.clientWidth;
+        setIsOverflowing(hasOverflow);
+      }
+    };
+
+    const observer = new ResizeObserver(checkOverflow);
+    if (containerRef.current) observer.observe(containerRef.current);
+
+    checkOverflow(); // Chạy lần đầu
+    return () => observer.disconnect();
+  }, [lang]); // Chạy lại khi đổi ngôn ngữ vì chữ dài ngắn khác nhau
+
   const handleLangChange = (e: SelectButtonChangeEvent) => {
     if (e.value) {
       setLang(e.value as Language);
@@ -36,27 +58,31 @@ const Navbar = () => {
   return (
     <header className="w-full bg-gradient-to-r from-[#4c5409] from-[60%] to-[#101010] to-[100%] shadow-lg py-2 px-5">
       <div className="w-full flex items-center justify-between mx-auto">
+        {/* NÚT BARS: Hiện khi (isOverflowing) HOẶC (màn hình nhỏ < md) */}
         <button
           onClick={() => setVisible(true)}
-          className="md:hidden text-white text-2xl p-2 active:scale-90 transition-transform"
+          className={`${isOverflowing ? "block" : "md:hidden"} text-white text-2xl p-2 active:scale-90 transition-transform`}
         >
           <FontAwesomeIcon icon={faBars} />
         </button>
-        {/* LOGO BÊN TRÁI */}
-        <div className="text-white text-2xl md:text-3xl font-bold tracking-tighter shrink-0 md:static">
+
+        {/* LOGO */}
+        <div className="text-white text-2xl md:text-3xl font-bold tracking-tighter shrink-0">
           HELENA LE.
         </div>
 
-        {/* MENU Ở GIỮA */}
-        <nav className="hidden md:flex items-center gap-8 mx-4">
+        {/* MENU: Ẩn khi bị Overflow */}
+        <nav
+          ref={navRef}
+          className={`${isOverflowing ? "invisible absolute" : "hidden md:flex"} items-center gap-8 mx-4 flex-nowrap`}
+        >
           {menuItems.map((item) => (
             <a
               key={item.key}
               href={`#${item.id}`}
-              className="text-white font-bold uppercase text-md hover:opacity-70 transition-opacity whitespace-nowrap"
+              className="text-white font-bold uppercase whitespace-nowrap hover:opacity-70"
             >
-              {t(`nav.${item.key}`)}{" "}
-              {/* Hàm t() sẽ tìm trong nav.about, nav.experience... */}
+              {t(`nav.${item.key}`)}
             </a>
           ))}
         </nav>
