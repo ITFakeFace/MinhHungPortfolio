@@ -157,7 +157,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="md:hidden w-full flex flex-col gap-2 items-center justify-center mt-5 sm:mt-5 mb-10 sm:mb-3">
+        <div className="md:hidden w-full flex flex-col gap-2 items-center justify-center mt-2 sm:mt-5 mb-10 sm:mb-3">
           <Button
             unstyled
             className="cursor-pointer hover:scale-110 transition-all duration-300 mx-auto w-3/5"
