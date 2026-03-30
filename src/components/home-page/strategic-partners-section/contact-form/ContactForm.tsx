@@ -210,7 +210,7 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
                           rows={3}
                           autoResize
                           className={classNames(
-                            "p-3 rounded-2xl bg-[#d9d9d9] text-black transition-all border-2 border-transparent",
+                            "p-3 rounded-2xl bg-[#d9d9d9] text-black transition-all border-2 border-transparent mb:2 md:mb-5",
                             { "!border-red-400 bg-red-50": fieldState.error },
                           )}
                         />
@@ -219,7 +219,7 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
                           {...controllerField}
                           keyfilter={field.keyfilter}
                           className={classNames(
-                            "p-2 rounded-full bg-[#d9d9d9] text-black transition-all border-2 border-transparent",
+                            "p-2 rounded-full bg-[#d9d9d9] text-black transition-all border-2 border-transparent mb:2 md:mb-5",
                             { "!border-red-500 bg-red-50": fieldState.error },
                           )}
                         />
