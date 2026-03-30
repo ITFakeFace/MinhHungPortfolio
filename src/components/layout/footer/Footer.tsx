@@ -9,7 +9,7 @@ import { Button } from "primereact/button";
 const Footer = () => {
   return (
     <div
-      className={`${styles.container} flex flex-col-reverse gap-10 md:gap-0 md:flex-row py-20 mb-40 md:mb-0`}
+      className={`${styles.container} flex flex-col-reverse gap-10 md:gap-0 md:flex-row py-20 md:mb-0`}
     >
       <div className="w-4/5 md:w-1/2 md:pl-20 mx-auto">
         <Image

@@ -154,7 +154,9 @@ const ExperienceSection = () => {
     return (
       <div className="flex flex-col gap-3">
         {/* Thời gian */}
-        <div className={`${durationClass} text-right`}>{durationText}</div>
+        <div className={`${durationClass} text-left md:text-right`}>
+          {durationText}
+        </div>
         <div>
           <div className={`${contentTextClass} text-center md:text-center`}>
             {text1}

@@ -61,12 +61,12 @@ const AboutSection = () => {
               className="hidden sm:block md:hidden float-right w-1/2 h-auto object-contain ml-4 mb-2 [shape-outside:inset(0)]"
               /* shape-outside giúp trình duyệt hiểu khối bao quanh ảnh để đẩy chữ */
             />
-            <div className="whitespace-pre-line flex flex-col gap-5 md:mb-5 text-sm sm:text-md md:text-xl mb-2 ml-5 mr-5 sm:mr-0 sm:ml-12.5 md:ml-0 text-justify leading-relaxed">
+            <div className="whitespace-pre-line flex flex-col gap-5 md:mb-5 text-sm sm:text-md md:text-xl mb-2 ml-5 mr-5 sm:mr-0 sm:ml-12.5 text-left md:ml-0 leading-relaxed">
               {lang == "Viet"
                 ? "Tôi cũng là Nhà sáng lập cộng đồng SHE Global Community, Leadership & Business Coach tại Mind Coach Global, người tổ chức chuỗi sự kiện LinkedIn Networking Vietnam, đồng thời là một Mentor, Diễn giả và Giám khảo tích cực cho các cộng đồng về Sales, Marketing, FMCG & Bán lẻ."
                 : "I am the Founder of SHE Global Community, a Leadership & Business Coach at Mind Coach Global, the organizer of LinkedIn Networking Vietnam events, and an active Mentor, Speaker, and Judge within Sales, Marketing, FMCG, and Retail communities."}
             </div>
-            <div className="whitespace-pre-line flex flex-col gap-5 text-sm sm:text-md md:text-xl mb-5 md:mb-0 ml-5 mr-5 sm:mr-0 sm:ml-12.5 md:ml-0 text-justify leading-relaxed">
+            <div className="whitespace-pre-line flex flex-col gap-5 text-sm sm:text-md md:text-xl mb-5 md:mb-0 ml-5 mr-5 sm:mr-0 sm:ml-12.5 text-left md:ml-0 leading-relaxed">
               {lang == "Viet"
                 ? "Đam mê lớn nhất của tôi là chinh phục thị trường, phát triển con người và tạo ra những tác động kinh doanh bền vững thông qua chiến lược xuất sắc và một tinh thần quyết liệt."
                 : "My greatest passion lies in conquering markets, developing people, and creating sustainable business impact through strategic excellence and a strong results-driven mindset."}
