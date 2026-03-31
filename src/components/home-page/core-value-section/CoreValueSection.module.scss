@@ -31,8 +31,6 @@ $bg-gradient-end: #828c15;
   justify-content: center;
 
   // Kích thước vòng tròn
-  width: 75px;
-  height: 75px;
   border-radius: 50%; // Tạo hình tròn hoàn hảo
 
   // Tạo viền Gradient
@@ -61,8 +59,8 @@ $bg-gradient-end: #828c15;
     font-size: 1.25rem;
   }
 
-  @media (max-width: 767px) {
-    width: 60px;
-    height: 60px;
-  }
+  // @media (max-width: 767px) {
+  //   width: 60px;
+  //   height: 60px;
+  // }
 }

@@ -106,19 +106,19 @@ const HotTopicSection = () => {
   const renderLeftColItem = (item: TopicData) => {
     return (
       <div
-        className="w-19/20 sm:w-9/10 flex flex-row gap-3 md:gap-5 self-end"
+        className="w-19/20 sm:w-9/10 flex flex-row gap-3 md:gap-5 self-end items-start"
         key={item[lang].index}
       >
         <div className="flex flex-col">
-          <div className="text-white w-full text-right md:text-left border-b-2 md:border-b-3 border-white text-xl md:text-3xl font-bold pb-1 md:pb-2">
+          <div className="text-white w-full text-right md:text-left border-b-2 md:border-b-3 border-white text-xl md:text-3xl 2xl:text-4xl! 4xl:text-5xl! font-bold pb-1 md:pb-2">
             {item[lang].title}
           </div>
-          <div className="text-white w-full text-right md:text-left mt-2 md:mt-3 font-semibold text-lg md:text-2xl">
+          <div className="text-white w-full text-right md:text-left mt-2 md:mt-3 font-semibold text-lg md:text-2xl 2xl:text-3xl 4xl:text-4xl!">
             {item[lang].description}
           </div>
         </div>
         <div
-          className={`${styles.numberCircle} text-white text-2xl md:text-4xl font-bold aspect-square flex justify-center items-center text-center`}
+          className={`${styles.numberCircle} w-[60px] md:w-[75px]! 2xl:w-[100px]! shrink-0 text-white text-2xl md:text-4xl! 2xl:text-5xl! font-bold aspect-square! flex justify-center items-center text-center`}
         >
           {item[lang].index}
         </div>
@@ -129,19 +129,19 @@ const HotTopicSection = () => {
   const renderRightColItem = (item: TopicData) => {
     return (
       <div
-        className="w-19/20 sm:w-9/10 flex flex-row gap-3 md:gap-5 self-start"
+        className="w-19/20 sm:w-9/10 flex flex-row gap-3 md:gap-5 self-start items-start"
         key={item[lang].index}
       >
         <div
-          className={`${styles.numberCircle} text-white text-2xl md:text-4xl font-bold aspect-square flex justify-center items-center text-center`}
+          className={`${styles.numberCircle} w-[60px] md:w-[75px]! 2xl:w-[100px]! shrink-0 text-white text-2xl md:text-4xl! 2xl:text-5xl! font-bold aspect-square flex justify-center items-center text-center`}
         >
           {item[lang].index}
         </div>
         <div className="flex flex-col ">
-          <div className="text-white w-full text-left border-b-2 md:border-b-3 border-white text-xl md:text-3xl font-bold pb-2">
+          <div className="text-white w-full text-left border-b-2 md:border-b-3 border-white text-xl md:text-3xl 2xl:text-4xl! 4xl:text-5xl! font-bold pb-2">
             {item[lang].title}
           </div>
-          <div className="text-white w-full mt-3 font-semibold text-lg md:text-2xl">
+          <div className="text-white w-full mt-3 font-semibold text-lg md:text-2xl 2xl:text-3xl! 4xl:text-4xl!">
             {item[lang].description}
           </div>
         </div>
@@ -172,19 +172,19 @@ const HotTopicSection = () => {
   // Sử dụng lại:
   const ConsultationButton = () => (
     <button
-      className="group relative block w-full max-w-[500px] mx-auto md:-mt-10 transition-all duration-300 hover:scale-105 active:scale-100 no-underline -translate-y-2 md:translate-y-0"
+      className="group relative block w-full max-w-[500px] 2xl:max-w-[700px]! mx-auto md:-mt-10 transition-all duration-300 hover:scale-105 active:scale-100 no-underline -translate-y-2 md:translate-y-0"
       onClick={openContactForm}
     >
       {/* Lớp nền Gradient */}
       <div
-        className="flex items-center justify-center border border-white rounded-[15px] md:rounded-[20px] h-[60px] md:h-[90px] w-full shadow-lg overflow-hidden"
+        className="flex items-center justify-center border border-white rounded-[15px] md:rounded-[20px] h-[60px] md:h-[90px] 4xl:h-[125px] w-full shadow-lg overflow-hidden"
         style={{
           backgroundImage:
             "linear-gradient(90.04deg, rgb(118, 127, 19) 0%, rgb(0, 0, 0) 134.48%)",
         }}
       >
         {/* Nội dung Text */}
-        <span className="text-white font-bold text-2xl sm:text-4xl md:text-4xl lg:text-5xl leading-none uppercase tracking-wider px-3 md:px-6 text-center">
+        <span className="text-white font-bold text-2xl sm:text-4xl md:text-4xl lg:text-5xl 4xl:text-7xl! leading-none uppercase tracking-wider px-3 md:px-6 text-center">
           {lang === "Viet" ? "Liên hệ tư vấn" : "Book a Consultation"}
         </span>
       </div>
@@ -231,7 +231,7 @@ const HotTopicSection = () => {
   const HotTopicBlockDesktop = () => (
     <div className="w-full flex-row items-center flex">
       {/* Phần bên trái: Chiếm 1 phần diện tích còn lại (3.5/10) */}
-      <div className="flex-1 min-w-0 flex flex-col gap-20 items-end">
+      <div className="flex-1 min-w-0 flex flex-col gap-20 2xl:gap-60! items-end">
         {topics
           .filter((item) => parseInt(item.Viet.index) % 2 !== 0)
           .map((item) => renderLeftColItem(item))}
@@ -244,7 +244,7 @@ const HotTopicSection = () => {
       </div>
 
       {/* Phần bên phải: Chiếm 1 phần diện tích còn lại (3.5/10) */}
-      <div className="flex-1 min-w-0 flex flex-col gap-30 items-start">
+      <div className="flex-1 min-w-0 flex flex-col gap-30 2xl:gap-70! items-start">
         {topics
           .filter((item) => parseInt(item[lang].index) % 2 === 0)
           .map((item) => renderRightColItem(item))}
@@ -295,7 +295,7 @@ const HotTopicSection = () => {
         <Image
           src={lang == "Viet" ? TopicImage2VN : TopicImage2EN}
           alt="text"
-          className="w-4/5 md:w-7/10 mx-auto md:mx-5 mb-10 mt-20 hidden md:block"
+          className={`w-4/5 ${lang == "Viet" ? "md:7/10" : "md:w-1/2"} mx-auto md:mx-5 mb-10 mt-20 hidden md:block`}
         />
         <Image
           src={lang == "Viet" ? TopicImage3VN : TopicImage3EN}
@@ -336,7 +336,7 @@ const HotTopicSection = () => {
         </div>
         <div className="w-4/5 md:w-1/2 mx-auto md:ml-0! md:mr-10! text-justify">
           <Image src={QuoteVN} alt="text" className="w-full mx-auto" />
-          <div className="text-xl md:text-3xl text-white leading-relaxed">
+          <div className="text-xl md:text-3xl 2xl:text-3xl! 4xl:text-5xl! text-white leading-relaxed">
             {lang == "Viet"
               ? "SHE Global Community là một hệ sinh thái toàn diện dành cho phụ nữ – nơi mỗi người phụ nữ được kết nối, được truyền cảm hứng và được nâng đỡ trên hành trình phát triển bản thân, sự nghiệp và tài chính. Chúng tôi tin rằng, khi một người phụ nữ được trao quyền, cô ấy không chỉ thay đổi cuộc đời mình mà còn lan tỏa những ảnh hưởng tích cực đến gia đình, cộng đồng và cả xã hội."
               : "SHE Global Community is a comprehensive ecosystem for women—where every woman is connected, inspired, and empowered on her journey of personal, career, and financial development. We believe that when a woman is empowered, she not only transforms her own life but also creates a positive impact on her family, community, and society."}
@@ -352,11 +352,11 @@ const HotTopicSection = () => {
           />
           <MoreInfoButton />
         </div>
-        <div className="w-1/2 mr-10 hidden md:flex flex-row gap-2">
-          <div className="my-auto">
+        <div className="w-1/2 hidden md:flex flex-row gap-2">
+          <div className="my-auto w-3/5">
             <Image src={Event1Image} alt="text" className="w-full mx-auto" />
           </div>
-          <div className="flex flex-col gap-2 w-1/2">
+          <div className="flex flex-col gap-2 w-2/5">
             <Image src={Event2Image} alt="text" className="w-full mx-auto" />
             <Image src={Event3Image} alt="text" className="w-full mx-auto" />
           </div>

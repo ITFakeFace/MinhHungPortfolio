@@ -32,9 +32,6 @@ $color-end: rgba(0, 0, 0, 0.1); // to-[#000000]/10
   align-items: center;
   justify-content: center;
 
-  // Kích thước vòng tròn
-  width: 75px;
-  height: 75px;
   border-radius: 50%; // Tạo hình tròn hoàn hảo
 
   // Tạo viền Gradient
@@ -61,10 +58,5 @@ $color-end: rgba(0, 0, 0, 0.1); // to-[#000000]/10
     color: white;
     font-weight: bold;
     font-size: 1.25rem;
-  }
-
-  @media (max-width: 767px) {
-    width: 60px;
-    height: 60px;
   }
 }

@@ -175,7 +175,9 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
       />
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="bg-[#3b4118]/50 w-full p-5 md:p-12! rounded-[3rem] shadow-2xl flex flex-col gap-2">
-          <h2 className="text-white text-3xl md:text-4xl font-bold text-center mb-3 uppercase tracking-wider">
+          <h2
+            className={`text-white ${lang == "Viet" ? "text-3xl" : "text-[1.3rem]"} md:text-4xl font-bold text-center mb-3 uppercase tracking-wider`}
+          >
             {lang === "Viet"
               ? "Đặt lịch trao đổi trực tiếp"
               : "SCHEDULE FOR DIRECT CONSULTATION"}
@@ -239,7 +241,7 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
             <Button
               type="submit"
               label={lang === "Viet" ? "Gửi đi!" : "Book now!"}
-              className="px-10! md:px-16! py-3! text-2xl md:text-4xl bg-white bg-linear-to-r! from-[#737c12] to-[#202305] text-white font-bold rounded-xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 border-none shadow-lg!"
+              className={`${lang == "Viet" ? "px-10!" : "px-5!"} md:px-16! py-3! text-2xl md:text-4xl bg-white bg-linear-to-r! from-[#737c12] to-[#202305] text-white font-bold rounded-xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 border-none shadow-lg!`}
             />
           </div>
         </div>
@@ -248,7 +250,7 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
           <Button
             type="submit"
             label={lang === "Viet" ? "Gửi đi!" : "Book now!"}
-            className="px-16! py-3! text-4xl bg-white bg-linear-to-r! from-[#737c12] to-[#202305] text-white font-bold rounded-3xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 border-none shadow-lg!"
+            className={`px-16! py-3! md:text-4xl! ${lang == "Viet" ? "text-2xl!" : "text-lg!"} bg-white bg-linear-to-r! from-[#737c12] to-[#202305] text-white font-bold rounded-3xl! hover:bg-[#d9d9d9] hover:scale-125 transition-all! duration-300 border-none shadow-lg!`}
           />
         </div>
       </form>

@@ -120,7 +120,7 @@ const CertificationSection = () => {
     return (
       <div className="flex flex-row items-start w-full max-w-5xl mx-auto gap-3 py-6">
         {/* CỘT LOGO: Cố định độ rộng hoặc dùng flex-basis */}
-        <div className="w-1/4 flex-shrink-0 flex justify-center">
+        <div className="w-1/4 2xl:w-1/4! flex-shrink-0 flex justify-center">
           <Image
             src={item[lang].logoImage}
             alt="Logo"
@@ -131,17 +131,17 @@ const CertificationSection = () => {
         {/* CỘT TEXT: Chiếm phần còn lại */}
         <div className="flex-1 flex flex-col gap-3 text-[#4c5409] mr-5">
           {/* Tiêu đề chính: Đậm và lớn nhất */}
-          <h2 className="text-3xl font-extrabold uppercase leading-tight tracking-tight">
+          <h2 className="text-3xl 2xl:text-3xl! font-extrabold uppercase leading-tight tracking-tight">
             {item[lang].title}
           </h2>
 
           {/* Tên đơn vị: Nhạt hơn hoặc kích thước vừa phải */}
-          <h3 className="text-xl font-bold uppercase tracking-wide opacity-90">
+          <h3 className="text-xl 2xl:text-2xl! font-bold uppercase tracking-wide opacity-90">
             {item[lang].unitName}
           </h3>
 
           {/* Mô tả: Căn đều hoặc căn trái tùy ý */}
-          <p className="text-lg leading-relaxed text-justify md:text-left">
+          <p className="text-lg 2xl:text-xl! leading-relaxed text-justify md:text-left">
             {item[lang].description}
           </p>
         </div>

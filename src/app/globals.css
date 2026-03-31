@@ -15,6 +15,9 @@
 }
 
 @theme {
+  --breakpoint-3xl: 125rem; /* 2000px */
+  --breakpoint-4xl: 160rem;
+
   @keyframes marquee {
     from {
       transform: translateX(0);

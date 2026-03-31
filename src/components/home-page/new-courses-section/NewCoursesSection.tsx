@@ -44,8 +44,8 @@ const NewCoursesSection = () => {
           />
         </a>
       </div>
-      <div className="w-7/10 md:w-8/10 flex flex-col md:flex-row mx-auto gap-20 md:gap-30 mt-10 sm:mt-20">
-        <div className="w-full md:w-1/2! flex flex-col justify-center items-center gap-13">
+      <div className="w-7/10 md:w-8/10 flex flex-col md:flex-row items-center justify-between mx-auto gap-20 md:gap-30 mt-10 sm:mt-20!">
+        <div className="w-full md:w-1/3! flex flex-col justify-between items-center gap-13">
           <div className="flex flex-col gap-1">
             <Image
               src={EventSub1Image}
@@ -55,7 +55,7 @@ const NewCoursesSection = () => {
             <div className="bg-[#7f8b1f] text-white w-full text-center text-lg sm:text-2xl font-semibold rounded-md p-2">
               THE YEAR AHEAD - VELOCITY 2026
             </div>
-            <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-white text-md sm:text-lg md:text-xl">
+            <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-white text-md sm:text-lg md:text-xl md:min-h-[9rem]! xl:min-h-[7.6rem] flex flex-col justify-center">
               <div className="text-center">
                 {lang == "Viet" ? "Thời gian: " : "Time: "}10/04/2026
               </div>
@@ -72,12 +72,12 @@ const NewCoursesSection = () => {
           >
             <Button
               unstyled
-              className="bg-linear-to-r from-[#4c5409] to-[#afb165] text-white px-5 py-2 text-2xl sm:text-4xl font-bold rounded-xl w-fit mx-auto cursor-pointer hover:scale-110 transition-all duration-300"
+              className="bg-linear-to-r from-[#4c5409] to-[#afb165] text-white px-5 py-2 text-2xl md:text-2xl! lg:text-3xl! 2xl:text-4xl! font-bold rounded-xl w-fit mx-auto cursor-pointer hover:scale-110 transition-all duration-300"
               label={lang == "Viet" ? "XEM THÊM >>>" : "SEE MORE >>>"}
             />
           </a>
         </div>
-        <div className="w-full md:w-1/2! flex flex-col justify-center items-center gap-13">
+        <div className="w-full md:w-1/3! flex flex-col justify-between items-center gap-13">
           <div className="flex flex-col gap-1">
             <Image
               src={EventSub2Image}
@@ -87,7 +87,7 @@ const NewCoursesSection = () => {
             <div className="bg-[#7f8b1f] text-white w-full text-center text-lg sm:text-2xl font-semibold rounded-md p-2">
               AI REVOLUTION SUMMIT VIETNAM
             </div>
-            <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-md sm:text-lg md:text-xl">
+            <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-md sm:text-lg md:text-xl md:min-h-[9rem]! xl:min-h-[7.6rem] flex flex-col justify-center">
               <div className="text-white text-center">
                 {lang == "Viet" ? "Thời gian: " : "Time: "}24/04/2026
               </div>
@@ -104,12 +104,12 @@ const NewCoursesSection = () => {
           >
             <Button
               unstyled
-              className="bg-linear-to-r from-[#4c5409] to-[#afb165] text-white px-5 py-2 text-2xl sm:text-4xl font-bold rounded-xl w-fit mx-auto cursor-pointer hover:scale-110 transition-all duration-300"
+              className="bg-linear-to-r from-[#4c5409] to-[#afb165] text-white px-5 py-2 text-2xl md:text-2xl! lg:text-3xl! 2xl:text-4xl! font-bold rounded-xl w-fit mx-auto cursor-pointer hover:scale-110 transition-all duration-300"
               label={lang == "Viet" ? "XEM THÊM >>>" : "SEE MORE >>>"}
             />
           </a>
         </div>
-        <div className="w-full md:w-1/2! flex flex-col justify-center items-center gap-13">
+        <div className="w-full md:w-1/3! flex flex-col justify-between items-center gap-13">
           <div className="flex flex-col gap-1">
             <Image
               src={EventSub3Image}
@@ -119,9 +119,9 @@ const NewCoursesSection = () => {
             <div className="bg-[#7f8b1f] text-white w-full text-center text-lg sm:text-2xl font-semibold rounded-md p-2">
               AI REVOLUTION SUMMIT VIETNAM
             </div>
-            <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-md sm:text-lg md:text-xl">
+            <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-md sm:text-lg md:text-xl md:min-h-[9rem]! xl:min-h-[7.6rem] flex flex-col justify-center">
               <div className="text-white text-center">
-                {lang == "Viet" ? "Thời gian: " : "Time: "}17:30 | 31.03.2026s
+                {lang == "Viet" ? "Thời gian: " : "Time: "}17:30 | 31.03.2026
               </div>
               <div className="text-white text-center">
                 {lang == "Viet"
@@ -130,10 +130,14 @@ const NewCoursesSection = () => {
               </div>
             </div>
           </div>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://csmovietnam.com/csmo-new-year-meet-up-2026-from-pressure-to-power/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button
               unstyled
-              className="bg-linear-to-r from-[#4c5409] to-[#afb165] text-white px-5 py-2 text-2xl sm:text-4xl font-bold rounded-xl w-fit mx-auto cursor-pointer hover:scale-110 transition-all duration-300"
+              className="bg-linear-to-r from-[#4c5409] to-[#afb165] text-white px-5 py-2 text-2xl md:text-2xl! lg:text-3xl! 2xl:text-4xl! font-bold rounded-xl w-fit mx-auto cursor-pointer hover:scale-110 transition-all duration-300"
               label={lang == "Viet" ? "XEM THÊM >>>" : "SEE MORE >>>"}
             />
           </a>

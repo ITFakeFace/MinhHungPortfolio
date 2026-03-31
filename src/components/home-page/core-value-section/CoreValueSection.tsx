@@ -130,18 +130,18 @@ const CoreValueSection = () => {
         key={item[lang].index}
         className="flex flex-row w-full gap-4 px-5 sm:px-20 md:px-5"
       >
-        <div className="max-w-30">
+        <div className="">
           <div
-            className={`${styles.numberCircle} text-white text-2xl md:text-4xl font-bold aspect-square flex justify-center items-center text-center`}
+            className={`${styles.numberCircle} w-[60px] md:w-[75px]! 2xl:w-[125px]! text-white text-2xl md:text-4xl 2xl:text-6xl! font-bold aspect-square flex justify-center items-center text-center`}
           >
             {item[lang].index}
           </div>
         </div>
         <div className="flex flex-col gap-3">
-          <div className="text-2xl md:text-4xl text-white font-semibold">
+          <div className="text-2xl md:text-4xl 4xl:text-5xl! text-white font-semibold">
             {item[lang].title}
           </div>
-          <div className="text-lg md:text-2xl text-white ">
+          <div className="text-lg md:text-2xl 4xl:text-4xl! text-white ">
             {item[lang].description}
           </div>
         </div>
@@ -166,12 +166,12 @@ const CoreValueSection = () => {
               label={
                 lang == "Viet" ? "Trao đổi trực tiếp" : "One-on-one discussion"
               }
-              className="hidden md:block bg-linear-to-r from-[#757e13] to-[#1c1e04] text-white text-2xl sm:text-4xl font-bold rounded-2xl w-fit px-10 py-3 border-2 border-white cursor-pointer hover:scale-110 transition-all duration-300"
+              className="hidden md:block bg-linear-to-r from-[#757e13] to-[#1c1e04] text-white text-2xl sm:text-4xl 2xl:text-6xl!  font-bold rounded-2xl w-fit px-10 py-3 2xl:px-15! 2xl:py-7! border-2 border-white cursor-pointer hover:scale-110 transition-all duration-300"
               onClick={openContactForm}
             />
           </div>
         </div>
-        <div className="w-full md:w-8/15 flex flex-col mt-0 md:mt-0 gap-5 md:gap-10 justify-center items-center md:items-start">
+        <div className="w-full md:w-8/15 flex flex-col mt-0 md:mt-0 gap-5 md:gap-10 2xl:gap-20! justify-center items-center md:items-start">
           <Image
             src={lang == "Viet" ? CoreValueTextVN : CoreValueTextEN}
             alt="Core Value Text"
@@ -186,11 +186,13 @@ const CoreValueSection = () => {
           label={
             lang == "Viet" ? "Trao đổi trực tiếp" : "One-on-one discussion"
           }
-          className="md:hidden block bg-linear-to-r from-[#757e13] to-[#1c1e04] text-white text-2xl sm:text-4xl font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto border-2 border-[#f4ff88]"
+          className="md:hidden block bg-linear-to-r from-[#757e13] to-[#1c1e04] text-white text-2xl sm:text-4xl! font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto border-2 border-[#f4ff88]"
           onClick={openContactForm}
         />
       </div>
-      <ImageFilmTrip images={films} speed="120s" />
+      <div className="2xl:scale-120">
+        <ImageFilmTrip images={films} speed="120s" />
+      </div>
     </div>
   );
 };
