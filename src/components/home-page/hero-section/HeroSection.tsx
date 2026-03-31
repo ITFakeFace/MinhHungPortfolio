@@ -32,11 +32,13 @@ const ExpButton = ({ className }: { className?: string }) => {
         className={`w-full aspect-9/5 bg-[linear-gradient(135deg,rgba(55,73,25,0.5)_0%,rgba(36,40,4,0.5)_50%,rgba(55,73,25,0.5)_100%)] p-2 border-3 md:border-5! border-[#454d09] text-white rounded-2xl md:rounded-4xl flex flex-col items-center justify-center gap-2`}
       >
         <div
-          className={`${lang == "Viet" ? "text-2xl" : "text-xl"} sm:text-5xl md:text-5xl lg:text-6xl xl:text-[75px]! animate-blink-resize text-center font-bold`}
+          className={`${lang == "Viet" ? "text-2xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-[75px]!" : "text-xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-[68px]!"}  animate-blink-resize text-center font-bold`}
         >
           +18 {lang == "Viet" ? "năm" : "years"}
         </div>
-        <div className="w-9/10 text-center text-[10px] sm:text-lg md:text-xl lg:text-2xl font-semibold">
+        <div
+          className={`w-9/10 text-center text-[10px] sm:text-lg md:text-xl ${lang == "Viet" ? "lg:text-2xl" : "lg:text-[24px]!"}  font-semibold1`}
+        >
           {lang == "Viet"
             ? "Lãnh đạo và quản lý ngành FMCG và Bán lẻ"
             : "FMCG and Retail Leadership & Management"}

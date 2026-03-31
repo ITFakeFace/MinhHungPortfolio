@@ -117,7 +117,7 @@ const NewCoursesSection = () => {
               className="w-full h-auto max-h-137.5 mx-auto"
             />
             <div className="bg-[#7f8b1f] text-white w-full text-center text-lg sm:text-2xl font-semibold rounded-md p-2">
-              AI REVOLUTION SUMMIT VIETNAM
+              FROM PRESSURE TO POWER
             </div>
             <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-md sm:text-lg md:text-xl md:min-h-[9rem]! xl:min-h-[7.6rem] flex flex-col justify-center">
               <div className="text-white text-center">

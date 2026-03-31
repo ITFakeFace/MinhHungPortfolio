@@ -4,6 +4,7 @@ import MethodDesktop2 from "@/assets/home-page/assets/method-2.png";
 import MethodDesktop1EN from "@/assets/home-page/assets/methodEN-1.png";
 import MethodDesktop2EN from "@/assets/home-page/assets/methodEN-2.png";
 import MethodText1 from "@/assets/home-page/text/MethodText-1.png";
+import MethodText1EN from "@/assets/home-page/text/MethodTextEN-1.png";
 import MethodMobile1 from "@/assets/home-page/assets/method-3.png";
 import MethodMobile2 from "@/assets/home-page/assets/method-4.png";
 import MethodMobile3 from "@/assets/home-page/assets/method-5.png";
@@ -42,7 +43,11 @@ const EducationMethodSection = () => {
         className={`block! md:hidden! ${styles.generalBox} ${styles.mobileBox}`}
       >
         <div className="flex flex-col w-4/5 mx-auto items-center justify-center mt-5">
-          <Image src={MethodText1} alt="Title" className=" mx-auto" />
+          <Image
+            src={lang == "Viet" ? MethodText1 : MethodText1EN}
+            alt="Title"
+            className=" mx-auto"
+          />
           <Image src={MethodMobile1} alt="Title" className="mx-auto my-10" />
           <div className="text-2xl sm:text-4xl text-center text-white font-semibold mt-5 mb-5">
             {lang == "Viet"
