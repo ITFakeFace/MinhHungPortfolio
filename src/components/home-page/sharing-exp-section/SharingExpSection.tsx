@@ -38,7 +38,7 @@ const SharingExpSection = () => {
         content:
           "Với tôi văn hóa là “cách doanh nghiệp sống mỗi ngày” - Đó là “DNA” của tổ chức, là \“không khí\” mà chúng ta hít thở mỗi ngày khi đi làm",
         image: Exp1Image,
-        url: "https://www.linkedin.com/posts/minh-hung-le-2a76111a9_trong-b%E1%BB%91i-c%E1%BA%A3nh-hi%E1%BB%87n-nay-v%C4%83n-ho%C3%A1-doanh-nghi%E1%BB%87p-activity-7406643758693478400-qghx",
+        url: "https://www.linkedin.com/posts/advertisingvietnam_trong-b%E1%BB%91i-c%E1%BA%A3nh-hi%E1%BB%87n-nay-v%C4%83n-ho%C3%A1-doanh-nghi%E1%BB%87p-activity-7406611560841895936-NzO1?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0",
       },
       Eng: {
         title:
@@ -47,7 +47,7 @@ const SharingExpSection = () => {
         content:
           "To me, corporate culture is “how a company lives every day” — it is the “DNA” of an organization, the “air” we breathe every day at work.",
         image: Exp1Image,
-        url: "https://www.linkedin.com/posts/minh-hung-le-2a76111a9_trong-b%E1%BB%91i-c%E1%BA%A3nh-hi%E1%BB%87n-nay-v%C4%83n-ho%C3%A1-doanh-nghi%E1%BB%87p-activity-7406643758693478400-qghx",
+        url: "https://www.linkedin.com/posts/advertisingvietnam_trong-b%E1%BB%91i-c%E1%BA%A3nh-hi%E1%BB%87n-nay-v%C4%83n-ho%C3%A1-doanh-nghi%E1%BB%87p-activity-7406611560841895936-NzO1?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0",
       },
     },
     {
