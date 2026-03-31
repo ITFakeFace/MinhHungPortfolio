@@ -9,7 +9,7 @@ import TopicImage3VN from "@/assets/home-page/text/TopicText-3.png";
 import QuoteVN from "@/assets/home-page/text/Quote-3.png";
 import Event1Image from "@/assets/home-page/assets/event-1.png";
 import Event2Image from "@/assets/home-page/assets/TopicEvent-1.jpg";
-import Event3Image from "@/assets/home-page/assets/event-3.png";
+import Event3Image from "@/assets/home-page/assets/event-3.jpg";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
 import styles from "./HotTopicSection.module.scss";
