@@ -1,0 +1,18 @@
+$bg-mobile-image-url1: url("../../../assets/home-page/background/bg-newest-course-1.png");
+$bg-mobile-image-url2: url("../../../assets/home-page/background/bg-newest-course-1.png");
+$bg-btn-image: url("../../../assets/home-page/background/bg-button-gold-1.png");
+$bg-gradient-start: #3a3d12;
+
+.container {
+  background:
+    $bg-mobile-image-url1 no-repeat center top / contain,
+    $bg-mobile-image-url2 no-repeat center bottom / contain,
+    $bg-gradient-start;
+
+  background-size: cover, cover; // 🔥 QUAN TRỌNG
+  background-blend-mode: overlay;
+}
+
+.goldenButton {
+  background: $bg-btn-image no-repeat center / cover;
+}

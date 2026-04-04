@@ -13,6 +13,7 @@ import SharingExpSection from "@/components/home-page/sharing-exp-section/Sharin
 import VideoSection from "@/components/home-page/video-section/VideoSection";
 import { ContactProvider } from "@/context/ContactContext";
 import { useLanguage } from "@/context/LanguageContext";
+import NewestCouresSection from "@/components/home-page/newest-courses-section/NewestCouresSection";
 
 export default function Home() {
   const { lang } = useLanguage();
@@ -22,6 +23,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
+        <NewestCouresSection />
         <NewCoursesSection />
         <EducationMethodSection />
         <CertificateSection />
