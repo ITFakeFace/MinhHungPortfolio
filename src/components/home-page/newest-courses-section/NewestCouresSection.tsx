@@ -6,6 +6,8 @@ import ProgramText from "@/assets/home-page/text/ProgramText-1.png";
 import ProgramTextEN from "@/assets/home-page/text/ProgramTextEN-1.png";
 import Plan4ModuleText from "@/assets/home-page/text/Plan4ModuleText-1.png";
 import Plan4ModuleTextEN from "@/assets/home-page/text/Plan4ModuleTextEN-1.png";
+import Plan4ModuleTextDesktop from "@/assets/home-page/text/Plan4ModuleTextDesktop-1.png";
+import Plan4ModuleTextDesktopEN from "@/assets/home-page/text/Plan4ModuleTextDesktopEN-1.png";
 import ConquerMarketText from "@/assets/home-page/text/WeaponConquerMarketText-1.png";
 import ConquerMarketTextEN from "@/assets/home-page/text/WeaponConquerMarketTextEN-1.png";
 import SolutionText from "@/assets/home-page/text/SolutionText-1.png";
@@ -156,10 +158,10 @@ const NewestCouresSection = () => {
       <Image
         src={lang == "Viet" ? NewestCourseText : NewestCourseTextEN}
         alt="Newest Course Text"
-        className={`w-4/5 lg:w-7/10 mx-auto my-20`}
+        className={`w-4/5 lg:w-7/10 mx-auto my-10 lg:my-20`}
       />
       <div
-        className={`bg-black/40 border-4 border-[#8D7234] rounded-4xl lg:rounded-[130px] w-19/20 mx-auto flex flex-col gap-4 lg:gap-15! py-5 lg:py-20! text-white`}
+        className={`bg-black/60 border-4 border-[#8D7234] rounded-4xl lg:rounded-[130px] w-19/20 mx-auto flex flex-col gap-4 lg:gap-15! py-5 lg:py-20! text-white`}
       >
         <Image
           src={lang == "Viet" ? ProgramText : ProgramTextEN}
@@ -207,7 +209,7 @@ const NewestCouresSection = () => {
         <div
           className={`flex flex-col lg:flex-row items-stretch w-19/20 mx-auto gap-3`}
         >
-          <div className="w-full lg:w-3/5! flex flex-col items-center justify-center bg-transparent">
+          <div className="w-full lg:w-1/2! flex flex-col items-center justify-center bg-transparent">
             <div
               className={`lg:hidden! block font-bold text-[clamp(1.5rem,5vw,4rem)] text-center text-balance mt-4 mb-2`}
             >
@@ -224,7 +226,7 @@ const NewestCouresSection = () => {
             </div>
           </div>
           <div
-            className={`flex flex-col gap-2 lg:gap-6 w-full lg:w-2/5! mx-auto mt-0 lg:mt-5 px-0 lg:px-3`}
+            className={`flex flex-col gap-2 lg:gap-2 w-full lg:w-1/2! mx-auto mt-0 lg:mt-5 px-0 lg:px-3`}
           >
             <div
               className={`hidden lg:block font-bold text-[clamp(1.5rem,5vw,3.5rem)] text-center text-balance`}
@@ -285,7 +287,14 @@ const NewestCouresSection = () => {
           <Image
             src={lang == "Viet" ? Plan4ModuleText : Plan4ModuleTextEN}
             alt="Plan 4 Module Text"
-            className={`w-9/10 lg:w-7/10 mx-auto mt-5`}
+            className={`block md:hidden w-9/10 lg:w-7/10 mx-auto mt-5`}
+          />
+          <Image
+            src={
+              lang == "Viet" ? Plan4ModuleTextDesktop : Plan4ModuleTextDesktopEN
+            }
+            alt="Plan 4 Module Text"
+            className={`hidden md:block w-9/10 lg:w-7/10 mx-auto mt-5`}
           />
           <div
             className={`grid! grid-cols-1 md:grid-cols-3 gap-4 ustify-center mt-3 lg:mt-8 mx-5 items-stretch`}
@@ -898,7 +907,7 @@ const NewestCouresSection = () => {
           <Image
             src={lang == "Viet" ? CoursePackText : CoursePackTextEN}
             alt="Market Conquering Weapon Text"
-            className={`w-3/5 mx-auto mt-10`}
+            className={`w-4/5 lg:w-3/5 mx-auto mt-10`}
           />
           <div className={`grid! grid-cols-1 lg:grid-cols-3 gap-4`}>
             {/* Package 1 */}
@@ -936,7 +945,9 @@ const NewestCouresSection = () => {
                   </div>
                 </div>
               </div>
-              <div className={`w-full flex items-center justify-center`}>
+              <div
+                className={`w-full flex items-center justify-center mt-5 md:mt-0`}
+              >
                 <Button
                   unstyled
                   onClick={openContactForm}
@@ -990,7 +1001,9 @@ const NewestCouresSection = () => {
                   </div>
                 </div>
               </div>
-              <div className={`w-full flex items-center justify-center`}>
+              <div
+                className={`w-full flex items-center justify-center mt-5 md:mt-0`}
+              >
                 <Button
                   unstyled
                   onClick={openContactForm}
@@ -1049,7 +1062,9 @@ const NewestCouresSection = () => {
                   </div>
                 </div>
               </div>
-              <div className={`w-full flex items-center justify-center`}>
+              <div
+                className={`w-full flex items-center justify-center mt-5 md:mt-0`}
+              >
                 <Button
                   unstyled
                   onClick={openContactForm}
