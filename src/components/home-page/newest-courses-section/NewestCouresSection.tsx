@@ -43,7 +43,7 @@ const NewestCouresSection = () => {
     // Title: Scale từ 20px (mobile) lên 30px (2K)
     title:
       "font-bold italic text-center text-[#996205] " +
-      "text-[clamp(1.25rem,1rem+1.5vw,2.5rem)] mb-1 lg:mb-2",
+      "text-[clamp(1.15rem,1rem+0.5vw,2.5rem)] lg:text-[clamp(1.5rem,1rem+1.5vw,2.5rem)] mb-1 lg:mb-2",
 
     // Content: Scale từ 14px (mobile) lên 22px (2K)
     content:
@@ -224,10 +224,10 @@ const NewestCouresSection = () => {
             </div>
           </div>
           <div
-            className={`flex flex-col gap-2 lg:gap-6 w-full lg:w-2/5! mx-auto mt-0 lg:mt-5 px-0 lg:px-5`}
+            className={`flex flex-col gap-2 lg:gap-6 w-full lg:w-2/5! mx-auto mt-0 lg:mt-5 px-0 lg:px-3`}
           >
             <div
-              className={`hidden lg:block font-bold text-[clamp(1.5rem,5vw,4rem)] text-center text-balance`}
+              className={`hidden lg:block font-bold text-[clamp(1.5rem,5vw,3.5rem)] text-center text-balance`}
             >
               {lang == "Viet"
                 ? "NGƯỜI GIẢI BÀI TOÁN TĂNG TRƯỞNG"
@@ -938,19 +938,19 @@ const NewestCouresSection = () => {
               </div>
               <div className={`w-full flex items-center justify-center`}>
                 <Button
-                    unstyled
-                    onClick={openContactForm}
-                    className={`${styles.goldenButton} text-white font-bold
+                  unstyled
+                  onClick={openContactForm}
+                  className={`${styles.goldenButton} text-white font-bold
                   rounded-full 
                   text-[clamp(0.75rem,5vw,1rem)] 
                   lg:text-[clamp(1.5rem,5vw,1.75rem)] 
                   text-balance 
                   py-3 px-4 transition-all duration-300 mx-auto! mt-auto hover:cursor-pointer`}
-                  >
-                    {lang == "Viet"
-                      ? "CHI PHÍ TRAO ĐỔI THÊM"
-                      : "CONTACT FOR PRICING DETAILS"}
-                  </Button>
+                >
+                  {lang == "Viet"
+                    ? "CHI PHÍ TRAO ĐỔI THÊM"
+                    : "CONTACT FOR PRICING DETAILS"}
+                </Button>
               </div>
             </div>
             {/* Package 2 */}
