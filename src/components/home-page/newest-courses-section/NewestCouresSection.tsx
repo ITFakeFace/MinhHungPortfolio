@@ -24,8 +24,10 @@ import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
 import { Button } from "primereact/button";
 import { mergeClasses } from "@/utils/cn";
+import { useContactForm } from "@/context/ContactContext";
 
 const NewestCouresSection = () => {
+  const { openContactForm } = useContactForm();
   const { lang } = useLanguage();
   const TargetStyles: Record<string, string> = {
     // Container: Co giãn chiều rộng từ 95% (mobile) về 50% (desktop)
@@ -792,13 +794,12 @@ const NewestCouresSection = () => {
                     }
                   />
                 </a>
-                <a href="#consultation-form">
-                  <Button
-                    unstyled
-                    className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-3 px-10 rounded-4xl text-white text-xl lg:text-3xl font-bold hover:cursor-pointer`}
-                    label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "ENROLL NOW"}
-                  />
-                </a>
+                <Button
+                  onClick={openContactForm}
+                  unstyled
+                  className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-3 px-10 rounded-4xl text-white text-xl lg:text-3xl font-bold hover:cursor-pointer`}
+                  label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "ENROLL NOW"}
+                />
               </div>
             </div>
           </div>
@@ -867,19 +868,19 @@ const NewestCouresSection = () => {
               </div>
 
               <div className={`mt-7 mb-5 w-full flex justify-center`}>
-                <a href="#consultation-form">
-                  <button
-                    className={`${styles.goldenButton} text-black font-bold
+                <Button
+                  unstyled
+                  onClick={openContactForm}
+                  className={`${styles.goldenButton} text-black font-bold
                   rounded-full 
                   text-[clamp(1rem,5vw,1.55rem)]
                   text-balance
                   py-3 px-4 transition-all duration-300 ml-5 mx-auto! hover:cursor-pointer`}
-                  >
-                    {lang == "Viet"
-                      ? "THỰC THI CHIẾN LƯỢC ĐÚNG NGAY HÔM NAY!"
-                      : "EXECUTE THE RIGHT STRATEGY TODAY!"}
-                  </button>
-                </a>
+                >
+                  {lang == "Viet"
+                    ? "THỰC THI CHIẾN LƯỢC ĐÚNG NGAY HÔM NAY!"
+                    : "EXECUTE THE RIGHT STRATEGY TODAY!"}
+                </Button>
               </div>
             </div>
             <div
@@ -936,20 +937,20 @@ const NewestCouresSection = () => {
                 </div>
               </div>
               <div className={`w-full flex items-center justify-center`}>
-                <a href="#consultation-form">
-                  <button
+                <Button
+                    unstyled
+                    onClick={openContactForm}
                     className={`${styles.goldenButton} text-white font-bold
                   rounded-full 
                   text-[clamp(0.75rem,5vw,1rem)] 
                   lg:text-[clamp(1.5rem,5vw,1.75rem)] 
-                  text-balance
-                  py-3 px-4 transition-all duration-300 ml-5 mx-auto! hover:cursor-pointer`}
+                  text-balance 
+                  py-3 px-4 transition-all duration-300 mx-auto! mt-auto hover:cursor-pointer`}
                   >
                     {lang == "Viet"
                       ? "CHI PHÍ TRAO ĐỔI THÊM"
                       : "CONTACT FOR PRICING DETAILS"}
-                  </button>
-                </a>
+                  </Button>
               </div>
             </div>
             {/* Package 2 */}
@@ -990,20 +991,20 @@ const NewestCouresSection = () => {
                 </div>
               </div>
               <div className={`w-full flex items-center justify-center`}>
-                <a href="#consultation-form">
-                  <button
-                    className={`${styles.goldenButton} text-white font-bold
+                <Button
+                  unstyled
+                  onClick={openContactForm}
+                  className={`${styles.goldenButton} text-white font-bold
                   rounded-full 
                   text-[clamp(0.75rem,5vw,1rem)] 
                   lg:text-[clamp(1.5rem,5vw,1.75rem)] 
-                  text-balance
-                  py-3 px-4 transition-all duration-300 ml-5 mx-auto! hover:cursor-pointer`}
-                  >
-                    {lang == "Viet"
-                      ? "CHI PHÍ TRAO ĐỔI THÊM"
-                      : "CONTACT FOR PRICING DETAILS"}
-                  </button>
-                </a>
+                  text-balance 
+                  py-3 px-4 transition-all duration-300 mx-auto! mt-auto hover:cursor-pointer`}
+                >
+                  {lang == "Viet"
+                    ? "CHI PHÍ TRAO ĐỔI THÊM"
+                    : "CONTACT FOR PRICING DETAILS"}
+                </Button>
               </div>
             </div>
             {/* Package 3 */}
@@ -1049,20 +1050,20 @@ const NewestCouresSection = () => {
                 </div>
               </div>
               <div className={`w-full flex items-center justify-center`}>
-                <a href="#consultation-form">
-                  <button
-                    className={`${styles.goldenButton} text-white font-bold
+                <Button
+                  unstyled
+                  onClick={openContactForm}
+                  className={`${styles.goldenButton} text-white font-bold
                   rounded-full 
                   text-[clamp(0.75rem,5vw,1rem)] 
                   lg:text-[clamp(1.5rem,5vw,1.75rem)] 
                   text-balance 
                   py-3 px-4 transition-all duration-300 mx-auto! mt-auto hover:cursor-pointer`}
-                  >
-                    {lang == "Viet"
-                      ? "CHI PHÍ TRAO ĐỔI THÊM"
-                      : "CONTACT FOR PRICING DETAILS"}
-                  </button>
-                </a>
+                >
+                  {lang == "Viet"
+                    ? "CHI PHÍ TRAO ĐỔI THÊM"
+                    : "CONTACT FOR PRICING DETAILS"}
+                </Button>
               </div>
             </div>
           </div>

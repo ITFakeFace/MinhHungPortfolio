@@ -7,6 +7,7 @@ import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import { Toast } from "primereact/toast";
 import { classNames } from "primereact/utils";
+import { div } from "framer-motion/client";
 
 interface FormData {
   fullName: string;
@@ -87,6 +88,38 @@ const ContactDialog = ({
     }
   };
 
+  const renderHeader = () => {
+    return (
+      <div className="flex items-center justify-between w-full pr-4">
+        {/* Tiêu đề (Căn trái hoặc giữa tùy bạn, ở đây tôi dùng flex-1 để chiếm chỗ) */}
+        <span className="text-[clamp(1.2rem,3vw,1.75rem)] font-bold text-white">
+          {lang === "Viet" ? "ĐĂNG KÝ TƯ VẤN" : "BOOK A CONSULTATION"}
+        </span>
+
+        {/* Nút X tùy chỉnh */}
+        <button
+          onClick={onHide}
+          className="p-2 rounded-full hover:bg-black/5 transition-colors cursor-pointer flex items-center justify-center"
+          aria-label="Close"
+        >
+          <svg
+            className="w-10 h-10 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+    );
+  };
+
   return (
     <>
       <Toast
@@ -124,7 +157,7 @@ const ContactDialog = ({
       <Dialog
         visible={visible}
         onHide={onHide}
-        header={lang === "Viet" ? "ĐĂNG KÝ TƯ VẤN" : "BOOK A CONSULTATION"}
+        header={renderHeader}
         draggable={false}
         resizable={false}
         dismissableMask
@@ -297,7 +330,9 @@ const ContactDialog = ({
           {/* Nội dung */}
           <div className="flex flex-col gap-1">
             <label className="text-white font-bold ml-1 text-lg">
-              {lang === "Viet" ? "Nội dung tư vấn" : "Content"}
+              {lang === "Viet"
+                ? "Khóa học/Nội dung tư vấn"
+                : "Course/Consultation Content"}
             </label>
             <Controller
               name="content"

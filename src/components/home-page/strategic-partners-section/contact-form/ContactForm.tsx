@@ -66,7 +66,10 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
     },
     {
       name: "content",
-      label: lang === "Viet" ? "Nội dung tư vấn" : "Consultation Content",
+      label:
+        lang === "Viet"
+          ? "Khóa học/Nội dung tư vấn"
+          : "Course/Consultation Content",
       type: "textarea",
       mobileMDWidth: "w-3/5 md:w-full", // Chiếm 3/5 width trên mobile
       mobileSMWidth: "w-3/5 ", // Chiếm 3/5 width trên mobile
