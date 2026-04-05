@@ -1,41 +1,51 @@
 "use client";
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import { TRANSLATIONS } from "@/data/content";
 import { Language } from "@/types/content";
 import { LanguageContextType } from "@/types/LanguageContextType";
 
-const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined,
-);
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
+  // 1. Khởi tạo state mặc định (Tạm thời để là Viet)
   const [lang, setLang] = useState<Language>("Viet");
+  const [isInitialized, setIsInitialized] = useState(false);
 
-  // Hàm lấy nội dung theo key (ví dụ: t('hero.title'))
+  // 2. useEffect để đọc từ localStorage khi component mount (chỉ chạy ở Client)
+  useEffect(() => {
+    const savedLang = localStorage.getItem("user-language") as Language;
+    if (savedLang && (savedLang === "Viet" || savedLang === "Eng")) {
+      setLang(savedLang);
+    }
+    setIsInitialized(true);
+  }, []);
+
+  // 3. useEffect để lưu vào localStorage mỗi khi lang thay đổi
+  useEffect(() => {
+    if (isInitialized) {
+      localStorage.setItem("user-language", lang);
+    }
+  }, [lang, isInitialized]);
+
   const t = (path: string): string => {
     const keys = path.split(".");
-
-    // Bắt đầu từ Object ngôn ngữ hiện tại
-    let result: unknown = TRANSLATIONS[lang as Language];
+    let result: unknown = TRANSLATIONS[lang];
 
     for (const key of keys) {
-      // Kiểm tra result có phải là Object và có chứa key đó không
-      if (result && typeof result === "object" && key in result) {
-        // Ép kiểu tạm thời sang Record để truy cập thuộc tính kế tiếp
+      if (result && typeof result === "object" && key in (result as object)) {
         result = (result as Record<string, unknown>)[key];
       } else {
-        return path; // Trả về chính path nếu không tìm thấy nội dung
+        return path;
       }
     }
 
-    // Cuối cùng, chỉ trả về nếu result thực sự là một chuỗi
     return typeof result === "string" ? result : path;
   };
 
+  // Ngăn chặn Hydration Mismatch (Tùy chọn)
+  // Nếu bạn muốn tránh việc giao diện bị nháy từ Viet sang Eng khi vừa load trang,
+  // có thể return null hoặc loading spinner cho đến khi isInitialized = true.
+  
   return (
     <LanguageContext.Provider value={{ lang, setLang, t }}>
       {children}
@@ -45,12 +55,8 @@ export const LanguageProvider = ({
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
-
-  // Nếu context là undefined, chương trình sẽ dừng tại đây và báo lỗi
   if (context === undefined) {
     throw new Error("useLanguage must be used within a LanguageProvider");
   }
-
-  // Sau dòng này, TS tự hiểu context chắc chắn là LanguageContextType (không còn undefined)
   return context;
 };

@@ -589,12 +589,12 @@ const NewestCouresSection = () => {
                   <li>
                     {lang == "Viet"
                       ? "Học viên tự xây dựng được AOP 12 tháng cho MT"
-                      : "Học viên tự xây dựng được AOP 12 tháng cho MT"}
+                      : "Learners are able to independently develop a 12-month AOP for Modern Trade (MT)"}
                   </li>
                   <li>
                     {lang == "Viet"
                       ? "Có thể phân tích và đưa ra chiến lược Execution → Target → Budget → ROI"
-                      : "Có thể phân tích và đưa ra chiến lược Execution → Target → Budget → ROI"}
+                      : "Capable of analyzing and formulating strategies across Execution → Target → Budget → ROI"}
                   </li>
                 </ul>
               </div>
@@ -1209,8 +1209,8 @@ const FloatingHero = () => {
         <div
           className={`
             relative lg:absolute 
-            lg:bottom-[7%] lg:left-[13%] 
-            z-20 w-full lg:max-w-[500px]
+            lg:bottom-[3%] lg:left-[13%] 
+            z-20 w-full lg:max-w-[550px]
             /* Mobile: Trái */
             self-start text-left pl-4 
             /* Desktop: Trái */
