@@ -14,7 +14,7 @@ export interface ITranslation {
   nav: {
     about: string;
     experience: string;
-    project: string;
+    courses: string;
     method: string;
     partner: string;
   };

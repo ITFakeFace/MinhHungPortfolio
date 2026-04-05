@@ -21,10 +21,10 @@ const Navbar = () => {
   // Cấu trúc menu lấy từ t() để tự động dịch
   const menuItems = [
     { key: "about", id: "about" },
+    { key: "courses", id: "courses" },
     { key: "experience", id: "experience" },
     { key: "method", id: "method" },
     { key: "partner", id: "partners" },
-    { key: "project", id: "she-project" },
   ];
 
   // LOGIC CHECK OVERFLOW

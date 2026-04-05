@@ -4,10 +4,10 @@ export const TRANSLATIONS: Record<Language, ITranslation> = {
   Viet: {
     nav: {
       about: "GIỚI THIỆU",
+      courses: "KHÓA HỌC",
       experience: "KINH NGHIỆM",
       method: "PHƯƠNG PHÁP",
       partner: "ĐỐI TÁC",
-      project: "DỰ ÁN SHE GLOBAL COMMUNITY",
     },
     hero: {
       title: "MINH HƯNG",
@@ -33,7 +33,11 @@ export const TRANSLATIONS: Record<Language, ITranslation> = {
       {
         duration: "2024 - 2025",
         desc: [
-          { type: "text", value: "Giám đốc Kinh doanh Quốc tế, Kênh MT & Thương mại Điện tử & SA tại Tân Hiệp Phát" },
+          {
+            type: "text",
+            value:
+              "Giám đốc Kinh doanh Quốc tế, Kênh MT & Thương mại Điện tử & SA tại Tân Hiệp Phát",
+          },
           { type: "image", src: "/home-page/logo/THPGroupLogo-1.png" },
           { type: "text", value: "CEO/Nhà sáng lập SHE Global Community" },
           { type: "image", src: "/home-page/logo/SheLogo-1.png" },
@@ -46,10 +50,10 @@ export const TRANSLATIONS: Record<Language, ITranslation> = {
   Eng: {
     nav: {
       about: "ABOUT",
+      courses: "COURSES",
       experience: "EXPERIENCE",
       method: "METHOD",
       partner: "PARTNERS",
-      project: "SHE GLOBAL COMMUNITY PROJECT",
     },
     hero: {
       title: "MINH HUNG",

@@ -63,6 +63,7 @@ const Footer = () => {
           <a
             href="/MinhHungPortfolio/documents/PORTFOLIO.pdf" // Đường dẫn file trong thư mục public
             download="HelenaPortfolio.pdf" // Tên file khi tải về máy
+            target="_blank"
             className="mx-auto" // Căn giữa thẻ a
           >
             <Button

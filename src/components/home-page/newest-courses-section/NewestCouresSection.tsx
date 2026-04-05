@@ -19,10 +19,11 @@ import MsHungEN from "@/assets/home-page/assets/NewestCourseMsHungEN-1.png";
 import WeaponConquerMarket from "@/assets/home-page/assets/WeaponConquerMarket-1.png";
 import SolutionImage from "@/assets/home-page/assets/SolutionImage-1.png";
 import EventLinkedInImage from "@/assets/home-page/assets/EventLinkedIn-1.png";
-import CourseBookImage from "@/assets/home-page/assets/CourseBookImage-1.png";
+import CourseBookImage from "@/assets/home-page/assets/EbookImage-1.png";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
 import { Button } from "primereact/button";
+import { mergeClasses } from "@/utils/cn";
 
 const NewestCouresSection = () => {
   const { lang } = useLanguage();
@@ -31,7 +32,7 @@ const NewestCouresSection = () => {
     // Padding và Gap cũng dùng clamp để tự nở ra trên màn 2K
     container:
       "flex flex-col mx-auto justify-center items-center " +
-      "w-[clamp(92%,85%+2vw,50%)] " +
+      "w-[clamp(95%,85%+2vw,50%)] " +
       "bg-linear-to-tr from-[#FFFCA7] to-[#FFFEDA] " +
       "border-3 border-[#7F8B1E] rounded-3xl lg:rounded-4xl " +
       "p-[clamp(0.75rem,1vw,1.5rem)] " +
@@ -40,12 +41,12 @@ const NewestCouresSection = () => {
     // Title: Scale từ 20px (mobile) lên 30px (2K)
     title:
       "font-bold italic text-center text-[#996205] " +
-      "text-[clamp(1.25rem,1rem+1.5vw,2.25rem)] mb-1 lg:mb-2",
+      "text-[clamp(1.25rem,1rem+1.5vw,2.5rem)] mb-1 lg:mb-2",
 
     // Content: Scale từ 14px (mobile) lên 22px (2K)
     content:
-      "text-center italic text-[#2C3B0D] leading-relaxed " +
-      "text-[clamp(0.875rem,0.75rem+0.8vw,1.5rem)] mb-2",
+      "text-center italic text-[#2C3B0D] leading-relaxed text-balance " +
+      "text-[clamp(0.875rem,0.75rem+0.8vw,1.75rem)] mb-2",
   };
   const GrowthSolverStyles: Record<string, string> = {
     // Container: Giữ nguyên màu sắc của bạn, thêm padding linh hoạt
@@ -81,7 +82,7 @@ const NewestCouresSection = () => {
       "bg-linear-to-tr from-[#FFFCA7] to-[#FFFEDA] text-[#2C3B0D] h-full " +
       "border-4 border-[#2C3B0D] rounded-4xl p-3 shadow-lg " +
       "flex flex-col gap-4",
-
+    titleBox: "min-h-[clamp(9.2rem,52rem-35vw,9.2rem)] flex flex-col",
     // Module Index (MODULE 1, 2, 3)
     indexTitle:
       "text-[#CA8607] font-bold text-center " +
@@ -90,15 +91,17 @@ const NewestCouresSection = () => {
     // Title: Ép chiều cao tối thiểu để các title luôn chiếm không gian bằng nhau
     title:
       "font-extrabold text-center leading-tight text-[#2C3B0D] " +
-      "text-[clamp(1.5rem,0.9rem+1.2vw,1.75rem)] " + // 18px -> 32px
-      "min-h-[4rem] flex items-center justify-center text-balance", // Đảm bảo title luôn chiếm ít nhất 4rem chiều cao, và dùng text-balance để căn chỉnh đẹp
+      "text-[clamp(1.5rem,0.9rem+1.2vw,1.65rem)] " + // 18px -> 32px
+      "flex items-center justify-center text-balance", // Đảm bảo title luôn chiếm ít nhất 4rem chiều cao, và dùng text-balance để căn chỉnh đẹp
 
     // Subtitle
     subtitle:
       "italic text-center block opacity-90 " +
       "text-[clamp(1.25rem,0.75rem+0.5vw,1.5rem)] " + // 14px -> 18px
-      "min-h-[3.5rem] flex items-start justify-center",
-
+      "min-h-[5.6rem] flex items-start justify-center",
+    learningOutcomesBox: "min-h-[clamp(6rem,15vh,8.4rem)]",
+    keyTopicsBox: "lg:min-h-[23rem] 2xl:min-h-[17.5rem]",
+    targetAudienceBox: "",
     // Section (Kết quả, Nội dung, Đối tượng)
     // Mỗi section này sẽ có min-h để đẩy các phần dưới xuống đều nhau
     sectionWrapper: "flex-1 flex flex-col gap-4",
@@ -133,28 +136,28 @@ const NewestCouresSection = () => {
     container:
       "bg-linear-to-tr from-[#FFFCA7] to-[#FFFEDA] text-[#2C3B0D] h-full " +
       "border-4 border-[#2C3B0D] rounded-4xl p-3 shadow-lg " +
-      "flex flex-col gap-2 lg:gap-4",
+      "flex flex-col gap-2 lg:gap-3",
     indexTitle:
       "text-[#CA8607] font-bold text-center " +
       "text-[clamp(1rem,1rem+1.5vw,2rem)]", // 20px -> 40px
     title:
       "font-extrabold text-center leading-tight text-[#2C3B0D] " +
-      "text-[clamp(1.25rem,0.9rem+1.2vw,2rem)] " + // 18px -> 32px
-      "min-h-[3rem] lg:min-h-[4.15rem] flex items-start justify-center",
-    contentBox: "min-h-[8.5rem] lg:min-h-[12.5rem]",
-    key: "font-bold text-[clamp(1.5rem,0.75rem+0.5vw,1.65rem)]",
-    content: "font-normal text-[clamp(1.3rem,0.75rem+0.5vw,1.5rem)]",
+      "text-[clamp(1.5rem,0.9rem+1.2vw,2.5rem)] " + // 18px -> 32px
+      "min-h-[3rem] xl:min-h-[5.78rem] 2xl:min-h-[5.78rem] flex items-start justify-center",
+    contentBox: "flex-1",
+    key: "font-bold text-[clamp(1.5rem,0.75rem+1.5vw,1.65rem)]",
+    content: "font-normal text-[clamp(1.3rem,0.75rem+1.5vw,1.5rem)]",
   };
 
   return (
-    <div className={`${styles.container} w-full`}>
+    <div id="courses" className={`${styles.container} w-full`}>
       <Image
         src={lang == "Viet" ? NewestCourseText : NewestCourseTextEN}
         alt="Newest Course Text"
-        className={`w-7/10 mx-auto my-20`}
+        className={`w-4/5 lg:w-7/10 mx-auto my-20`}
       />
       <div
-        className={`bg-black/40 border-2 border-[#8D7234] rounded-4xl lg:rounded-[130px] w-19/20 mx-auto flex flex-col gap-4 lg:gap-15! py-5 lg:py-20! text-white`}
+        className={`bg-black/40 border-4 border-[#8D7234] rounded-4xl lg:rounded-[130px] w-19/20 mx-auto flex flex-col gap-4 lg:gap-15! py-5 lg:py-20! text-white`}
       >
         <Image
           src={lang == "Viet" ? ProgramText : ProgramTextEN}
@@ -199,17 +202,30 @@ const NewestCouresSection = () => {
         </div>
 
         {/* Growth Solver Boxes */}
-        <div className={`flex flex-col lg:flex-row w-9/10 mx-auto gap-3`}>
-          <Image
-            src={lang == "Viet" ? MsHung : MsHungEN}
-            alt="Ms. Hung"
-            className={`w-full h-auto lg:w-1/2! mx-auto object-contain`}
-          />
+        <div
+          className={`flex flex-col lg:flex-row items-stretch w-19/20 mx-auto gap-3`}
+        >
+          <div className="w-full lg:w-3/5! flex flex-col items-center justify-center bg-transparent">
+            <div
+              className={`lg:hidden! block font-bold text-[clamp(1.5rem,5vw,4rem)] text-center text-balance mt-4 mb-2`}
+            >
+              {lang == "Viet"
+                ? "NGƯỜI GIẢI BÀI TOÁN TĂNG TRƯỞNG"
+                : "THE GROWTH PROBLEM SOLVER"}
+            </div>
+            <div className="w-full h-full flex items-center justify-center">
+              <Image
+                src={lang == "Viet" ? MsHung : MsHungEN}
+                alt="Ms. Hung"
+                className="w-full h-auto max-h-full object-contain"
+              />
+            </div>
+          </div>
           <div
-            className={`flex flex-col gap-2 lg:gap-5 w-full lg:w-1/2! mx-auto mt-0 lg:mt-5 px-0 lg:px-5`}
+            className={`flex flex-col gap-2 lg:gap-6 w-full lg:w-2/5! mx-auto mt-0 lg:mt-5 px-0 lg:px-5`}
           >
             <div
-              className={`font-bold text-2xl lg:text-5xl! text-center text-balance`}
+              className={`hidden lg:block font-bold text-[clamp(1.5rem,5vw,4rem)] text-center text-balance`}
             >
               {lang == "Viet"
                 ? "NGƯỜI GIẢI BÀI TOÁN TĂNG TRƯỞNG"
@@ -267,21 +283,25 @@ const NewestCouresSection = () => {
           <Image
             src={lang == "Viet" ? Plan4ModuleText : Plan4ModuleTextEN}
             alt="Plan 4 Module Text"
-            className={`w-9/10 lg:w-4/5 mx-auto mt-5`}
+            className={`w-9/10 lg:w-7/10 mx-auto mt-5`}
           />
           <div
-            className={`grid! grid-cols-1 md:grid-cols-3 gap-4 items-center justify-center mt-3 lg:mt-8 mx-5`}
+            className={`grid! grid-cols-1 md:grid-cols-3 gap-4 ustify-center mt-3 lg:mt-8 mx-5 items-stretch`}
           >
             {/* MODULE 1 */}
             <div className={`${Plan4ModuleStyles.container}`}>
-              <div className={`lg:min-h-[150px]! xl:min-h-[250px]`}>
+              <div className={`${Plan4ModuleStyles.titleBox}`}>
                 <div className={`${Plan4ModuleStyles.indexTitle}`}>
                   MODULE 1:
                 </div>
                 <div className={`${Plan4ModuleStyles.title}`}>
                   {lang == "Viet"
-                    ? "MODERN TRADE EXCELLENCE (FOUNDATION) TỪ HIỆN DIỆN ĐẾN DOANH SỐ"
-                    : "MODERN TRADE EXCELLENCE (FOUNDATION) FROM IN-STORE PRESENCE TO SALES PERFORMANCE"}
+                    ? "MODERN TRADE EXCELLENCE (FOUNDATION)"
+                    : "MODERN TRADE EXCELLENCE (FOUNDATION)"}
+                  <br />
+                  {lang == "Viet"
+                    ? "TỪ HIỆN DIỆN ĐẾN DOANH SỐ"
+                    : "FROM IN-STORE PRESENCE TO SALES PERFORMANCE"}
                 </div>
               </div>
               <div className={`${Plan4ModuleStyles.subtitle}`}>
@@ -289,7 +309,7 @@ const NewestCouresSection = () => {
                   ? "Phương pháp chiến thắng tại điểm bán (Point of Sale) – Nơi quyết định 70% doanh số FMCG"
                   : "Winning strategies at the Point of Sale (POS) – where up to 70% of FMCG revenue is generated"}
               </div>
-              <div>
+              <div className={`${Plan4ModuleStyles.learningOutcomesBox}`}>
                 <div className={`${Plan4ModuleStyles.contentTitle}`}>
                   {lang == "Viet" ? "Kết quả đạt được:" : "Learning Outcomes:"}
                 </div>
@@ -306,7 +326,7 @@ const NewestCouresSection = () => {
                   </li>
                 </ul>
               </div>
-              <div className="min-h-0 md:min-h-[230px]">
+              <div className={`${Plan4ModuleStyles.keyTopicsBox}`}>
                 <div className={`${Plan4ModuleStyles.contentTitle}`}>
                   {lang == "Viet" ? "Nội dung chính:" : "Key Topics:"}
                 </div>
@@ -338,7 +358,7 @@ const NewestCouresSection = () => {
                   </li>
                 </ul>
               </div>
-              <div>
+              <div className={``}>
                 <div className={`${Plan4ModuleStyles.contentTitle}`}>
                   {lang == "Viet" ? "Đối tượng:" : "Target Audience:"}
                 </div>
@@ -359,14 +379,18 @@ const NewestCouresSection = () => {
             </div>
             {/* MODULE 2 */}
             <div className={`${Plan4ModuleStyles.container}`}>
-              <div className={`lg:min-h-[150px]! xl:min-h-[250px]`}>
+              <div className={`${Plan4ModuleStyles.titleBox}`}>
                 <div className={`${Plan4ModuleStyles.indexTitle}`}>
                   MODULE 2:
                 </div>
                 <div className={`${Plan4ModuleStyles.title}`}>
                   {lang == "Viet"
-                    ? "KEY ACCOUNT MASTERY CHỐT DEAL LỚN VÀ XÂY DỰNG QUAN HỆ CHIẾN LƯỢC"
-                    : "KEY ACCOUNT MASTERY WINNING BIG DEALS AND BUILDING STRATEGIC PARTNERSHIPS"}
+                    ? "KEY ACCOUNT MASTERY"
+                    : "KEY ACCOUNT MASTERY"}
+                  <br />
+                  {lang == "Viet"
+                    ? "CHỐT DEAL LỚN VÀ XÂY DỰNG QUAN HỆ CHIẾN LƯỢC"
+                    : "WINNING BIG DEALS AND BUILDING STRATEGIC PARTNERSHIPS"}
                 </div>
               </div>
               <div className={`${Plan4ModuleStyles.subtitle}`}>
@@ -374,7 +398,7 @@ const NewestCouresSection = () => {
                   ? "Tập trung nhóm khách hàng lớn (Big Accounts) - Không chỉ bán hàng mà còn “đi deal & giữ deal”"
                   : "Focus on Big Accounts – moving beyond “closing deals” to “winning and sustaining deals”"}
               </div>
-              <div>
+              <div className={`${Plan4ModuleStyles.learningOutcomesBox}`}>
                 <div className={`${Plan4ModuleStyles.contentTitle}`}>
                   {lang == "Viet" ? "Kết quả đạt được:" : "Learning Outcomes:"}
                 </div>
@@ -391,7 +415,7 @@ const NewestCouresSection = () => {
                   </li>
                 </ul>
               </div>
-              <div className="min-h-0 md:min-h-[230px]">
+              <div className={`${Plan4ModuleStyles.keyTopicsBox}`}>
                 <div className={`${Plan4ModuleStyles.contentTitle}`}>
                   {lang == "Viet" ? "Nội dung chính:" : "Key Topics:"}
                 </div>
@@ -423,7 +447,7 @@ const NewestCouresSection = () => {
                   </li>
                 </ul>
               </div>
-              <div>
+              <div className={`${Plan4ModuleStyles.targetAudienceBox}`}>
                 <div className={`${Plan4ModuleStyles.contentTitle}`}>
                   {lang == "Viet" ? "Đối tượng:" : "Target Audience:"}
                 </div>
@@ -449,16 +473,18 @@ const NewestCouresSection = () => {
             </div>
             {/* MODULE 3 */}
             <div className={`${Plan4ModuleStyles.container}`}>
-              <div
-                className={`min-h-0 lg:min-h-[150px] xl:min-h-[250px] 2xl:min-h-[200px]`}
-              >
+              <div className={`${Plan4ModuleStyles.titleBox}`}>
                 <div className={`${Plan4ModuleStyles.indexTitle}`}>
                   MODULE 3:
                 </div>
                 <div className={`${Plan4ModuleStyles.title}`}>
                   {lang == "Viet"
-                    ? "GO-TO-MARKET AND DISTRIBUTION GO-TO-MARKET THỰC CHIẾN"
-                    : "GO-TO-MARKET AND DISTRIBUTION EXECUTING EFFECTIVE MARKET EXPANSION STRATEGIES"}
+                    ? "GO-TO-MARKET AND DISTRIBUTION"
+                    : "GO-TO-MARKET AND DISTRIBUTION "}
+                  <br />
+                  {lang == "Viet"
+                    ? "GO-TO-MARKET THỰC CHIẾN"
+                    : "EXECUTING EFFECTIVE MARKET EXPANSION STRATEGIES"}
                 </div>
               </div>
               <div className={`${Plan4ModuleStyles.subtitle}`}>
@@ -466,7 +492,7 @@ const NewestCouresSection = () => {
                   ? "Chiến lược khai mở thị trường, xây hệ thống phân phối và gia tăng doanh số"
                   : "Market expansion, distribution system development, and sustainable revenue growth"}
               </div>
-              <div>
+              <div className={`${Plan4ModuleStyles.learningOutcomesBox}`}>
                 <div className={`${Plan4ModuleStyles.contentTitle}`}>
                   {lang == "Viet" ? "Kết quả đạt được:" : "Learning Outcomes:"}
                 </div>
@@ -483,7 +509,7 @@ const NewestCouresSection = () => {
                   </li>
                 </ul>
               </div>
-              <div className="min-h-0 md:min-h-[230px]">
+              <div className={`${Plan4ModuleStyles.keyTopicsBox}`}>
                 <div className={`${Plan4ModuleStyles.contentTitle}`}>
                   {lang == "Viet" ? "Nội dung chính:" : "Key Topics:"}
                 </div>
@@ -515,7 +541,7 @@ const NewestCouresSection = () => {
                   </li>
                 </ul>
               </div>
-              <div>
+              <div className={`${Plan4ModuleStyles.targetAudienceBox}`}>
                 <div className={`${Plan4ModuleStyles.contentTitle}`}>
                   {lang == "Viet" ? "Đối tượng:" : "Target Audience:"}
                 </div>
@@ -531,23 +557,29 @@ const NewestCouresSection = () => {
               </div>
             </div>
             {/* MODULE 4 */}
-            <div className={`${Plan4ModuleStyles.container} lg:col-span-3 `}>
+            <div
+              className={`${mergeClasses(Plan4ModuleStyles.container, "gap-4 lg:col-span-3")}`}
+            >
               <div
                 className={`min-h-0 lg:min-h-[80px] xl:min-h-[250px] 2xl:min-h-[50px]`}
               >
                 <div className={`${Plan4ModuleStyles.indexTitle}`}>
                   MODULE 4: PREMIUM
                 </div>
-                <div className={`${Plan4ModuleStyles.title}`}>
+                <div
+                  className={`${mergeClasses(Plan4ModuleStyles.title, "min-h-0")}`}
+                >
                   {lang == "Viet"
                     ? "AOP FOR MODERN TRADE - ĐIỂM KHÁC BIỆT ĐẮT GIÁ"
                     : "AOP FOR MODERN TRADE - THE KEY DIFFERENTIATOR"}
                 </div>
-              </div>
-              <div className={`${Plan4ModuleStyles.subtitle}`}>
-                {lang == "Viet"
-                  ? "“Premium Module” - Chinh phục giá bán cao"
-                  : "“Premium Module” – Mastering Premium Pricing Strategies"}
+                <div
+                  className={`${mergeClasses(Plan4ModuleStyles.subtitle, "min-h-0 mt-2")}`}
+                >
+                  {lang == "Viet"
+                    ? "“Premium Module” - Chinh phục giá bán cao"
+                    : "“Premium Module” – Mastering Premium Pricing Strategies"}
+                </div>
               </div>
               <div className={`pl-1 lg:pl-5`}>
                 <div className={`${Plan4ModuleStyles.contentTitle}`}>
@@ -743,22 +775,30 @@ const NewestCouresSection = () => {
                 </ol>
               </div>
               <div
-                className={`flex flex-col lg:flex-row gap-3 lg:gap-50 justify-center items-center mt-10`}
+                className={`flex flex-col lg:flex-row gap-3 lg:gap-50! justify-center items-center mt-10`}
               >
-                <Button
-                  unstyled
-                  className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-3 px-10 rounded-4xl text-white text-2xl lg:text-5xl font-bold hover:cursor-pointer`}
-                  label={
-                    lang == "Viet"
-                      ? "TÌM HIỂU TRỌN KHÓA HỌC"
-                      : "EXPLORE THE COURSE MORE"
-                  }
-                />
-                <Button
-                  unstyled
-                  className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-3 px-10 rounded-4xl text-white text-2xl lg:text-5xl font-bold hover:cursor-pointer`}
-                  label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "ENROLL NOW"}
-                />
+                <a
+                  href="/MinhHungPortfolio/documents/ExploreCourse.pdf" // Đường dẫn file trong thư mục public
+                  download="ExploreCourse.pdf" // Tên file khi tải về máy
+                  target="_blank"
+                >
+                  <Button
+                    unstyled
+                    className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-3 px-3 lg:px-10 rounded-4xl text-white text-sm lg:text-3xl font-bold hover:cursor-pointer`}
+                    label={
+                      lang == "Viet"
+                        ? "TÌM HIỂU TRỌN KHÓA HỌC"
+                        : "EXPLORE THE COURSE MORE"
+                    }
+                  />
+                </a>
+                <a href="#consultation-form">
+                  <Button
+                    unstyled
+                    className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-3 px-10 rounded-4xl text-white text-xl lg:text-3xl font-bold hover:cursor-pointer`}
+                    label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "ENROLL NOW"}
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -781,7 +821,7 @@ const NewestCouresSection = () => {
         </div>
         <div className={`flex flex-col`}>
           <div
-            className={`mx-auto text-[1.25rem] lg:text-[45px]! text-center italic font-light mb-3 lg:mb-5 mt-15`}
+            className={`mx-auto text-[1.25rem] lg:text-[45px]! text-center italic font-light mb-3 lg:mb-5 mt-0`}
           >
             {lang == "Viet"
               ? "Team bạn đang làm MT rất chăm…"
@@ -794,7 +834,7 @@ const NewestCouresSection = () => {
           <div
             className={`w-9/10 mx-auto bg-[#040404] border-[#EEDA66] border-2 rounded-[60px] lg:rounded-[118px] flex flex-col lg:flex-row`}
           >
-            <div className="w-full lg:w-1/2! p-4 lg:p-12! flex flex-col justify-center items-center text-left lg:text-left gap-5">
+            <div className="w-full lg:w-1/2! p-4 lg:p-12! flex flex-col justify-center items-center text-left lg:text-left gap-0 lg:gap-5">
               <Image
                 src={lang == "Viet" ? SolutionText : SolutionTextEN}
                 alt="Market Conquering Weapon Text"
@@ -827,17 +867,19 @@ const NewestCouresSection = () => {
               </div>
 
               <div className={`mt-7 mb-5 w-full flex justify-center`}>
-                <button
-                  className={`${styles.goldenButton} text-black font-bold
+                <a href="#consultation-form">
+                  <button
+                    className={`${styles.goldenButton} text-black font-bold
                   rounded-full 
                   text-[clamp(1rem,5vw,1.55rem)]
                   text-balance
-                  py-3 px-4 transition-all duration-300 ml-5 mx-auto!`}
-                >
-                  {lang == "Viet"
-                    ? "THỰC THI CHIẾN LƯỢC ĐÚNG NGAY HÔM NAY!"
-                    : "EXECUTE THE RIGHT STRATEGY TODAY!"}
-                </button>
+                  py-3 px-4 transition-all duration-300 ml-5 mx-auto! hover:cursor-pointer`}
+                  >
+                    {lang == "Viet"
+                      ? "THỰC THI CHIẾN LƯỢC ĐÚNG NGAY HÔM NAY!"
+                      : "EXECUTE THE RIGHT STRATEGY TODAY!"}
+                  </button>
+                </a>
               </div>
             </div>
             <div
@@ -855,7 +897,7 @@ const NewestCouresSection = () => {
           <Image
             src={lang == "Viet" ? CoursePackText : CoursePackTextEN}
             alt="Market Conquering Weapon Text"
-            className={`w-4/5 mx-auto mt-10`}
+            className={`w-3/5 mx-auto mt-10`}
           />
           <div className={`grid! grid-cols-1 lg:grid-cols-3 gap-4`}>
             {/* Package 1 */}
@@ -893,21 +935,21 @@ const NewestCouresSection = () => {
                   </div>
                 </div>
               </div>
-              <div className={`w-full flex items-center`}>
-                <button
-                  className={`${styles.goldenButton} text-white font-bold
+              <div className={`w-full flex items-center justify-center`}>
+                <a href="#consultation-form">
+                  <button
+                    className={`${styles.goldenButton} text-white font-bold
                   rounded-full 
                   text-[clamp(0.75rem,5vw,1rem)] 
-                  lg:text-[clamp(1.5rem,5vw,2.5rem)] 
-                  2xl:text-[clamp(0.875rem,5vw,1.5rem)] 
-                  3xl:text-[clamp(1.5rem,5vw,2.5rem)] 
+                  lg:text-[clamp(1.5rem,5vw,1.75rem)] 
                   text-balance
-                  py-3 px-4 transition-all duration-300 ml-5 mx-auto!`}
-                >
-                  {lang == "Viet"
-                    ? "CHI PHÍ TRAO ĐỔI THÊM"
-                    : "CONTACT FOR PRICING DETAILS"}
-                </button>
+                  py-3 px-4 transition-all duration-300 ml-5 mx-auto! hover:cursor-pointer`}
+                  >
+                    {lang == "Viet"
+                      ? "CHI PHÍ TRAO ĐỔI THÊM"
+                      : "CONTACT FOR PRICING DETAILS"}
+                  </button>
+                </a>
               </div>
             </div>
             {/* Package 2 */}
@@ -947,21 +989,21 @@ const NewestCouresSection = () => {
                   </div>
                 </div>
               </div>
-              <div className={`w-full flex items-center`}>
-                <button
-                  className={`${styles.goldenButton} text-white font-bold
+              <div className={`w-full flex items-center justify-center`}>
+                <a href="#consultation-form">
+                  <button
+                    className={`${styles.goldenButton} text-white font-bold
                   rounded-full 
                   text-[clamp(0.75rem,5vw,1rem)] 
-                  lg:text-[clamp(1.5rem,5vw,2.5rem)] 
-                  2xl:text-[clamp(0.875rem,5vw,1.5rem)] 
-                  3xl:text-[clamp(1.5rem,5vw,2.5rem)] 
+                  lg:text-[clamp(1.5rem,5vw,1.75rem)] 
                   text-balance
-                  py-3 px-4 transition-all duration-300 ml-5 mx-auto!`}
-                >
-                  {lang == "Viet"
-                    ? "CHI PHÍ TRAO ĐỔI THÊM"
-                    : "CONTACT FOR PRICING DETAILS"}
-                </button>
+                  py-3 px-4 transition-all duration-300 ml-5 mx-auto! hover:cursor-pointer`}
+                  >
+                    {lang == "Viet"
+                      ? "CHI PHÍ TRAO ĐỔI THÊM"
+                      : "CONTACT FOR PRICING DETAILS"}
+                  </button>
+                </a>
               </div>
             </div>
             {/* Package 3 */}
@@ -1006,21 +1048,21 @@ const NewestCouresSection = () => {
                   </div>
                 </div>
               </div>
-              <div className={`w-full flex items-center`}>
-                <button
-                  className={`${styles.goldenButton} text-white font-bold
+              <div className={`w-full flex items-center justify-center`}>
+                <a href="#consultation-form">
+                  <button
+                    className={`${styles.goldenButton} text-white font-bold
                   rounded-full 
                   text-[clamp(0.75rem,5vw,1rem)] 
-                  lg:text-[clamp(1.5rem,5vw,2.5rem)] 
-                  2xl:text-[clamp(0.875rem,5vw,1.5rem)] 
-                  3xl:text-[clamp(1.5rem,5vw,2.5rem)] 
-                  text-balance
-                  py-3 px-4 transition-all duration-300 ml-5 mx-auto!`}
-                >
-                  {lang == "Viet"
-                    ? "CHI PHÍ TRAO ĐỔI THÊM"
-                    : "CONTACT FOR PRICING DETAILS"}
-                </button>
+                  lg:text-[clamp(1.5rem,5vw,1.75rem)] 
+                  text-balance 
+                  py-3 px-4 transition-all duration-300 mx-auto! mt-auto hover:cursor-pointer`}
+                  >
+                    {lang == "Viet"
+                      ? "CHI PHÍ TRAO ĐỔI THÊM"
+                      : "CONTACT FOR PRICING DETAILS"}
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -1035,18 +1077,23 @@ const NewestCouresSection = () => {
         <Image
           src={EventLinkedInImage}
           alt="Explore Course Text"
-          className={`w-17/20 mx-auto mt-10 `}
+          className={`w-18/20 mx-auto mt-10 `}
         />
         <div className={`grid! grid-cols-2 mx-5 gap-3`}>
           <div className="h-full flex flex-col items-center justify-center gap-4 lg:gap-8">
             {/* Phần nhãn EBOOK */}
-            <div className="text-white font-bold text-[clamp(1rem,4vw,12rem)] leading-none tracking-wider">
+            <div className="text-white font-bold text-[clamp(1rem,5vw,5.5rem)] leading-none tracking-wider">
               {lang === "Viet" ? "EBOOK MIỄN PHÍ" : "FREE EBOOK"}
             </div>
 
             {/* Phần Nút bấm Gradient */}
-            <button
-              className={`
+            <a
+              href="/MinhHungPortfolio/documents/LinkedInWorkbook.pdf" // Đường dẫn file trong thư mục public
+              download="LinkedInWorkbook.pdf" // Tên file khi tải về máy
+              target="_blank"
+            >
+              <button
+                className={`
                 text-white font-bold uppercase
                 bg-linear-to-r from-[#4C5409] via-[#4C5409] to-[#B0B266]
                 /* Clamp cho font nút: Min 1rem (16px) -> Max 1.5rem (24px) */
@@ -1055,9 +1102,10 @@ const NewestCouresSection = () => {
                 py-[clamp(0.5rem,2vw,1rem)] px-[clamp(1rem,5vw,4rem)]
                 rounded-full shadow-lg hover:brightness-110 active:scale-95 transition-all
               `}
-            >
-              {lang === "Viet" ? "NHẬN NGAY" : "DOWNLOAD NOW"}
-            </button>
+              >
+                {lang === "Viet" ? "NHẬN NGAY" : "DOWNLOAD NOW"}
+              </button>
+            </a>
           </div>
           <div>
             <Image
@@ -1089,7 +1137,7 @@ const FloatingHero = () => {
         <Image
           src={WeaponConquerMarket}
           alt="Central Graphic"
-          className="w-full lg:w-7/10! h-auto object-contain relative z-10 opacity-90 order-first lg:order-none"
+          className="w-full scale-120 md:scale-100 lg:w-7/10! h-auto object-contain relative z-10 opacity-90 order-first lg:order-none py-3"
         />
 
         {/* CÁC KHỐI CHỮ */}
@@ -1098,7 +1146,7 @@ const FloatingHero = () => {
         <div
           className={`
             relative lg:absolute 
-            lg:top-[30%] lg:left-[3%] 
+            lg:top-[25%] lg:left-[3%] 
             z-20 w-full lg:max-w-[550px]
             /* Mobile: Trái */
             self-start text-left lg:pl-6 
@@ -1130,8 +1178,8 @@ const FloatingHero = () => {
         <div
           className={`
             relative lg:absolute 
-            lg:top-[18%] lg:right-[3%] 
-            z-20 w-full lg:max-w-[500px]
+            lg:top-[13%] lg:right-[3%] 
+            z-20 w-full 2xl:max-w-[600px] lg:max-w-[500px]
             /* Mobile: Phải */
             self-end text-right pr-4 
             text-balance
@@ -1161,7 +1209,7 @@ const FloatingHero = () => {
         <div
           className={`
             relative lg:absolute 
-            lg:bottom-[5%] lg:left-[15%] 
+            lg:bottom-[7%] lg:left-[13%] 
             z-20 w-full lg:max-w-[500px]
             /* Mobile: Trái */
             self-start text-left pl-4 
