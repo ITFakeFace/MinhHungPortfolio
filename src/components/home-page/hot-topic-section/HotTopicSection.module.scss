@@ -1,7 +1,7 @@
 // Định nghĩa các biến dựa trên class Tailwind cũ của bạn
 $bg-image-url: url("../../../assets/home-page/background/bg-topic-1.png");
 $color-start: #828c15; // from-[#828c15]
-$color-end: rgba(0, 0, 0, 0.1); // to-[#000000]/10
+$color-end: rgba(0, 0, 0, 1); // to-[#000000]/10
 
 .container {
   width: 100%;
@@ -17,11 +17,12 @@ $color-end: rgba(0, 0, 0, 0.1); // to-[#000000]/10
   background-repeat: no-repeat; // Không lặp lại ảnh
   background-position: center center; // Luôn căn giữa ảnh
   background-size: cover; // QUAN TRỌNG NHẤT: Phủ kín mọi góc cạnh
+  background-blend-mode: normal;
 
   @media (max-width: 767px) {
     // Tùy chỉnh riêng cho Mobile nếu cần thay đổi vị trí ảnh
     background:
-      $bg-image-url no-repeat center center / contain,
+      // $bg-image-url no-repeat center center / contain,
       linear-gradient(to bottom, $color-start 0%, $color-end 100%);
     background-size: cover;
   }

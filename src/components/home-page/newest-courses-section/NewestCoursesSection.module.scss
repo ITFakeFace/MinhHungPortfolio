@@ -1,16 +1,25 @@
-$bg-mobile-image-url1: url("../../../assets/home-page/background/bg-newest-course-1.png");
-$bg-mobile-image-url2: url("../../../assets/home-page/background/bg-newest-course-1.png");
+$bg-image-url1: url("../../../assets/home-page/background/bg-newest-course-3.png");
+// $bg-mobile-image-url2: url("../../../assets/home-page/background/bg-newest-course-1.png");
 $bg-btn-image: url("../../../assets/home-page/background/bg-button-gold-1.png");
 $bg-gradient-start: #3a3d12;
+$green-stop: #4c5409;
 
 .container {
   background:
-    $bg-mobile-image-url1 no-repeat center top / contain,
-    $bg-mobile-image-url2 no-repeat center bottom / contain,
-    $bg-gradient-start;
+    $bg-image-url1,
+    linear-gradient(to bottom, rgba(0, 0, 0, 1) 64%, $green-stop 100%);
 
-  background-size: cover, cover; // 🔥 QUAN TRỌNG
-  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position:
+    center top,
+    center;
+
+  // Ép ảnh dãn khít khung (Stretch thực sự)
+  background-size:
+    100% 100%,
+    100% 100%;
+
+  background-blend-mode: normal;
 }
 
 .goldenButton {

@@ -1,0 +1,62 @@
+// Định nghĩa các biến dựa trên class Tailwind cũ của bạn
+// $bg-image-url: url("../../../assets/home-page/background/bg-topic-1.png");
+$color-start: #828c15; // from-[#828c15]
+$color-end: rgba(0, 0, 0, 1); // to-[#000000]/10
+
+.container {
+  width: 100%;
+  padding-top: 2.5rem; // Tương đương pt-10
+
+  // Mặc định cho Desktop hoặc toàn bộ
+  background:
+    // $bg-image-url no-repeat center bottom / contain,
+    // Ảnh nằm trên
+    linear-gradient(to bottom, $color-start, $color-end); // Gradient nằm dưới
+  background-size: cover; // Đảm bảo lớp nền phủ kín
+  // BỘ TỨ QUYẾT ĐỊNH:
+  background-repeat: no-repeat; // Không lặp lại ảnh
+  background-position: center center; // Luôn căn giữa ảnh
+  background-size: cover; // QUAN TRỌNG NHẤT: Phủ kín mọi góc cạnh
+
+  @media (max-width: 767px) {
+    // Tùy chỉnh riêng cho Mobile nếu cần thay đổi vị trí ảnh
+    background:
+      // $bg-image-url no-repeat center center / contain,
+      linear-gradient(to bottom, $color-start 0%, $color-end 100%);
+    background-size: cover;
+  }
+}
+.numberCircle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%; // Tạo hình tròn hoàn hảo
+
+  // Tạo viền Gradient
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 4px; // Độ dày của viền tròn
+
+    // Hướng từ trái dưới lên phải trên
+    background: linear-gradient(to top right, #717627, #181905);
+
+    // Kỹ thuật đục lỗ để nền bên trong trong suốt
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  // Style cho con số bên trong
+  span {
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+}

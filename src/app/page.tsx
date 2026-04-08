@@ -14,6 +14,7 @@ import VideoSection from "@/components/home-page/video-section/VideoSection";
 import { ContactProvider } from "@/context/ContactContext";
 import { useLanguage } from "@/context/LanguageContext";
 import NewestCouresSection from "@/components/home-page/newest-courses-section/NewestCouresSection";
+import SHESection from "@/components/home-page/she-section/SHESection";
 
 export default function Home() {
   const { lang } = useLanguage();
@@ -23,13 +24,14 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
+        <CoreValueSection />
+        <HotTopicSection />
         <NewestCouresSection />
         <NewCoursesSection />
         <EducationMethodSection />
         <CertificateSection />
-        <CoreValueSection />
-        <HotTopicSection />
         <TrainingPartnersSection />
+        <SHESection />
         <StrategicPartnerSection />
         <SharingExpSection />
         <VideoSection />

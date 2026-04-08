@@ -58,6 +58,20 @@
     }
   }
 
+  @keyframes sequence-heartbeat {
+    0%,
+    33.3% {
+      transform: scale(0.9);
+    } /* Nghỉ */
+    16.6% {
+      transform: scale(1.1);
+    } /* Đập ở giữa quãng của nó */
+    33.4%,
+    100% {
+      transform: scale(0.9);
+    } /* Nghỉ phần còn lại */
+  }
+
   /* Tạo class tiện ích cho Tailwind */
   /* 1.5s là tốc độ, bạn có thể chỉnh thành 1s nếu muốn nhanh hơn */
   --animate-marquee: marquee linear infinite;
@@ -65,6 +79,9 @@
   --animate-blink-resize: blink-resize 1.5s ease-in-out infinite;
   --animate-heartbeat: heartbeat 1.5s ease-in-out infinite;
   --animate-light-heartbeat: light-heartbeat 2s ease-in-out infinite;
+  --animate-sequence-heartbeat-1: sequence-heartbeat 6s infinite;
+  --animate-sequence-heartbeat-2: sequence-heartbeat 6s infinite 2s;
+  --animate-sequence-heartbeat-3: sequence-heartbeat 6s infinite 4s;
 }
 
 html,

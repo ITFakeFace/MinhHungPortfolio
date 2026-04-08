@@ -180,7 +180,7 @@ const TrainingPartnersSection = () => {
   };
   return (
     <div className="w-full bg-[#feffd4]">
-      <div className="mt-15 sm:mt-20 md:mt-22 uppercase bg-linear-to-r from-[#505809] to-[#c1c969] bg-clip-text text-transparent font-bold text-3xl sm:text-5xl md:text-7xl text-center mb-2 md:mb-12! p-3">
+      <div className="mt-15 sm:mt-20 md:mt-22 uppercase bg-linear-to-r from-[#505809] to-[#c1c969] bg-clip-text text-transparent font-bold text-2xl sm:text-5xl md:text-7xl text-center mb-2 md:mb-12! p-3">
         {lang == "Viet"
           ? "ĐỐI TÁC HỢP TÁC ĐÀO TẠO"
           : "TRAINING COLLABORATION PARTNERS"}

@@ -151,16 +151,11 @@ const CoreValueSection = () => {
   return (
     <div>
       <div
-        className={`w-full flex flex-col md:flex-row gap-5 pb-10 md:pb-0 ${styles.container}`}
+        className={`w-full flex flex-col pt-0 md:pt-10! md:flex-row gap-5 pb-10 md:pb-15 ${styles.container}`}
       >
-        <div className="w-full md:w-7/15 mt-20 md:mt-0 md:min-h-250 flex flex-col-reverse md:flex-col relative">
+        <div className="w-full md:w-7/15 md:mt-0 md:min-h-250 flex flex-col-reverse md:flex-col relative">
           <Image src={MsHungImage} alt="Ms Hung" className="w-full h-auto" />
           <div className="w-full flex flex-col  items-center overflow-visible mb-0 md:-translate-y-30">
-            <Image
-              src={QuoteEndText}
-              alt="Quote End Text"
-              className="w-4/5 md:w-full h-auto mx-auto mt-10 md:mt-0"
-            />
             <Button
               unstyled
               label={
@@ -171,7 +166,7 @@ const CoreValueSection = () => {
             />
           </div>
         </div>
-        <div className="w-full md:w-8/15 flex flex-col mt-0 md:mt-0 gap-5 md:gap-10 2xl:gap-20! justify-center items-center md:items-start">
+        <div className="w-full md:w-8/15 flex flex-col mt-0 md:mt-0 gap-5 md:gap-10 2xl:gap-15! justify-center items-center md:items-start">
           <Image
             src={lang == "Viet" ? CoreValueTextVN : CoreValueTextEN}
             alt="Core Value Text"
@@ -189,9 +184,6 @@ const CoreValueSection = () => {
           className="md:hidden block bg-linear-to-r from-[#757e13] to-[#1c1e04] text-white text-2xl sm:text-4xl! font-bold rounded-2xl w-fit px-10 py-3 cursor-pointer hover:scale-110 transition-all duration-300 mx-auto border-2 border-[#f4ff88]"
           onClick={openContactForm}
         />
-      </div>
-      <div className="2xl:scale-120">
-        <ImageFilmTrip images={films} speed="120s" />
       </div>
     </div>
   );

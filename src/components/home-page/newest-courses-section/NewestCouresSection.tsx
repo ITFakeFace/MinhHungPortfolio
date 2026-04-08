@@ -16,8 +16,20 @@ import CoursePackText from "@/assets/home-page/text/CoursePackText-1.png";
 import CoursePackTextEN from "@/assets/home-page/text/CoursePackTextEN-1.png";
 import ExploreCourseText from "@/assets/home-page/text/ExploreCourseText-1.png";
 import ExploreCourseTextEN from "@/assets/home-page/text/ExploreCourseTextEN-1.png";
+import PersonalSolutionText from "@/assets/home-page/text/PersonalSolutionText-1.png";
+import PersonalSolutionTextEN from "@/assets/home-page/text/PersonalSolutionTextEN-1.png";
+import DeepExploreText from "@/assets/home-page/text/DeepExploreText-1.png";
+import DeepExploreTextEN from "@/assets/home-page/text/DeepExploreTextEN-1.png";
+import CareerChoiceText from "@/assets/home-page/text/CareerChoiceText-1.png";
+import CareerChoiceTextEN from "@/assets/home-page/text/CareerChoiceText-1.png";
+import PersonalCareerText from "@/assets/home-page/text/PersonalCareerText-1.png";
+import PersonalCareerTextEN from "@/assets/home-page/text/PersonalCareerTextEN-1.png";
+import SolutionImage2 from "@/assets/home-page/assets/SolutionImage-2.png";
+import SolutionImage2EN from "@/assets/home-page/assets/SolutionImageEN-2.png";
 import MsHung from "@/assets/home-page/assets/NewestCourseMsHung-1.png";
+import MsHung2 from "@/assets/home-page/assets/NewestCourseMsHung-2.png";
 import MsHungEN from "@/assets/home-page/assets/NewestCourseMsHungEN-1.png";
+import PriceText from "@/assets/home-page/text/PriceText-1.png";
 import WeaponConquerMarket from "@/assets/home-page/assets/WeaponConquerMarket-1.png";
 import SolutionImage from "@/assets/home-page/assets/SolutionImage-1.png";
 import EventLinkedInImage from "@/assets/home-page/assets/EventLinkedIn-1.png";
@@ -27,10 +39,26 @@ import Image from "next/image";
 import { Button } from "primereact/button";
 import { mergeClasses } from "@/utils/cn";
 import { useContactForm } from "@/context/ContactContext";
+import ImageFilmTrip from "@/components/general/ImageFilmTrip";
+import CoreValueScrollImage1 from "@/assets/home-page/assets/CoreValueScroll-1.png";
+import CoreValueScrollImage2 from "@/assets/home-page/assets/CoreValueScroll-2.png";
+import CoreValueScrollImage3 from "@/assets/home-page/assets/CoreValueScroll-3.png";
+import CoreValueScrollImage4 from "@/assets/home-page/assets/CoreValueScroll-4.jpg";
+import CoreValueScrollImage5 from "@/assets/home-page/assets/CoreValueScroll-5.png";
+import CoreValueScrollImage6 from "@/assets/home-page/assets/CoreValueScroll-6.png";
+import { title } from "process";
 
 const NewestCouresSection = () => {
   const { openContactForm } = useContactForm();
   const { lang } = useLanguage();
+  const films = [
+    CoreValueScrollImage1,
+    CoreValueScrollImage2,
+    CoreValueScrollImage3,
+    CoreValueScrollImage4,
+    CoreValueScrollImage5,
+    CoreValueScrollImage6,
+  ];
   const TargetStyles: Record<string, string> = {
     // Container: Co giãn chiều rộng từ 95% (mobile) về 50% (desktop)
     // Padding và Gap cũng dùng clamp để tự nở ra trên màn 2K
@@ -38,7 +66,7 @@ const NewestCouresSection = () => {
       "flex flex-col mx-auto justify-center items-center " +
       "w-[clamp(95%,85%+2vw,50%)] " +
       "bg-linear-to-tr from-[#FFFCA7] to-[#FFFEDA] " +
-      "border-3 border-[#7F8B1E] rounded-3xl lg:rounded-4xl " +
+      "border-4 border-[#ca8607] rounded-3xl lg:rounded-4xl " +
       "p-[clamp(0.75rem,1vw,1.5rem)] " +
       "gap-[clamp(0.25rem,0.5vw,1rem)] shadow-lg",
 
@@ -49,13 +77,13 @@ const NewestCouresSection = () => {
 
     // Content: Scale từ 14px (mobile) lên 22px (2K)
     content:
-      "text-center italic text-[#2C3B0D] leading-relaxed text-balance " +
-      "text-[clamp(0.875rem,0.75rem+0.8vw,1.75rem)] mb-2",
+      "text-center italic text-[#2C3B0D] leading-relaxed lg:text-balance " +
+      "text-[clamp(0.85rem,0.75rem+1.8vw,0.875rem)] mb-2 lg:text-[clamp(0.875rem,0.75rem+1.8vw,2rem)] mb-2",
   };
   const GrowthSolverStyles: Record<string, string> = {
     // Container: Giữ nguyên màu sắc của bạn, thêm padding linh hoạt
     container:
-      "px-4 py-3 lg:px-6 lg:py-5 bg-[#1D1F0D] border-2 border-[#CA8607] rounded-3xl mb-4 shadow-lg ",
+      "px-4 py-3 lg:px-6 lg:py-5 bg-[#1D1F0D]/50 border-2 border-[#CA8607] rounded-3xl mb-4 shadow-lg ",
 
     // Title: Kết hợp Gradient "Vàng Kim" của bạn với Clamp co giãn
     // Giải thích: Min 24px (1.5rem) -> Max 40px (2.5rem)
@@ -86,7 +114,10 @@ const NewestCouresSection = () => {
       "bg-linear-to-tr from-[#FFFCA7] to-[#FFFEDA] text-[#2C3B0D] h-full " +
       "border-4 border-[#2C3B0D] rounded-4xl p-3 shadow-lg " +
       "flex flex-col gap-4",
-    titleBox: "min-h-[clamp(9.2rem,52rem-35vw,9.2rem)] flex flex-col",
+    titleBox:
+      (lang == "Viet"
+        ? "min-h-[clamp(9.2rem,52rem-35vw,9.2rem)]"
+        : "min-h-[clamp(9.2rem,52rem-35vw,13.85rem)]") + " flex flex-col",
     // Module Index (MODULE 1, 2, 3)
     indexTitle:
       "text-[#CA8607] font-bold text-center " +
@@ -94,9 +125,9 @@ const NewestCouresSection = () => {
 
     // Title: Ép chiều cao tối thiểu để các title luôn chiếm không gian bằng nhau
     title:
-      "font-extrabold text-center leading-tight text-[#2C3B0D] " +
-      "text-[clamp(1.5rem,0.9rem+1.2vw,1.65rem)] " + // 18px -> 32px
-      "flex items-center justify-center text-balance", // Đảm bảo title luôn chiếm ít nhất 4rem chiều cao, và dùng text-balance để căn chỉnh đẹp
+      "font-extrabold text-center text-[#2C3B0D] " +
+      "text-[clamp(1.5rem,0.9rem+1.2vw,1.75rem)] " + // 18px -> 32px
+      "flex items-center justify-center text-balance leading-tight", // Đảm bảo title luôn chiếm ít nhất 4rem chiều cao, và dùng text-balance để căn chỉnh đẹp
 
     // Subtitle
     subtitle:
@@ -140,7 +171,7 @@ const NewestCouresSection = () => {
     container:
       "bg-linear-to-tr from-[#FFFCA7] to-[#FFFEDA] text-[#2C3B0D] h-full " +
       "border-4 border-[#2C3B0D] rounded-4xl p-3 shadow-lg " +
-      "flex flex-col gap-2 lg:gap-3",
+      "flex flex-col gap-2 lg:gap-3 transition-all duration-300 hover:scale-110",
     indexTitle:
       "text-[#CA8607] font-bold text-center " +
       "text-[clamp(1rem,1rem+1.5vw,2rem)]", // 20px -> 40px
@@ -153,15 +184,79 @@ const NewestCouresSection = () => {
     content: "font-normal text-[clamp(1.3rem,0.75rem+1.5vw,1.5rem)]",
   };
 
+  const PathStyles: Record<string, string> = {
+    container:
+      "text-[#CA8607] bg-black/85 border-4 border-[#8D7234] rounded-4xl lg:rounded-[130px] w-19/20 mx-auto flex flex-col gap-4 lg:gap-15! pt-5 lg:pt-10! mt-10 text-white ",
+    cardContainer:
+      "bg-linear-to-tr from-[#FFFCA7] to-[#FFFEDA] text-[#2C3B0D] h-full " +
+      "border-4 border-[#CA8607] rounded-4xl p-3 shadow-lg lg:mx-0 mx-3 " +
+      "flex flex-col",
+    subtitle:
+      "text-[clamp(1.05rem,0.75rem+1.5vw,1.25rem)] italic text-center mb-1 w-18/20 mx-auto tracking-wide",
+    titleIndex:
+      "text-[#CA8607] font-bold text-center text-[clamp(1rem,1rem+1.5vw,1.5rem)]", // 20px -> 40px
+    title:
+      "text-[#2C3B0D] font-bold text-center " +
+      "text-[clamp(1rem,1rem+1.5vw,2rem)]", // 20px -> 40px
+    price:
+      "text-center text-[clamp(1.05rem,0.75rem+1.5vw,1.15rem)] text-balance italic my-2",
+    contentTitle:
+      "font-bold text-[clamp(1.05rem,0.75rem+2.5vw,1.35rem)] leading-loose",
+    content:
+      "list-disc list-outside pl-5 text-[clamp(1.05rem,0.75rem+1.5vw,1.25rem)] leading-loose",
+    buttonBox:
+      "mt-auto w-full flex justify-end items-center transition-all duration-300 hover:scale-110",
+    button:
+      "bg-linear-to-r from-[#4C5409] from-74% to-[#B0B266] to-100% text-white text-[clamp(1rem,1rem+1.5vw,1.75rem)] font-bold rounded-full py-2 px-6 mt-5 mx-auto! hover:cursor-pointer mb-2",
+  };
+
+  const DeepExploreStyles: Record<string, string> = {
+    container: "flex flex-col lg:flex-row mx-auto gap-0",
+    price:
+      "italic text-left text-[clamp(1.05rem,0.75rem+1.5vw,1.6rem)] text-balance my-2",
+    contentList:
+      "list-disc list-inside pl-5 text-[clamp(1.05rem,0.75rem+1.5vw,1.25rem)] leading-loose ",
+    contentTitle:
+      "font-bold text-[clamp(1.05rem,0.75rem+2.5vw,1.1rem)] lg:text-[clamp(1.05rem,0.75rem+2.5vw,2rem)]",
+    content: "list-outside pl-2 text-[clamp(1.05rem,0.75rem+1.5vw,1.75rem)]",
+    button:
+      "bg-linear-to-r from-[#4C5409] from-74% to-[#B0B266] to-100% text-white text-[clamp(1rem,1rem+1.5vw,3rem)] font-bold rounded-full py-2 px-6 lg:px-10 mt-4 mx-auto! hover:cursor-pointer lg:mt-5 mb-5 lg:mb-2 transition-all duration-300 hover:scale-110",
+  };
   return (
-    <div id="courses" className={`${styles.container} w-full`}>
+    <div id="courses" className={`${styles.container} w-full leading-`}>
+      <div className={`flex flex-col justify-center items-center lg:mt-30`}>
+        <div className={`w-full`}>
+          <Image
+            src={lang == "Viet" ? PersonalSolutionText : PersonalSolutionTextEN}
+            alt="Program Text"
+            className={`w-9/10 lg:w-7/10 mx-auto`}
+          />
+        </div>
+        <Image
+          src={lang == "Viet" ? SolutionImage2 : SolutionImage2EN}
+          alt="text"
+          className={`w-19/20 mx-auto `}
+        />
+        <Button
+          unstyled
+          onClick={openContactForm}
+          className={`${styles.goldenButton} text-black font-bold
+                  rounded-full 
+                  text-[clamp(1rem,10vw,1rem)]
+                  lg:text-[clamp(1rem,10vw,2rem)]
+                  text-balance
+                  py-3 px-4 ml-5 mx-auto! hover:cursor-pointer transition-all duration-300 hover:scale-110 `}
+        >
+          {lang == "Viet" ? "ĐẶT LỊCH TƯ VẤN RIÊNG!" : "BOOK A CONSULTATION!"}
+        </Button>
+      </div>
       <Image
         src={lang == "Viet" ? NewestCourseText : NewestCourseTextEN}
         alt="Newest Course Text"
         className={`w-4/5 lg:w-7/10 mx-auto my-10 lg:my-20`}
       />
       <div
-        className={`bg-black/60 border-4 border-[#8D7234] rounded-4xl lg:rounded-[130px] w-19/20 mx-auto flex flex-col gap-4 lg:gap-15! py-5 lg:py-20! text-white`}
+        className={`bg-black/50 border-4 border-[#8D7234] rounded-4xl lg:rounded-[130px] w-19/20 mx-auto flex flex-col gap-4 lg:gap-15! py-5 lg:py-20! text-white`}
       >
         <Image
           src={lang == "Viet" ? ProgramText : ProgramTextEN}
@@ -199,8 +294,12 @@ const NewestCouresSection = () => {
             </div>
             <div className={`${TargetStyles.content}`}>
               {lang == "Viet"
-                ? "Modern Trade & Go-To-Market Strategist AOP & Commercial Planning Expert"
-                : "Modern Trade & Go-To-Market Strategist AOP & Commercial Planning Expert"}
+                ? "Modern Trade & Go-To-Market Strategist"
+                : "Modern Trade & Go-To-Market Strategist"}
+              <br />
+              {lang == "Viet"
+                ? "AOP & Commercial Planning Expert"
+                : "AOP & Commercial Planning Expert"}
             </div>
           </div>
         </div>
@@ -594,7 +693,7 @@ const NewestCouresSection = () => {
               </div>
               <div className={`pl-1 lg:pl-5`}>
                 <div className={`${Plan4ModuleStyles.contentTitle}`}>
-                  Kết quả đạt được
+                  {lang == "Viet" ? "Kết quả đạt được:" : "Learning Outcomes:"}
                 </div>
                 <ul className={`${Plan4ModuleStyles.contentList}`}>
                   <li>
@@ -611,7 +710,7 @@ const NewestCouresSection = () => {
               </div>
               <div className="min-h-0 md:min-h-[230px] pl-1 lg:pl-5">
                 <div className={`${Plan4ModuleStyles.contentTitle}`}>
-                  Nội dung chính:
+                  {lang == "Viet" ? "Nội dung chính:" : "Key Topics:"}
                 </div>
                 <ol
                   className={`${Plan4ModuleStyles.module4OrderedContentList} `}
@@ -625,7 +724,7 @@ const NewestCouresSection = () => {
                     >
                       {lang == "Viet"
                         ? "AOP Framework: Chuẩn Corporate"
-                        : "AOP Framework: Chuẩn Corporate"}
+                        : "AOP Framework: Corporate Standard"}
                     </div>
                     <ul
                       className={`${Plan4ModuleStyles.module4UnorderedContentList} `}
@@ -667,7 +766,7 @@ const NewestCouresSection = () => {
                       <li>
                         {lang == "Viet"
                           ? "Demand planning theo mùa vụ"
-                          : "Demand planning theo mùa vụ"}
+                          : "Demand planning"}
                       </li>
                       <li>
                         {lang == "Viet"
@@ -689,29 +788,20 @@ const NewestCouresSection = () => {
                       className={`${Plan4ModuleStyles.module4OrderedContentTitle}`}
                     >
                       {lang == "Viet"
-                        ? "AOP Framework: Chuẩn Corporate"
-                        : "AOP Framework: Chuẩn Corporate"}
+                        ? "Budget and Investment"
+                        : "Budget and Investment"}
                     </div>
                     <ul
                       className={`${Plan4ModuleStyles.module4UnorderedContentList} `}
                     >
+                      <li>{lang == "Viet" ? "Trade spend" : "Trade spend"}</li>
                       <li>
-                        {lang == "Viet"
-                          ? "Sales Target (Volume/ Value)"
-                          : "Sales Target (Volume/ Value)"}
+                        {lang == "Viet" ? "Promotion cost" : "Promotion cost)"}
                       </li>
                       <li>
                         {lang == "Viet"
-                          ? "Channel Target (MT vs GT vs Others)"
-                          : "Channel Target (MT vs GT vs Others)"}
-                      </li>
-                      <li>
-                        {lang == "Viet"
-                          ? "Key Account Target"
-                          : "Key Account Target"}
-                      </li>
-                      <li>
-                        {lang == "Viet" ? "SKU strategy" : "SKU strategy"}
+                          ? "ROI mindset (không “đốt tiền mù”)"
+                          : "ROI mindset (no “blind spending”)"}
                       </li>
                     </ul>
                   </li>
@@ -723,29 +813,22 @@ const NewestCouresSection = () => {
                       className={`${Plan4ModuleStyles.module4OrderedContentTitle}`}
                     >
                       {lang == "Viet"
-                        ? "AOP Framework: Chuẩn Corporate"
-                        : "AOP Framework: Chuẩn Corporate"}
+                        ? "Execution Roadmap"
+                        : "Execution Roadmap"}
                     </div>
                     <ul
                       className={`${Plan4ModuleStyles.module4UnorderedContentList} `}
                     >
                       <li>
-                        {lang == "Viet"
-                          ? "Sales Target (Volume/ Value)"
-                          : "Sales Target (Volume/ Value)"}
+                        {lang == "Viet" ? "Quarterly plan" : "Quarterly plan"}
                       </li>
                       <li>
                         {lang == "Viet"
-                          ? "Channel Target (MT vs GT vs Others)"
-                          : "Channel Target (MT vs GT vs Others)"}
+                          ? "Monthly breakdown"
+                          : "Monthly breakdown"}
                       </li>
                       <li>
-                        {lang == "Viet"
-                          ? "Key Account Target"
-                          : "Key Account Target"}
-                      </li>
-                      <li>
-                        {lang == "Viet" ? "SKU strategy" : "SKU strategy"}
+                        {lang == "Viet" ? "KPI tracking" : "KPI tracking"}
                       </li>
                     </ul>
                   </li>
@@ -757,29 +840,21 @@ const NewestCouresSection = () => {
                       className={`${Plan4ModuleStyles.module4OrderedContentTitle}`}
                     >
                       {lang == "Viet"
-                        ? "AOP Framework: Chuẩn Corporate"
-                        : "AOP Framework: Chuẩn Corporate"}
+                        ? "Case Study thực chiến"
+                        : "Practical Case Studies"}
                     </div>
                     <ul
                       className={`${Plan4ModuleStyles.module4UnorderedContentList} `}
                     >
                       <li>
                         {lang == "Viet"
-                          ? "Sales Target (Volume/ Value)"
-                          : "Sales Target (Volume/ Value)"}
+                          ? "Coca-Cola / Nestlé / THP style"
+                          : "Coca-Cola / Nestlé / THP style"}
                       </li>
                       <li>
                         {lang == "Viet"
-                          ? "Channel Target (MT vs GT vs Others)"
-                          : "Channel Target (MT vs GT vs Others)"}
-                      </li>
-                      <li>
-                        {lang == "Viet"
-                          ? "Key Account Target"
-                          : "Key Account Target"}
-                      </li>
-                      <li>
-                        {lang == "Viet" ? "SKU strategy" : "SKU strategy"}
+                          ? "Nắm bắt “vũ khí” riêng của bạn"
+                          : "Customized assignments based on your own business"}
                       </li>
                     </ul>
                   </li>
@@ -795,7 +870,7 @@ const NewestCouresSection = () => {
                 >
                   <Button
                     unstyled
-                    className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-3 px-3 lg:px-10 rounded-4xl text-white text-sm lg:text-3xl font-bold hover:cursor-pointer`}
+                    className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-3 px-3 lg:px-10 rounded-4xl text-white text-sm lg:text-3xl font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110`}
                     label={
                       lang == "Viet"
                         ? "TÌM HIỂU TRỌN KHÓA HỌC"
@@ -806,7 +881,7 @@ const NewestCouresSection = () => {
                 <Button
                   onClick={openContactForm}
                   unstyled
-                  className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-3 px-10 rounded-4xl text-white text-xl lg:text-3xl font-bold hover:cursor-pointer`}
+                  className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-3 px-10 rounded-4xl text-white text-xl lg:text-3xl font-bold hover:cursor-pointer animate-heartbeat transition-all duration-300 hover:scale-110`}
                   label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "ENROLL NOW"}
                 />
               </div>
@@ -852,12 +927,12 @@ const NewestCouresSection = () => {
               />
 
               {/* Phần tiêu đề dẫn dắt */}
-              <div className="w-full lg:w-4/5 mx-auto mt-6 text-[clamp(1.5rem,2.5vw,2rem)] leading-tight">
+              <div className="w-full lg:w-4/5 mx-auto mt-6 text-[clamp(1.25rem,2.5vw,1.5rem)] lg:text-[clamp(1.5rem,2.5vw,2rem)] leading-tight">
                 {lang == "Viet"
                   ? "Tay nghề thật sự chuyển đổi khi bạn biết:"
                   : "Expertise truly transforms when you know:"}
                 {/* Phần danh sách bullet points */}
-                <ul className="list-disc list-inside mt-4 ml-5 space-y-2 text-[clamp(1.5rem,2.5vw,2rem)]">
+                <ul className="list-disc list-inside mt-4 ml-5 space-y-2 text-[clamp(1.25rem,2.5vw,1.5rem)] lg:text-[clamp(1.5rem,2.5vw,2rem)]">
                   <li>
                     {lang == "Viet"
                       ? "Tăng trưởng doanh số tại Modern Trade"
@@ -884,7 +959,7 @@ const NewestCouresSection = () => {
                   rounded-full 
                   text-[clamp(1rem,5vw,1.55rem)]
                   text-balance
-                  py-3 px-4 transition-all duration-300 ml-5 mx-auto! hover:cursor-pointer`}
+                  py-3 px-4 transition-all duration-300 ml-5 mx-auto! hover:cursor-pointer hover:scale-110`}
                 >
                   {lang == "Viet"
                     ? "THỰC THI CHIẾN LƯỢC ĐÚNG NGAY HÔM NAY!"
@@ -911,7 +986,7 @@ const NewestCouresSection = () => {
           />
           <div className={`grid! grid-cols-1 lg:grid-cols-3 gap-4`}>
             {/* Package 1 */}
-            <div className={`${CoursePackStyles.container}`}>
+            <div className={`${CoursePackStyles.container} `}>
               <div>
                 <div className={`${CoursePackStyles.indexTitle}`}>
                   {lang == "Viet" ? "GÓI 1" : "PACKAGE 1"}
@@ -956,7 +1031,10 @@ const NewestCouresSection = () => {
                   text-[clamp(0.75rem,5vw,1rem)] 
                   lg:text-[clamp(1.5rem,5vw,1.75rem)] 
                   text-balance 
-                  py-3 px-4 transition-all duration-300 mx-auto! mt-auto hover:cursor-pointer`}
+                  py-3 px-4 transition-all duration-300 mx-auto! mt-auto hover:cursor-pointer
+                  hover:scale-110
+                  animate-sequence-heartbeat-1
+                  `}
                 >
                   {lang == "Viet"
                     ? "CHI PHÍ TRAO ĐỔI THÊM"
@@ -1012,7 +1090,9 @@ const NewestCouresSection = () => {
                   text-[clamp(0.75rem,5vw,1rem)] 
                   lg:text-[clamp(1.5rem,5vw,1.75rem)] 
                   text-balance 
-                  py-3 px-4 transition-all duration-300 mx-auto! mt-auto hover:cursor-pointer`}
+                  py-3 px-4 transition-all duration-300 mx-auto! mt-auto hover:cursor-pointer
+                  hover:scale-110
+                  animate-sequence-heartbeat-2`}
                 >
                   {lang == "Viet"
                     ? "CHI PHÍ TRAO ĐỔI THÊM"
@@ -1073,7 +1153,9 @@ const NewestCouresSection = () => {
                   text-[clamp(0.75rem,5vw,1rem)] 
                   lg:text-[clamp(1.5rem,5vw,1.75rem)] 
                   text-balance 
-                  py-3 px-4 transition-all duration-300 mx-auto! mt-auto hover:cursor-pointer`}
+                  py-3 px-4 transition-all duration-300 mx-auto! mt-auto hover:cursor-pointer 
+                  hover:scale-110
+                  animate-sequence-heartbeat-3`}
                 >
                   {lang == "Viet"
                     ? "CHI PHÍ TRAO ĐỔI THÊM"
@@ -1095,10 +1177,31 @@ const NewestCouresSection = () => {
           alt="Explore Course Text"
           className={`w-18/20 mx-auto mt-10 `}
         />
-        <div className={`grid! grid-cols-2 mx-5 gap-3`}>
-          <div className="h-full flex flex-col items-center justify-center gap-4 lg:gap-8">
+        <div
+          className={`flex flex-col lg:flex-row gap-3 lg:gap-20! justify-center items-center mt-5 lg:mt-10 mb-5 lg:mb-0`}
+        >
+          <a
+            href="" // Đường dẫn file trong thư mục public
+            download="" // Tên file khi tải về máy
+            target="_blank"
+          >
+            <Button
+              unstyled
+              className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-xl lg:text-6xl font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110`}
+              label={lang == "Viet" ? "TÌM HIỂU THÊM" : "EXPLORE MORE"}
+            />
+          </a>
+          <Button
+            onClick={openContactForm}
+            unstyled
+            className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-xl lg:text-6xl font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110`}
+            label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "ENROLL NOW"}
+          />
+        </div>
+        <div className={`flex! flex-row mx-3 lg:mx-5 gap-3`}>
+          <div className="grow h-full w-4/9 flex flex-col items-center justify-center gap-4 lg:gap-8 my-auto">
             {/* Phần nhãn EBOOK */}
-            <div className="text-white font-bold text-[clamp(1rem,5vw,5.5rem)] leading-none tracking-wider">
+            <div className="text-white font-bold text-[clamp(2rem,5vw,5.5rem)] lg:text-[clamp(1rem,5vw,5.5rem)] leading-10 lg:leading-none tracking-wider text-balance text-center">
               {lang === "Viet" ? "EBOOK MIỄN PHÍ" : "FREE EBOOK"}
             </div>
 
@@ -1117,13 +1220,15 @@ const NewestCouresSection = () => {
                 /* Padding scale theo màn hình */
                 py-[clamp(0.5rem,2vw,1rem)] px-[clamp(1rem,5vw,4rem)]
                 rounded-full shadow-lg hover:brightness-110 active:scale-95 transition-all
+                hover:cursor-pointer
+                duration-300 hover:scale-110
               `}
               >
                 {lang === "Viet" ? "NHẬN NGAY" : "DOWNLOAD NOW"}
               </button>
             </a>
           </div>
-          <div>
+          <div className={`w-5/9`}>
             <Image
               src={CourseBookImage}
               alt="Explore Course Text"
@@ -1131,6 +1236,371 @@ const NewestCouresSection = () => {
             />
           </div>
         </div>
+      </div>
+      <div className={`flex flex-col mt-20 mb-10 lg:my-20`}>
+        <div className={`w-full`}>
+          <Image
+            src={lang == "Viet" ? PersonalCareerText : PersonalCareerTextEN}
+            alt="Program Text"
+            className={`w-9/10 lg:w-7/10 mx-auto`}
+          />
+        </div>
+        <div
+          className={`text-balance text-md lg:text-4xl tracking-wider text-white font-semibold text-center mt-2 lg:mt-4`}
+        >
+          {lang == "Viet"
+            ? "CAREER MENTORING & COACHING"
+            : "CAREER MENTORING & COACHING"}
+        </div>
+        <div className={`${PathStyles.container} `}>
+          <div className={`w-full`}>
+            <Image
+              src={lang == "Viet" ? CareerChoiceText : CareerChoiceTextEN}
+              alt="Program Text"
+              className={`w-9/10 lg:w-7/10 mx-auto`}
+            />
+          </div>
+          <div
+            className={`grid! grid-cols-1 lg:grid-cols-3 w-full gap-5 mb-10 lg:mb-0 lg:py-20 lg:px-10`}
+          >
+            {/* Card 1 */}
+            <div className={`${PathStyles.cardContainer} lg:-translate-y-20`}>
+              <div className={`${PathStyles.subtitle}`}>
+                {lang == "Viet"
+                  ? "Bạn muốn thoát khỏi tình trạng mơ hồ, mất định hướng?"
+                  : "Do you want to break free from confusion and lack of direction?"}
+              </div>
+              <div className={`${PathStyles.titleIndex}`}>
+                {lang == "Viet" ? "LỘ TRÌNH 1:" : "PATHWAY 1:"}
+              </div>
+              <div className={`${PathStyles.title}`}>CAREER CLARITY</div>
+              <div className={`${PathStyles.price}`}>
+                {lang == "Viet"
+                  ? "5.000.000 VNĐ/ lộ trình"
+                  : "5.000.000 VNĐ/ program"}
+              </div>
+              <div className={`${PathStyles.contentTitle}`}>
+                {lang == "Viet" ? "Thời lượng:" : "Duration:"}
+              </div>
+              <ul className={`${PathStyles.content}`}>
+                <li>
+                  {lang == "Viet"
+                    ? "2 buổi (90 phút/buổi)"
+                    : "2 sessions (90 minutes/session)"}
+                </li>
+              </ul>
+              <div className={`${PathStyles.contentTitle}`}>
+                {lang == "Viet" ? "Kết quả đạt được:" : "Expected Outcomes:"}
+              </div>
+              <ul className={`${PathStyles.content}`}>
+                <li>
+                  {lang == "Viet"
+                    ? "Xác định giá trị bản thân (SWOT)"
+                    : "Identify your personal values (SWOT)"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Chọn đúng hướng đi sự nghiệp phù hợp"
+                    : "Choose a suitable career direction"}
+                </li>
+              </ul>
+              <div className={`${PathStyles.contentTitle}`}>
+                {lang == "Viet" ? "Tập trung vào:" : "Focus Areas:"}
+              </div>
+              <ul className={`${PathStyles.content}`}>
+                <li>
+                  {lang == "Viet"
+                    ? "Xác định điểm mạnh, điểm yếu & lợi thế cạnh tranh"
+                    : "Identify strengths, weaknesses, and competitive advantages"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Định hướng nghề nghiệp chuyên nghiệp & thiết lập mục tiêu"
+                    : "Define a professional career direction & establish goals"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Lộ trình phát triển sự nghiệp chiến lược trong 6 – 12 tháng"
+                    : "Build a strategic career development plan for 6–12 months"}
+                </li>
+              </ul>
+              <div className={`${PathStyles.contentTitle}`}>
+                {lang == "Viet" ? "Đối tượng:" : "Target Audience:"}
+              </div>
+              <ul className={`${PathStyles.content}`}>
+                <li>
+                  {lang == "Viet"
+                    ? "Người đang mơ hồ, mất định hướng)"
+                    : "Individuals who feel lost or lack career direction"}
+                </li>
+              </ul>
+              <div className={`${PathStyles.buttonBox}`}>
+                <Button
+                  unstyled
+                  onClick={openContactForm}
+                  className={`${PathStyles.button}`}
+                  label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
+                />
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className={`${PathStyles.cardContainer} lg:translate-y-0`}>
+              <div className={`${PathStyles.subtitle}`}>
+                {lang == "Viet"
+                  ? "Bạn muốn bức tốc, thăng tiến nhanh?"
+                  : "Do you want to accelerate and advance quickly?"}
+              </div>
+              <div className={`${PathStyles.titleIndex}`}>
+                {lang == "Viet" ? "LỘ TRÌNH 2:" : "PATHWAY 2:"}
+              </div>
+              <div className={`${PathStyles.title}`}>CAREER ACCELERATION</div>
+              <div className={`${PathStyles.price}`}>
+                {lang == "Viet"
+                  ? "10.000.000 VNĐ/ lộ trình"
+                  : "10.000.000 VNĐ program"}
+              </div>
+              <div className={`${PathStyles.contentTitle}`}>
+                {lang == "Viet" ? "Thời lượng:" : "Duration:"}
+              </div>
+              <ul className={`${PathStyles.content}`}>
+                <li>
+                  {lang == "Viet"
+                    ? "4 buổi (90 phút/buổi)"
+                    : "4 sessions (90 minutes/session)"}
+                </li>
+              </ul>
+              <div className={`${PathStyles.contentTitle}`}>
+                {lang == "Viet" ? "Kết quả đạt được:" : "Expected Outcomes:"}
+              </div>
+              <ul className={`${PathStyles.content}`}>
+                <li>
+                  {lang == "Viet"
+                    ? "Có kế hoạch phát triển sự nghiệp rõ ràng"
+                    : "Develop a clear career growth plan"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Tăng tỉ lệ chọn của bản thân"
+                    : "Increase your chances of achieving personal career goals"}
+                </li>
+              </ul>
+              <div className={`${PathStyles.contentTitle}`}>
+                {lang == "Viet" ? "Tập trung vào:" : "Focus Areas:"}
+              </div>
+              <ul className={`${PathStyles.content}`}>
+                <li>
+                  {lang == "Viet"
+                    ? "Lộ trình nghề nghiệp chi tiết & kế hoạch triển khai"
+                    : "Detailed career roadmap & execution plan"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Tối ưu CV & LinkedIn để tăng độ hiển thị"
+                    : "CV & LinkedIn optimization to enhance visibility"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Chiến lược thăng tiến & chuyển việc"
+                    : "Career advancement & job transition strategies"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Tư duy huấn luyện (Coaching) & kỹ năng lãnh đạo cốt lõi"
+                    : "Coaching mindset & core leadership skills"}
+                </li>
+              </ul>
+              <div className={`${PathStyles.contentTitle}`}>
+                {lang == "Viet" ? "Đối tượng:" : "Target Audience:"}
+              </div>
+              <ul className={`${PathStyles.content}`}>
+                <li>
+                  {lang == "Viet"
+                    ? "Muốn phát triển nhảy vọt trong sự nghiệp, thăng tiến nhanh"
+                    : "Individuals aiming for rapid career growth and promotion"}
+                </li>
+              </ul>
+              <div className={`${PathStyles.buttonBox}`}>
+                <Button
+                  unstyled
+                  onClick={openContactForm}
+                  className={`${PathStyles.button}`}
+                  label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
+                />
+              </div>
+            </div>
+            {/* Card 3 */}
+            <div className={`${PathStyles.cardContainer} lg:translate-y-20`}>
+              <div className={`${PathStyles.subtitle}`}>
+                {lang == "Viet"
+                  ? "Bạn muốn tạo ra bước nhảy vọt trong vị thế?"
+                  : "Do you want to create a breakthrough in your position?"}
+              </div>
+              <div className={`${PathStyles.titleIndex}`}>
+                {lang == "Viet" ? "LỘ TRÌNH 3:" : "PATHWAY 3:"}
+              </div>
+              <div className={`${PathStyles.title}`}>CAREER BREAKTHROUGH</div>
+              <div className={`${PathStyles.price}`}>
+                {lang == "Viet"
+                  ? "20.000.000 VNĐ/ lộ trình"
+                  : "20.000.000 VNĐ/ program"}
+              </div>
+              <div className={`${PathStyles.contentTitle}`}>
+                {lang == "Viet" ? "Thời lượng:" : "Duration:"}
+              </div>
+              <ul className={`${PathStyles.content}`}>
+                <li>
+                  {lang == "Viet"
+                    ? "6 - 8 buổi (2 - 3 tháng)"
+                    : "6 - 8 sessions (2 - 3 months)"}
+                </li>
+              </ul>
+              <div className={`${PathStyles.contentTitle}`}>
+                {lang == "Viet" ? "Kết quả đạt được:" : "Expected Outcomes:"}
+              </div>
+              <ul className={`${PathStyles.content}`}>
+                <li>
+                  {lang == "Viet"
+                    ? "Tạo ra bước đột phá rõ rệt trong hành trình sự nghiệp"
+                    : "Achieve a clear breakthrough in your career journey"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Chuyển từ một ứng viên trở thành lựa chọn hàng đầu"
+                    : "Transform from a candidate into a top choice"}
+                </li>
+              </ul>
+              <div className={`${PathStyles.contentTitle}`}>
+                {lang == "Viet" ? "Tập trung vào:" : "Focus Areas:"}
+              </div>
+              <ul className={`${PathStyles.content}`}>
+                <li>
+                  {lang == "Viet"
+                    ? "Lộ trình nghề nghiệp chi tiết & kế hoạch triển khai"
+                    : "Personalized career strategy: tailored roadmap based on real market insights"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Tối ưu CV & LinkedIn để tăng độ hiển thị"
+                    : "Strategic personal branding: optimize LinkedIn to build credibility"}
+                </li>
+                <li>
+                  {lang == "Viet"
+                    ? "Chiến lược thăng tiến & chuyển việc"
+                    : "Preparation for major milestones: intensive coaching for promotion or career transition"}
+                </li>
+              </ul>
+              <div className={`${PathStyles.contentTitle}`}>
+                {lang == "Viet" ? "Đối tượng:" : "Target Audience:"}
+              </div>
+              <ul className={`${PathStyles.content} mb-2 lg:mb-5`}>
+                <li>
+                  {lang == "Viet"
+                    ? "Người muốn tạo bước nhảy vọt vị thế"
+                    : "Individuals who aspire to make a breakthrough in their position"}
+                </li>
+              </ul>
+              <div className={`${PathStyles.buttonBox}`}>
+                <Button
+                  unstyled
+                  onClick={openContactForm}
+                  className={`${PathStyles.button}`}
+                  label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <Image
+              src={lang == "Viet" ? DeepExploreText : DeepExploreTextEN}
+              alt="Program Text"
+              className={`w-9/10 lg:w-7/10 mx-auto`}
+            />
+            <div
+              className={`text-center text-[clamp(1rem,2vw,1.5rem)] lg:text-[45px]! italic tracking-wide text-white mt-5`}
+            >
+              {lang == "Viet"
+                ? "Bạn có sẵn tiềm năng..."
+                : "You have untapped potential…"}
+              <br></br>
+              {lang == "Viet"
+                ? "Nhưng chưa được khai phóng?"
+                : "But it hasn’t been fully unlocked yet?"}
+            </div>
+            <div className={`${DeepExploreStyles.container}`}>
+              <div className={`w-full lg:w-1/2!`}>
+                <Image
+                  src={MsHung2}
+                  alt="Ms.Hung"
+                  className={`w-full h-auto`}
+                />
+              </div>
+              <div
+                className={`w-full lg:w-1/2! flex flex-col gap-3 lg:gap-10 mt-10 mb-0 lg:my-auto lg:mr-5`}
+              >
+                <div className={`w-9/10 lg:w-8/10 h-auto mx-auto`}>
+                  <Image
+                    src={PriceText}
+                    alt="Price Text"
+                    className={`w-full h-auto`}
+                  />
+                  <div className={`${DeepExploreStyles.price}`}>
+                    {lang == "Viet" ? "VNĐ/ 03 THÁNG" : "VNĐ/ 03 MONTHS"}
+                  </div>
+                </div>
+                <div>
+                  <ul className={`${DeepExploreStyles.contentList}`}>
+                    <li className={`${DeepExploreStyles.content}`}>
+                      <span className={`${DeepExploreStyles.contentTitle}`}>
+                        {lang == "Viet"
+                          ? "Thời gian đồng hành: "
+                          : "Coaching Duration: "}
+                      </span>{" "}
+                      {lang == "Viet"
+                        ? "3 tháng liên tục"
+                        : "3 consecutive months"}
+                    </li>
+                    <li className={`${DeepExploreStyles.content}`}>
+                      <span className={`${DeepExploreStyles.contentTitle}`}>
+                        {lang == "Viet"
+                          ? "Số lượng phiên: "
+                          : "Number of Sessions: "}
+                      </span>{" "}
+                      {lang == "Viet"
+                        ? "10 Phiên Coaching 1-1 (60 phút/phiên)"
+                        : "10 sessions (1–1 coaching, 60 minutes/session)"}
+                    </li>
+                    <li className={`${DeepExploreStyles.content}`}>
+                      <span className={`${DeepExploreStyles.contentTitle}`}>
+                        {lang == "Viet" ? "Hỗ trợ 1-1: " : "Support: "}
+                      </span>{" "}
+                      {lang == "Viet"
+                        ? "Q&A trực tiếp qua Zalo/ Email trong suốt quá trình"
+                        : "1:1 assistance via Zalo/Email throughout the entire program"}
+                    </li>
+                    <li className={`${DeepExploreStyles.content}`}>
+                      <span className={`${DeepExploreStyles.contentTitle}`}>
+                        {lang == "Viet" ? "Công cụ: " : "Tools: "}
+                      </span>{" "}
+                      {lang == "Viet"
+                        ? "Cung cấp biểu mẫu, bài tập thực hành độc quyền"
+                        : "Exclusive templates and practical exercises provided"}
+                    </li>
+                  </ul>
+                </div>
+                <Button
+                  unstyled
+                  onClick={openContactForm}
+                  className={`${DeepExploreStyles.button}`}
+                  label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="2xl:scale-120">
+        <ImageFilmTrip images={films} speed="120s" />
       </div>
     </div>
   );

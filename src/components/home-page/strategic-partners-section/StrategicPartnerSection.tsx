@@ -27,7 +27,7 @@ const StrategicPartnerSection = () => {
         />
       </div>
       <div className="relative flex flex-col md:flex-row pt-20 pb-0 md:py-20 w-full">
-        <div className="absolute w-1/2 bottom-0 right-0 md:static md:w-1/2! md:m-10">
+        <div className="absolute w-1/2 bottom-0 right-0 md:static md:w-1/2! md:ml-10">
           <Image
             src={MsHungImage}
             alt="title text"
