@@ -1600,7 +1600,7 @@ const NewestCouresSection = () => {
         </div>
       </div>
       <div className="2xl:scale-120">
-        <ImageFilmTrip images={films} speed="120s" />
+        <ImageFilmTrip images={films} speed="60s" />
       </div>
     </div>
   );

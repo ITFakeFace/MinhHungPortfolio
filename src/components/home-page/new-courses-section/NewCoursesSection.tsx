@@ -8,7 +8,7 @@ import styles from "./NewCoursesSection.module.scss";
 import EventMain1Image from "@/assets/home-page/assets/event-6.png";
 import EventSub1Image from "@/assets/home-page/assets/event-7.png";
 import EventSub2Image from "@/assets/home-page/assets/event-8.png";
-import EventSub3Image from "@/assets/home-page/assets/event-9.jpg";
+import EventSub3Image from "@/assets/home-page/assets/event-10.jpg";
 import { Button } from "primereact/button";
 
 const NewCoursesSection = () => {
@@ -117,21 +117,22 @@ const NewCoursesSection = () => {
               className="w-full h-auto max-h-137.5 mx-auto"
             />
             <div className="bg-[#7f8b1f] text-white w-full text-center text-lg sm:text-2xl font-semibold rounded-md p-2">
-              FROM PRESSURE TO POWER
+              SMART DELIVERY VIETNAM 2026
             </div>
             <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-md sm:text-lg md:text-xl md:min-h-[9rem]! xl:min-h-[7.6rem] flex flex-col justify-center">
               <div className="text-white text-center">
-                {lang == "Viet" ? "Thời gian: " : "Time: "}17:30 | 31.03.2026
+                {lang == "Viet" ? "Thời gian: " : "Time: "}14:00 - 15:30 |
+                23/04/2026
               </div>
               <div className="text-white text-center">
                 {lang == "Viet"
-                  ? "Địa điểm: ZumWhere, 219 Nguyễn Trãi, TPHCM Suites, TPHCM"
-                  : "Location: ZumWhere, 219 Nguyen Trai Street, TPHCM Suites, Ho Chi Minh City"}
+                  ? "Địa điểm: Hall A, World Trade Centre (WTC Expo), TPHCM"
+                  : "Location: Hall A, World Trade Centre (WTC Expo), TPHCM"}
               </div>
             </div>
           </div>
           <a
-            href="https://csmovietnam.com/csmo-new-year-meet-up-2026-from-pressure-to-power/"
+            href="https://smartdeliveryvietnam.com/hcmc"
             target="_blank"
             rel="noopener noreferrer"
           >

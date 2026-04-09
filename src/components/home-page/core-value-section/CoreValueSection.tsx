@@ -7,7 +7,6 @@ import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
 import { Button } from "primereact/button";
 import styles from "./CoreValueSection.module.scss";
-import ImageFilmTrip from "@/components/general/ImageFilmTrip";
 import CoreValueScrollImage1 from "@/assets/home-page/assets/CoreValueScroll-1.png";
 import CoreValueScrollImage2 from "@/assets/home-page/assets/CoreValueScroll-2.png";
 import CoreValueScrollImage3 from "@/assets/home-page/assets/CoreValueScroll-3.png";

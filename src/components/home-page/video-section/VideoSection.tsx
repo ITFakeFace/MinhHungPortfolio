@@ -12,6 +12,7 @@ import UpperFooterScrollImage8 from "@/assets/home-page/assets/UpperFooterScroll
 import UpperFooterScrollImage9 from "@/assets/home-page/assets/UpperFooterScroll-9.png";
 import UpperFooterScrollImage10 from "@/assets/home-page/assets/UpperFooterScroll-10.png";
 import UpperFooterScrollImage11 from "@/assets/home-page/assets/UpperFooterScroll-11.png";
+import UpperFooterScrollImage12 from "@/assets/home-page/assets/UpperFooterScroll-12.jpg";
 import FooterScrollImage1 from "@/assets/home-page/assets/FooterFilm-1.jpg";
 import FooterScrollImage2 from "@/assets/home-page/assets/FooterFilm-2.jpg";
 import FooterScrollImage3 from "@/assets/home-page/assets/FooterFilm-3.jpg";
@@ -52,6 +53,7 @@ const VideoSection = () => {
     FooterScrollImage10,
     FooterScrollImage11,
     FooterScrollImage12,
+    UpperFooterScrollImage12,
   ];
 
   const basePath =
@@ -72,7 +74,7 @@ const VideoSection = () => {
   return (
     <div className="w-full flex flex-col">
       {/* FilmStrip trên */}
-      <ImageFilmTrip images={films} direction="left" speed="120s" />
+      <ImageFilmTrip images={films} direction="left" speed="60s" />
 
       {/* Container Video */}
       <div className="relative w-full group overflow-hidden bg-black">
@@ -108,7 +110,7 @@ const VideoSection = () => {
       </div>
 
       {/* FilmStrip dưới */}
-      <ImageFilmTrip images={films} direction="right" speed="120s" />
+      <ImageFilmTrip images={films} direction="right" speed="60s" />
     </div>
   );
 };

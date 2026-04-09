@@ -1,6 +1,6 @@
 "use client";
 import styles from "./HeroSection.module.scss";
-import MsHungImage from "@/assets/home-page/assets/MsHungBanner-2.png";
+import MsHungImage from "@/assets/home-page/assets/MsHungBanner-3.png";
 import ExpButtonImage from "@/assets/home-page/assets/ExpBox-1.png";
 import FacebookButtonImage from "@/assets/home-page/assets/FacebookButton-1.png";
 import LinkedInButtonImage from "@/assets/home-page/assets/LinkedInButton-1.png";

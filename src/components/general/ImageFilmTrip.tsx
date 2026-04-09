@@ -29,17 +29,23 @@ const ImageFilmTrip = ({
       >
         {/* Track 1 */}
         <div className="flex gap-0">
-          {[
-            ...images,
-            ...images,
-            ...images,
-            ...images,
-            ...images,
-            ...images,
-            ...images,
-            ...images,
-          ].map((img, index) => (
+          {images.map((img, index) => (
             <div key={`track1-${index}`} className="flex-shrink-0">
+              <div className="relative overflow-hidden rounded-none shadow-lg border border-white/10 hover:scale-105 transition-transform duration-300">
+                <Image
+                  src={img}
+                  alt={`Gallery ${index}`}
+                  className="h-24 sm:h-40 md:h-64 w-auto object-cover"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Track 2 */}
+        <div className="flex gap-0" aria-hidden="true">
+          {images.map((img, index) => (
+            <div key={`track2-${index}`} className="flex-shrink-0">
               <div className="relative overflow-hidden rounded-none shadow-lg border border-white/10 hover:scale-105 transition-transform duration-300">
                 <Image
                   src={img}

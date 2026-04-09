@@ -340,7 +340,7 @@ const ExperienceSection = () => {
         />
       </div>
       <div>
-        <ImageFilmTrip images={films} speed="120s" />
+        <ImageFilmTrip images={films} speed="60s" />
       </div>
     </div>
   );
