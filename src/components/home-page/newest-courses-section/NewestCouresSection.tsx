@@ -1202,31 +1202,10 @@ const NewestCouresSection = () => {
           <div className="grow h-full w-4/9 flex flex-col items-center justify-center gap-4 lg:gap-8 my-auto">
             {/* Phần nhãn EBOOK */}
             <div className="text-white font-bold text-[clamp(2rem,5vw,5.5rem)] lg:text-[clamp(1rem,5vw,5.5rem)] leading-10 lg:leading-none tracking-wider text-balance text-center">
-              {lang === "Viet" ? "EBOOK MIỄN PHÍ" : "FREE EBOOK"}
+              {lang === "Viet" ? "EBOOK" : "EBOOK"}
             </div>
 
             {/* Phần Nút bấm Gradient */}
-            <a
-              href="/MinhHungPortfolio/documents/LinkedInWorkbook.pdf" // Đường dẫn file trong thư mục public
-              download="LinkedInWorkbook.pdf" // Tên file khi tải về máy
-              target="_blank"
-            >
-              <button
-                className={`
-                text-white font-bold uppercase
-                bg-linear-to-r from-[#4C5409] via-[#4C5409] to-[#B0B266]
-                /* Clamp cho font nút: Min 1rem (16px) -> Max 1.5rem (24px) */
-                text-[clamp(1rem,3vw,5rem)]
-                /* Padding scale theo màn hình */
-                py-[clamp(0.5rem,2vw,1rem)] px-[clamp(1rem,5vw,4rem)]
-                rounded-full shadow-lg hover:brightness-110 active:scale-95 transition-all
-                hover:cursor-pointer
-                duration-300 hover:scale-110
-              `}
-              >
-                {lang === "Viet" ? "NHẬN NGAY" : "DOWNLOAD NOW"}
-              </button>
-            </a>
           </div>
           <div className={`w-5/9`}>
             <Image
