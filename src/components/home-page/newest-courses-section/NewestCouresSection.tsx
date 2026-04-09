@@ -21,7 +21,7 @@ import PersonalSolutionTextEN from "@/assets/home-page/text/PersonalSolutionText
 import DeepExploreText from "@/assets/home-page/text/DeepExploreText-1.png";
 import DeepExploreTextEN from "@/assets/home-page/text/DeepExploreTextEN-1.png";
 import CareerChoiceText from "@/assets/home-page/text/CareerChoiceText-1.png";
-import CareerChoiceTextEN from "@/assets/home-page/text/CareerChoiceText-1.png";
+import CareerChoiceTextEN from "@/assets/home-page/text/CareerChoiceTextEN-1.png";
 import PersonalCareerText from "@/assets/home-page/text/PersonalCareerText-1.png";
 import PersonalCareerTextEN from "@/assets/home-page/text/PersonalCareerTextEN-1.png";
 import SolutionImage2 from "@/assets/home-page/assets/SolutionImage-2.png";
