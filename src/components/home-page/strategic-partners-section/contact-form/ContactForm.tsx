@@ -98,16 +98,16 @@ const ContactForm = ({ lang }: { lang: "Viet" | "Eng" }) => {
   const onSubmit = async (data: FormData) => {
     // Thay ID_CUA_FORM bằng ID thực tế từ URL Google Form của bạn
     const GOOGLE_FORM_ACTION_URL =
-      "https://docs.google.com/forms/d/e/1FAIpQLSd0a3JpoKEy0On9nhhVkKpuHlwUqnyUnA_c8VfpxoFYOP6owg/formResponse";
+      "https://docs.google.com/forms/d/e/1FAIpQLSfmo5ltgc36spU8z7HRoMHrPZ-etpMX0slsPDCnqWk9mukYdQ/formResponse";
 
     const formData = new URLSearchParams();
 
     // Ánh xạ entry ID bạn đã cung cấp vào các trường tương ứng
-    formData.append("entry.466987214", data.fullName);
-    formData.append("entry.62166194", data.email);
-    formData.append("entry.162855882", data.phone);
-    formData.append("entry.388153607", data.organization);
-    formData.append("entry.868103744", data.content);
+    formData.append("entry.1821532733", data.fullName);
+    formData.append("entry.1776177637", data.email);
+    formData.append("entry.2027532706", data.phone);
+    formData.append("entry.314417235", data.organization);
+    formData.append("entry.692501202", data.content);
 
     try {
       await fetch(GOOGLE_FORM_ACTION_URL, {
