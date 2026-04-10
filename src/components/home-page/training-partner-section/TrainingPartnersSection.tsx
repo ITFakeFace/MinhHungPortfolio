@@ -8,6 +8,7 @@ import Partner2Image from "@/assets/home-page/assets/partner-2.png";
 import Partner3Image from "@/assets/home-page/assets/partner-3.png";
 import Partner4Image from "@/assets/home-page/assets/partner-4.jpg";
 import Partner5Image from "@/assets/home-page/assets/partner-5.png";
+import Partner6Image from "@/assets/home-page/assets/partner-6.jpg";
 import { Button } from "primereact/button";
 import { useContactForm } from "@/context/ContactContext";
 interface TrainingPartnerItem {
@@ -103,7 +104,7 @@ const TrainingPartnersSection = () => {
     {
       Viet: {
         title:
-          "COACHING THỰC CHIẾN DÀNH CHO QUẢN LÝ: GIAO VIỆC, PHÁT TRIỂN, GIỮ NGƯỜI ",
+          "COACHING THỰC CHIẾN DÀNH CHO QUẢN LÝ: GIAO VIỆC, PHÁT TRIỂN, GIỮ NGƯỜI",
         partnerName: "Mind Coach Global",
         position: "Coach",
         programContent:
@@ -120,16 +121,36 @@ const TrainingPartnersSection = () => {
         partnerImage: Partner5Image,
       },
     },
+    {
+      Viet: {
+        title:
+          "LINKEDIN FOR SOLOTRAINER: PHÁT TRIỂN SỰ NGHIỆP ĐÀO TẠO TRÊN LINKEDIN",
+        partnerName: "Trainer Bồ Công Anh; SUCCESS Training & Coaching",
+        position: "Speaker",
+        programContent:
+          "Nâng cấp định vị thương hiệu cá nhân dành cho Trainer, Solopreneur & SME Leaders, đồng thời xây dựng hệ thống nội dung thu hút khách hàng và chuyển hóa tri thức thành doanh thu trên nền tảng LinkedIn",
+        partnerImage: Partner6Image,
+      },
+      Eng: {
+        title:
+          "LINKEDIN FOR SOLO TRAINER: DEVELOPING A TRAINING CAREER ON LINKEDIN",
+        partnerName: "Trainer Bo Cong Anh; SUCCESS Training & Coaching",
+        position: "Speaker",
+        programContent:
+          "Elevate personal brand positioning for Trainers, Solopreneurs, and SME Leaders, while building a high-impact content system that attracts clients and converts expertise into revenue on LinkedIn.",
+        partnerImage: Partner6Image,
+      },
+    },
   ];
 
   const renderPartnerItem = (item: TrainingPartnerData) => {
     return (
       <div className="w-4/5 md:w-full h-full flex flex-col gap-5 md:flex-row md:gap-10 md:items-stretch mx-auto my-auto px-2">
-        <div className="w-full md:w-3/5! flex-none flex items-center justify-center h-fit">
+        <div className="w-full md:w-3/5! flex-none flex items-center justify-center h-fit md:h-full grow">
           <Image
             src={item[lang].partnerImage}
             alt="Partner Image"
-            className="w-full h-auto object-cover object-center scale-110 md:scale-100 "
+            className="w-full h-auto object-cover object-center scale-110 md:scale-100"
           />
         </div>
 

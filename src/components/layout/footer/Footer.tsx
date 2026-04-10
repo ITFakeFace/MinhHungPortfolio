@@ -4,6 +4,7 @@ import FooterQuotes from "@/assets/home-page/text/FooterQuotes-1.png";
 import FacebookButtonImage from "@/assets/home-page/assets/FacebookButton-3.png";
 import LinkedInButtonImage from "@/assets/home-page/assets/LinkedInButton-2.png";
 import YoutubeButtonImage from "@/assets/home-page/assets/YoutubeButton-2.png";
+import TiktokButtonImage from "@/assets/home-page/assets/TiktokButton-1.png";
 import { Button } from "primereact/button";
 
 const Footer = () => {
@@ -19,45 +20,64 @@ const Footer = () => {
         />
       </div>
       <div className="md:w-2/5 flex flex-col gap-5 md:ml-0 md:mr-20 mx-auto">
-        <div className="w-full flex flex-row gap-5 justify-center items-center mx-auto">
-          <a
-            href="https://www.facebook.com/khungtroi.binhyen.7"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cursor-pointer hover:scale-110 transition-all duration-300"
+        <div className="w-full flex flex-row gap-3 md:gap-5 justify-center items-center mx-auto">
+          <div
+            className={`w-fit flex flex-row gap-3 md:gap-5 items-center justify-center`}
           >
-            <Image
-              src={FacebookButtonImage}
-              alt="Facebook Button"
-              className="w-24 md:w-auto!"
-            />
-          </a>
+            <a
+              href="https://www.facebook.com/khungtroi.binhyen.7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer hover:scale-110 transition-all duration-300"
+            >
+              <Image
+                src={FacebookButtonImage}
+                alt="Facebook Button"
+                className="w-24 md:w-auto!"
+              />
+            </a>
 
-          <a
-            href="https://www.linkedin.com/in/minh-hung-le-2a76111a9/details/experience/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cursor-pointer hover:scale-110 transition-all duration-300"
+            <a
+              href="https://www.linkedin.com/in/minh-hung-le-2a76111a9/details/experience/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer hover:scale-110 transition-all duration-300"
+            >
+              <Image
+                src={LinkedInButtonImage}
+                alt="LinkedIn Button"
+                className="w-24 md:w-auto!"
+              />
+            </a>
+          </div>
+          <div
+            className={`w-fit flex flex-row gap-3 md:gap-5 items-center justify-center`}
           >
-            <Image
-              src={LinkedInButtonImage}
-              alt="LinkedIn Button"
-              className="w-24 md:w-auto!"
-            />
-          </a>
-
-          <a
-            href="https://youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cursor-pointer hover:scale-110 transition-all duration-300"
-          >
-            <Image
-              src={YoutubeButtonImage}
-              alt="Youtube Button"
-              className="w-24 md:w-auto!"
-            />
-          </a>
+            <a
+              href="https://www.youtube.com/@minhhungmentorforgenz?si=Uzz4RYRSCNdGl3A4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer hover:scale-110 transition-all duration-300"
+            >
+              <Image
+                src={YoutubeButtonImage}
+                alt="Youtube Button"
+                className="w-24 md:w-auto!"
+              />
+            </a>
+            <a
+              href="https://www.tiktok.com/@minhhumg.she.678?_r=1&_t=ZS-95O6prh8z28"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer hover:scale-110 transition-all duration-300"
+            >
+              <Image
+                src={TiktokButtonImage}
+                alt="Tiktok Button"
+                className="w-24 md:w-auto!"
+              />
+            </a>
+          </div>
         </div>
         <div className="w-full flex items-center">
           <a

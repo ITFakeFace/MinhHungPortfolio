@@ -27,12 +27,13 @@ import PersonalCareerTextEN from "@/assets/home-page/text/PersonalCareerTextEN-1
 import SolutionImage2 from "@/assets/home-page/assets/SolutionImage-2.png";
 import SolutionImage2EN from "@/assets/home-page/assets/SolutionImageEN-2.png";
 import MsHung from "@/assets/home-page/assets/NewestCourseMsHung-1.png";
-import MsHung2 from "@/assets/home-page/assets/NewestCourseMsHung-2.png";
+import MsHung2 from "@/assets/home-page/assets/NewestCourseMsHung-3.png";
 import MsHungEN from "@/assets/home-page/assets/NewestCourseMsHungEN-1.png";
 import PriceText from "@/assets/home-page/text/PriceText-1.png";
 import WeaponConquerMarket from "@/assets/home-page/assets/WeaponConquerMarket-1.png";
 import SolutionImage from "@/assets/home-page/assets/SolutionImage-1.png";
-import EventLinkedInImage from "@/assets/home-page/assets/EventLinkedIn-1.png";
+import EventLinkedInImage from "@/assets/home-page/assets/EventLinkedIn-2.jpg";
+import EventDecryptImage from "@/assets/home-page/assets/EventDecrypt-1.jpg";
 import CourseBookImage from "@/assets/home-page/assets/EbookImage-1.png";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
@@ -47,6 +48,10 @@ import CoreValueScrollImage4 from "@/assets/home-page/assets/CoreValueScroll-4.j
 import CoreValueScrollImage5 from "@/assets/home-page/assets/CoreValueScroll-5.png";
 import CoreValueScrollImage6 from "@/assets/home-page/assets/CoreValueScroll-6.png";
 import { title } from "process";
+import { Carousel } from "primereact/carousel";
+import { ReactNode } from "react";
+import { render } from "sass";
+import { div } from "framer-motion/client";
 
 const NewestCouresSection = () => {
   const { openContactForm } = useContactForm();
@@ -221,6 +226,74 @@ const NewestCouresSection = () => {
     content: "list-outside pl-2 text-[clamp(1.05rem,0.75rem+1.5vw,1.75rem)]",
     button:
       "bg-linear-to-r from-[#4C5409] from-74% to-[#B0B266] to-100% text-white text-[clamp(1rem,1rem+1.5vw,3rem)] font-bold rounded-full py-2 px-6 lg:px-10 mt-4 mx-auto! hover:cursor-pointer lg:mt-5 mb-5 lg:mb-2 transition-all duration-300 hover:scale-110",
+  };
+  const LinkedInCourse: React.ReactNode = (
+    <div>
+      <Image
+        src={EventLinkedInImage}
+        alt="Explore Course Text"
+        className={`w-8/10 md:w-full mx-auto mt-10 `}
+      />
+      <div
+        className={`flex flex-col lg:flex-row gap-3 lg:gap-20! justify-center items-center mt-5 lg:mt-10 mb-5 lg:mb-0`}
+      >
+        <a
+          href="/MinhHungPortfolio/documents/CourseLinkedInDoc.pdf" // Đường dẫn file trong thư mục public
+          download="The Linkedin Blueprint.pdf" // Tên file khi tải về máy
+          target="_blank"
+        >
+          <Button
+            unstyled
+            className={`bg-transparent border-2 border-[#4C5409] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-lg lg:text-6xl font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110`}
+            label={
+              lang == "Viet" ? "TẢI CẨM NANG MIỄN PHÍ" : "DOWNLOAD FREE GUIDE"
+            }
+          />
+        </a>
+        <Button
+          onClick={openContactForm}
+          unstyled
+          className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-xl lg:text-6xl font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110`}
+          label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
+        />
+      </div>
+    </div>
+  );
+
+  const DecryptCourse: React.ReactNode = (
+    <div>
+      <Image
+        src={EventDecryptImage}
+        alt="Event Decrypt Image"
+        className={`w-8/10 md:w-full mx-auto mt-10 `}
+      />
+      <div
+        className={`flex flex-col lg:flex-row gap-3 lg:gap-20! justify-center items-center mt-5 lg:mt-10 mb-5 lg:mb-0`}
+      >
+        <a
+          href="/MinhHungPortfolio/documents/CourseDecryptDoc.pdf" // Đường dẫn file trong thư mục public
+          download="Decode Shopper - Drive Sales at Store.pdf" // Tên file khi tải về máy
+          target="_blank"
+        >
+          <Button
+            unstyled
+            className={`bg-transparent border-2 border-[#4C5409] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-lg lg:text-6xl font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110`}
+            label={lang == "Viet" ? "TÌM HIỂU THÊM" : "EXPLORE MORE"}
+          />
+        </a>
+        <Button
+          onClick={openContactForm}
+          unstyled
+          className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-xl lg:text-6xl font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110`}
+          label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
+        />
+      </div>
+    </div>
+  );
+
+  const courses: React.ReactNode[] = [LinkedInCourse, DecryptCourse];
+  const renderCourseItem = (course: React.ReactNode) => {
+    return course;
   };
   return (
     <div id="courses" className={`${styles.container} w-full leading-`}>
@@ -1172,39 +1245,56 @@ const NewestCouresSection = () => {
           alt="Explore Course Text"
           className={`w-17/20 mx-auto`}
         />
-        <Image
-          src={EventLinkedInImage}
-          alt="Explore Course Text"
-          className={`w-18/20 mx-auto mt-10 `}
-        />
-        <div
-          className={`flex flex-col lg:flex-row gap-3 lg:gap-20! justify-center items-center mt-5 lg:mt-10 mb-5 lg:mb-0`}
-        >
-          <a
-            href="" // Đường dẫn file trong thư mục public
-            download="" // Tên file khi tải về máy
-            target="_blank"
-          >
+        <div className={`w-29/30 mx-auto`}>
+          <div className={`${styles.carouselWrapper} w-full`}>
+            <Carousel
+              value={courses} // Đã sửa Harvard đúng chính tả
+              itemTemplate={renderCourseItem}
+              numVisible={1}
+              numScroll={1}
+              autoplayInterval={10000}
+              showIndicators={false}
+              circular
+              prevIcon={<i className="pi pi-chevron-left text-lg" />}
+              nextIcon={<i className="pi pi-chevron-right text-lg" />}
+              className="w-full"
+            />
+          </div>
+        </div>
+        <div className={`flex! flex-row mx-3 lg:mx-5 gap-3 md:mt-30`}>
+          <div className="grow h-full w-4/9 flex flex-col items-center justify-center gap-4 lg:gap-4! my-auto">
+            {/* Phần nhãn EBOOK */}
+            <div>
+              <div className="text-white font-semibold text-[clamp(0.875rem,5vw,0.875rem)] lg:text-[clamp(1rem,5vw,3.1rem)] leading-5 lg:leading-relaxed tracking-wider text-balance text-center">
+                {lang === "Viet" ? "NHẬN THÊM" : "GET BONUS"} <br />
+              </div>
+              <div className="text-white font-bold text-[clamp(1rem,5vw,1rem)] lg:text-[clamp(1rem,5vw,6.5rem)] leading-5 lg:leading-relaxed tracking-wider text-balance text-center">
+                {lang === "Viet" ? "LINKEDIN EBOOK" : "LINKEDIN EBOOK"}
+              </div>
+              <div className="text-white font-semibold text-[clamp(0.625rem,5vw,0.625rem)] lg:text-[clamp(1rem,5vw,3.1rem)] leading-5 lg:leading-relaxed tracking-wider text-balance text-center">
+                {lang === "Viet" ? "KHI ĐĂNG KÝ KHÓA HỌC" : "FOR ENROLLMENT"}
+                {/* <br />
+              {lang === "Viet" ? "LINKEDIN EBOOK" : ""} */}
+              </div>
+            </div>
             <Button
               unstyled
-              className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-xl lg:text-6xl font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110`}
-              label={lang == "Viet" ? "TÌM HIỂU THÊM" : "EXPLORE MORE"}
-            />
-          </a>
-          <Button
-            onClick={openContactForm}
-            unstyled
-            className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-xl lg:text-6xl font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110`}
-            label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "ENROLL NOW"}
-          />
-        </div>
-        <div className={`flex! flex-row mx-3 lg:mx-5 gap-3`}>
-          <div className="grow h-full w-4/9 flex flex-col items-center justify-center gap-4 lg:gap-8 my-auto">
-            {/* Phần nhãn EBOOK */}
-            <div className="text-white font-bold text-[clamp(2rem,5vw,5.5rem)] lg:text-[clamp(1rem,5vw,5.5rem)] leading-10 lg:leading-none tracking-wider text-balance text-center">
-              {lang === "Viet" ? "EBOOK" : "EBOOK"}
-            </div>
-
+              onClick={openContactForm}
+              className={`
+                  text-white font-bold uppercase
+                  bg-linear-to-r from-[#4C5409] via-[#4C5409] to-[#B0B266]
+                  /* Clamp cho font nút: Min 1rem (16px) -> Max 1.5rem (24px) */
+                  text-[clamp(0.5rem,3vw,5rem)]
+                  /* Padding scale theo màn hình */
+                  py-[clamp(0.5rem,2vw,1rem)] px-[clamp(1rem,3vw,3rem)]
+                  rounded-full shadow-lg hover:brightness-110 active:scale-95 transition-all
+                  hover:cursor-pointer
+                  duration-300 hover:scale-110
+                  lg:mt-20
+                `}
+            >
+              {lang === "Viet" ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
+            </Button>
             {/* Phần Nút bấm Gradient */}
           </div>
           <div className={`w-5/9`}>
@@ -1455,17 +1545,17 @@ const NewestCouresSection = () => {
               <ul className={`${PathStyles.content}`}>
                 <li>
                   {lang == "Viet"
-                    ? "Lộ trình nghề nghiệp chi tiết & kế hoạch triển khai"
+                    ? "Chiến lược sự nghiệp cá nhân hóa: Lộ trình thiết kế riêng dựa trên các tình huống thực tế của thị trường"
                     : "Personalized career strategy: tailored roadmap based on real market insights"}
                 </li>
                 <li>
                   {lang == "Viet"
-                    ? "Tối ưu CV & LinkedIn để tăng độ hiển thị"
+                    ? "Xây dựng thương hiệu cá nhân chiến lược: Định vị LinkedIn toàn diện để gia tăng uy tín"
                     : "Strategic personal branding: optimize LinkedIn to build credibility"}
                 </li>
                 <li>
                   {lang == "Viet"
-                    ? "Chiến lược thăng tiến & chuyển việc"
+                    ? "Chuẩn bị cho bước ngoặt quan trọng: Coaching chuyên sâu cho thăng tiến hoặc chuyển việc lớn"
                     : "Preparation for major milestones: intensive coaching for promotion or career transition"}
                 </li>
               </ul>
@@ -1546,16 +1636,18 @@ const NewestCouresSection = () => {
                           : "Number of Sessions: "}
                       </span>{" "}
                       {lang == "Viet"
-                        ? "10 Phiên Coaching 1-1 (60 phút/phiên)"
-                        : "10 sessions (1–1 coaching, 60 minutes/session)"}
+                        ? "12 phiên Coaching 1-1 (4 phiên/ tháng)"
+                        : "12 sessions (1–1 coaching, 4 sessions/ month)"}
                     </li>
                     <li className={`${DeepExploreStyles.content}`}>
                       <span className={`${DeepExploreStyles.contentTitle}`}>
-                        {lang == "Viet" ? "Hỗ trợ 1-1: " : "Support: "}
+                        {lang == "Viet"
+                          ? "Quyền lợi và hỗ trợ: "
+                          : "Benefits & Support: "}
                       </span>{" "}
                       {lang == "Viet"
-                        ? "Q&A trực tiếp qua Zalo/ Email trong suốt quá trình"
-                        : "1:1 assistance via Zalo/Email throughout the entire program"}
+                        ? "Thiết kế lộ trình theo nhu cầu cá nhân và bảo mật dịch vụ; Q&A trực tiếp qua Zalo/ Email trong suốt quá trình"
+                        : "Tailored learning path, guaranteed confidentiality, and direct Q&A via Zalo/Email throughout."}
                     </li>
                     <li className={`${DeepExploreStyles.content}`}>
                       <span className={`${DeepExploreStyles.contentTitle}`}>

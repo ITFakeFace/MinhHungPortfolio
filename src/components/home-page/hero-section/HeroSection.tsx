@@ -5,6 +5,7 @@ import ExpButtonImage from "@/assets/home-page/assets/ExpBox-1.png";
 import FacebookButtonImage from "@/assets/home-page/assets/FacebookButton-1.png";
 import LinkedInButtonImage from "@/assets/home-page/assets/LinkedInButton-1.png";
 import YoutubeButtonImage from "@/assets/home-page/assets/YoutubeButton-1.png";
+import TiktokButtonImage from "@/assets/home-page/assets/TiktokButton-1.png";
 import ConsultingNowButtonImage from "@/assets/home-page/assets/ConsultingNowButton-1.png";
 import ConsultingNowButtonImageEN from "@/assets/home-page/assets/ConsultingNowButtonEN-1.png";
 import NewestEventButtonImage from "@/assets/home-page/assets/NewestEventButton-1.png";
@@ -68,7 +69,7 @@ const HeroSection = () => {
               className="h-full w-auto object-contain object-bottom md:mx-auto"
             />
           </div>
-          <div className="w-2/5 md:w-1/3 relative flex flex-col md:pr-10 md:p-5 md:mt-20 gap-3 sm:gap-5 md:gap-7! z-10 items-center mt-20 sm:mt-20 mr-3">
+          <div className="w-2/5 md:w-1/3 relative flex flex-col md:pr-10 md:p-5 md:mt-20 gap-3 sm:gap-5 md:gap-7! z-10 items-center mt-15 sm:mt-20 mr-3">
             <Image
               src={QuoteText}
               alt="Exp Button"
@@ -84,7 +85,7 @@ const HeroSection = () => {
               >
                 <Image
                   src={FacebookButtonImage}
-                  alt="Exp Button"
+                  alt="Facebook Button"
                   className="md:h-auto w-15! sm:w-24! md:w-32! md:mx-auto "
                 />
               </a>
@@ -96,19 +97,31 @@ const HeroSection = () => {
               >
                 <Image
                   src={LinkedInButtonImage}
-                  alt="Exp Button"
+                  alt="LinkedIn Button"
                   className="md:h-auto w-15! sm:w-24! md:w-32! md:mx-auto "
                 />
               </a>
               <a
-                href="https://www.youtube.com"
+                href="https://www.youtube.com/@minhhungmentorforgenz?si=Uzz4RYRSCNdGl3A4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer hover:scale-110 transition-all duration-300"
               >
                 <Image
                   src={YoutubeButtonImage}
-                  alt="Exp Button"
+                  alt="Youtube Button"
+                  className="md:h-auto w-15! sm:w-24! md:w-32! md:mx-auto "
+                />
+              </a>
+              <a
+                href="https://www.tiktok.com/@minhhumg.she.678?_r=1&_t=ZS-95O6prh8z28"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer hover:scale-110 transition-all duration-300"
+              >
+                <Image
+                  src={TiktokButtonImage}
+                  alt="Tiktok Button"
                   className="md:h-auto w-15! sm:w-24! md:w-32! md:mx-auto "
                 />
               </a>
@@ -148,7 +161,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="absolute bottom-0 w-full mx-auto">
-            <div className="relative flex flex-col items-center justify-center gap-2">
+            <div className="relative flex flex-col items-center justify-center gap-2 md:mb-4">
               <Image
                 src={lang == "Viet" ? NameTextVN : NameTextEN}
                 alt="Exp Button"
