@@ -1262,16 +1262,16 @@ const NewestCouresSection = () => {
           </div>
         </div>
         <div className={`flex! flex-row mx-3 lg:mx-5 gap-3 md:mt-30`}>
-          <div className="grow h-full w-4/9 flex flex-col items-center justify-center gap-4 lg:gap-4! my-auto">
+          <div className="grow h-full w-4/9 flex flex-col items-center justify-center gap-4 lg:gap-0! my-auto">
             {/* Phần nhãn EBOOK */}
             <div>
-              <div className="text-white font-semibold text-[clamp(0.875rem,5vw,0.875rem)] lg:text-[clamp(1rem,5vw,3.1rem)] leading-5 lg:leading-relaxed tracking-wider text-balance text-center">
+              <div className="text-white font-semibold text-[clamp(0.875rem,5vw,0.875rem)] lg:text-[clamp(1rem,5vw,3.1rem)] leading-5 lg:leading-snug tracking-wider text-balance text-center">
                 {lang === "Viet" ? "NHẬN THÊM" : "GET BONUS"} <br />
               </div>
-              <div className="text-white font-bold text-[clamp(1rem,5vw,1rem)] lg:text-[clamp(1rem,5vw,6.5rem)] leading-5 lg:leading-relaxed tracking-wider text-balance text-center">
+              <div className="text-white font-bold text-[clamp(1rem,5vw,1rem)] lg:text-[clamp(1rem,5vw,6.5rem)] leading-5 lg:leading-snug tracking-wider text-balance text-center">
                 {lang === "Viet" ? "LINKEDIN EBOOK" : "LINKEDIN EBOOK"}
               </div>
-              <div className="text-white font-semibold text-[clamp(0.625rem,5vw,0.625rem)] lg:text-[clamp(1rem,5vw,3.1rem)] leading-5 lg:leading-relaxed tracking-wider text-balance text-center">
+              <div className="text-white font-semibold text-[clamp(0.625rem,5vw,0.625rem)] lg:text-[clamp(1rem,5vw,3.1rem)] leading-5 lg:leading-normal tracking-wider text-balance text-center">
                 {lang === "Viet" ? "KHI ĐĂNG KÝ KHÓA HỌC" : "FOR ENROLLMENT"}
                 {/* <br />
               {lang === "Viet" ? "LINKEDIN EBOOK" : ""} */}

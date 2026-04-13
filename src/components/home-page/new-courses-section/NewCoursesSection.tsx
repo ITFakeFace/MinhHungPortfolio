@@ -5,7 +5,7 @@ import SheLogo from "@/assets/home-page/logo/SheLogo-1.png";
 import { useLanguage } from "@/context/LanguageContext";
 import Image, { StaticImageData } from "next/image";
 import styles from "./NewCoursesSection.module.scss";
-import EventMain1Image from "@/assets/home-page/assets/event-6.png";
+import EventMain1Image from "@/assets/home-page/assets/event-11.jpg";
 import EventSub1Image from "@/assets/home-page/assets/event-7.png";
 import EventSub2Image from "@/assets/home-page/assets/event-8.png";
 import EventSub3Image from "@/assets/home-page/assets/event-10.jpg";
@@ -33,7 +33,7 @@ const NewCoursesSection = () => {
           className="w-4/5 h-auto mx-auto animate-light-heartbeat"
         />
         <a
-          href="https://vioapp.vn/vi-vn/event/linkedin-networking-7-your-life-with-linkedin-ai#tickets"
+          href="https://smartdeliveryvietnam.com/hcmc"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -45,7 +45,7 @@ const NewCoursesSection = () => {
         </a>
       </div>
       <div className="w-7/10 md:w-8/10 flex flex-col md:flex-row items-center justify-between mx-auto gap-20 md:gap-30 mt-10 sm:mt-20!">
-        <div className="w-full md:w-1/3! flex flex-col justify-between items-center gap-13">
+        <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13">
           <div className="flex flex-col gap-1">
             <Image
               src={EventSub1Image}
@@ -77,7 +77,7 @@ const NewCoursesSection = () => {
             />
           </a>
         </div>
-        <div className="w-full md:w-1/3! flex flex-col justify-between items-center gap-13">
+        <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13">
           <div className="flex flex-col gap-1">
             <Image
               src={EventSub2Image}
@@ -109,7 +109,7 @@ const NewCoursesSection = () => {
             />
           </a>
         </div>
-        <div className="w-full md:w-1/3! flex flex-col justify-between items-center gap-13">
+        {/* <div className="w-full md:w-1/3! flex flex-col justify-between items-center gap-13">
           <div className="flex flex-col gap-1">
             <Image
               src={EventSub3Image}
@@ -142,7 +142,7 @@ const NewCoursesSection = () => {
               label={lang == "Viet" ? "XEM THÊM >>>" : "SEE MORE >>>"}
             />
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
