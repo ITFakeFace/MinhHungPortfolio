@@ -1347,6 +1347,8 @@ const NewestCouresSection = () => {
                 {lang == "Viet"
                   ? "5.000.000 VNĐ/ lộ trình"
                   : "5.000.000 VNĐ/ program"}
+                <br />
+                {lang == "Viet" ? "Tặng kèm Ebook" : "Includes Bonus Ebook"}
               </div>
               <div className={`${PathStyles.contentTitle}`}>
                 {lang == "Viet" ? "Thời lượng:" : "Duration:"}
@@ -1354,8 +1356,8 @@ const NewestCouresSection = () => {
               <ul className={`${PathStyles.content}`}>
                 <li>
                   {lang == "Viet"
-                    ? "2 buổi (90 phút/buổi)"
-                    : "2 sessions (90 minutes/session)"}
+                    ? "2 buổi offline và 3 buổi online (5 buổi)"
+                    : "2 offline sessions and 3 online sessions (5 sessions in total)"}
                 </li>
               </ul>
               <div className={`${PathStyles.contentTitle}`}>
@@ -1399,7 +1401,7 @@ const NewestCouresSection = () => {
               <ul className={`${PathStyles.content}`}>
                 <li>
                   {lang == "Viet"
-                    ? "Người đang mơ hồ, mất định hướng)"
+                    ? "Người đang mơ hồ, mất định hướng"
                     : "Individuals who feel lost or lack career direction"}
                 </li>
               </ul>
@@ -1435,8 +1437,8 @@ const NewestCouresSection = () => {
               <ul className={`${PathStyles.content}`}>
                 <li>
                   {lang == "Viet"
-                    ? "4 buổi (90 phút/buổi)"
-                    : "4 sessions (90 minutes/session)"}
+                    ? "5 buổi offline (120 phút), 5 buổi online và 1 quà tặng (sách, ebook, vé tham gia workshop))"
+                    : "5 offline sessions (120 minutes each), 5 online sessions, and 1 bonus gift (book, ebook, or workshop ticket)"}
                 </li>
               </ul>
               <div className={`${PathStyles.contentTitle}`}>

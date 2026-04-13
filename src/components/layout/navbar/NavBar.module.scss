@@ -1,3 +1,4 @@
+@use "sass:color";
 // Định nghĩa biến
 $active-bg: #4c5409;
 $text-dim: rgba(255, 255, 255, 0.6);
@@ -35,7 +36,7 @@ $transition-speed: 0.2s;
       color: white !important;
 
       &:hover {
-        background: darken($active-bg, 5%) !important;
+        background: color.adjust($active-bg, $lightness: -5%) !important;
       }
     }
 
