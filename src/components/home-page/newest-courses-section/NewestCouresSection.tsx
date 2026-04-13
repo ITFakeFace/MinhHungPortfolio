@@ -12,6 +12,13 @@ import ConquerMarketText from "@/assets/home-page/text/WeaponConquerMarketText-1
 import ConquerMarketTextEN from "@/assets/home-page/text/WeaponConquerMarketTextEN-1.png";
 import SolutionText from "@/assets/home-page/text/SolutionText-1.png";
 import SolutionTextEN from "@/assets/home-page/text/SolutionTextEN-1.png";
+import BuildSystemText from "@/assets/home-page/text/BuildSystemText-1.png";
+import BuildSystemTextEN from "@/assets/home-page/text/BuildSystemTextEN-1.png";
+import BuildSystemImage from "@/assets/home-page/assets/BuildSystemImage-1.png";
+import BuildSystemSubImage1 from "@/assets/home-page/assets/BuildSystemSubImage-1.png";
+import BuildSystemSubImage2 from "@/assets/home-page/assets/BuildSystemSubImage-2.png";
+import BuildSystemSubImage3 from "@/assets/home-page/assets/BuildSystemSubImage-3.png";
+import BuildSystemSubImage4 from "@/assets/home-page/assets/BuildSystemSubImage-4.png";
 import CoursePackText from "@/assets/home-page/text/CoursePackText-1.png";
 import CoursePackTextEN from "@/assets/home-page/text/CoursePackTextEN-1.png";
 import ExploreCourseText from "@/assets/home-page/text/ExploreCourseText-1.png";
@@ -34,6 +41,7 @@ import WeaponConquerMarket from "@/assets/home-page/assets/WeaponConquerMarket-1
 import SolutionImage from "@/assets/home-page/assets/SolutionImage-1.png";
 import EventLinkedInImage from "@/assets/home-page/assets/EventLinkedIn-2.jpg";
 import EventDecryptImage from "@/assets/home-page/assets/EventDecrypt-1.jpg";
+import EventGenZImage from "@/assets/home-page/assets/EventGenZ-1.jpg";
 import CourseBookImage from "@/assets/home-page/assets/EbookImage-1.png";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
@@ -64,6 +72,19 @@ const NewestCouresSection = () => {
     CoreValueScrollImage5,
     CoreValueScrollImage6,
   ];
+  const BuildSystemStyles: Record<string, string> = {
+    cardContainer:
+      "flex flex-col bg-linear-to-tr from-[#FFFCA7] to-[#FFFEDA] items-center " +
+      "border-4 border-[#7F8B1E] rounded-3xl lg:rounded-4xl p-3 text-[#4C5409]",
+    cardContainerReverse:
+      "flex flex-col lg:flex-col-reverse bg-linear-to-tr from-[#FFFCA7] to-[#FFFEDA] items-center " +
+      "border-4 border-[#7F8B1E] rounded-3xl lg:rounded-4xl p-3 text-[#4C5409]",
+    title:
+      "font-bold text-center text-[clamp(1rem,1.2rem+1.5vw,1.15rem)] lg:text-[clamp(1.5rem,1.2rem+1.5vw,1.5rem)] mb-2",
+    content:
+      "font-medium text-[clamp(1rem,1.2rem+1.5vw,1.15rem)] lg:text-[clamp(1.5rem,1.2rem+1.5vw,1.5rem)] mb-2",
+    image: "w-4/5 h-auto mx-auto",
+  };
   const TargetStyles: Record<string, string> = {
     // Container: Co giãn chiều rộng từ 95% (mobile) về 50% (desktop)
     // Padding và Gap cũng dùng clamp để tự nở ra trên màn 2K
@@ -102,16 +123,6 @@ const NewestCouresSection = () => {
       "text-white/90 leading-relaxed " +
       "text-[clamp(1rem,0.9rem+0.5vw,1.5rem)]!",
   };
-  // const Plan4ModuleStyles: Record<string, string> = {
-  //   container:
-  //     "bg-linear-to-tr from-[#FFFCA7] to-[#FFFEDA] text-[#2C3B0D] h-full " +
-  //     "border-4 border-[#2C3B0D] rounded-4xl p-5 shadow-lg flex flex-col ", // Bỏ w-full!
-  //   indexTitle: "text-[#CA8607] font-bold text-xl lg:text-4xl mb-2 text-center", // Giảm size cho cân đối
-  //   title: "text-lg lg:text-3xl font-extrabold text-center mb-3 leading-tight", // Giảm size 3xl -> xl
-  //   subtitle: "italic text-lg text-center mb-4 block",
-  //   contentTitle: "font-bold text-[#2C3B0D] text-2xl mt-2",
-  //   contentList: "list-disc list-inside pl-5 text-xl space-y-1 mb-3",
-  // };
 
   const Plan4ModuleStyles: Record<string, string> = {
     // Container: Dùng h-full để các box cao bằng nhau trong Grid cha
@@ -271,7 +282,7 @@ const NewestCouresSection = () => {
         className={`flex flex-col lg:flex-row gap-3 lg:gap-20! justify-center items-center mt-5 lg:mt-10 mb-5 lg:mb-0`}
       >
         <a
-          href="/MinhHungPortfolio/documents/CourseDecryptDoc.pdf" // Đường dẫn file trong thư mục public
+          href="/MinhHungPortfolio/documents/CourseDecryptDoc-2.pdf" // Đường dẫn file trong thư mục public
           download="Decode Shopper - Drive Sales at Store.pdf" // Tên file khi tải về máy
           target="_blank"
         >
@@ -291,7 +302,42 @@ const NewestCouresSection = () => {
     </div>
   );
 
-  const courses: React.ReactNode[] = [LinkedInCourse, DecryptCourse];
+  const GenZCourse: React.ReactNode = (
+    <div>
+      <Image
+        src={EventGenZImage}
+        alt="Event Gen Z Image"
+        className={`w-8/10 md:w-full mx-auto mt-10 `}
+      />
+      <div
+        className={`flex flex-col lg:flex-row gap-3 lg:gap-20! justify-center items-center mt-5 lg:mt-10 mb-5 lg:mb-0`}
+      >
+        <a
+          href="/MinhHungPortfolio/documents/GenZPlaybook.pdf" // Đường dẫn file trong thư mục public
+          download="Gen Z Leadership Playbook.pdf" // Tên file khi tải về máy
+          target="_blank"
+        >
+          <Button
+            unstyled
+            className={`bg-transparent border-2 border-[#4C5409] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-lg lg:text-6xl font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110`}
+            label={lang == "Viet" ? "TÌM HIỂU THÊM" : "EXPLORE MORE"}
+          />
+        </a>
+        <Button
+          onClick={openContactForm}
+          unstyled
+          className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-xl lg:text-6xl font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110`}
+          label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
+        />
+      </div>
+    </div>
+  );
+
+  const courses: React.ReactNode[] = [
+    LinkedInCourse,
+    DecryptCourse,
+    GenZCourse,
+  ];
   const renderCourseItem = (course: React.ReactNode) => {
     return course;
   };
@@ -308,7 +354,7 @@ const NewestCouresSection = () => {
         <Image
           src={lang == "Viet" ? SolutionImage2 : SolutionImage2EN}
           alt="text"
-          className={`w-19/20 mx-auto `}
+          className={`w-18/20 mx-auto `}
         />
         <Button
           unstyled
@@ -322,6 +368,159 @@ const NewestCouresSection = () => {
         >
           {lang == "Viet" ? "ĐẶT LỊCH TƯ VẤN RIÊNG!" : "BOOK A CONSULTATION!"}
         </Button>
+      </div>
+      <div
+        className={`bg-black/50 border-4 border-[#8D7234] rounded-4xl lg:rounded-[130px] w-19/20 mx-auto flex flex-col text-white mt-10 lg:mt-20 pb-10 `}
+      >
+        <div className={`flex flex-col lg:flex-row lg:items-stretch w-full`}>
+          <div
+            className={`w-full lg:w-1/2 mt-3 lg:mt-15! px-3 lg:px-0 lg:ml-10`}
+          >
+            <Image
+              src={lang == "Viet" ? BuildSystemText : BuildSystemTextEN}
+              alt="Build System Image"
+              className={`w-full h-auto`}
+            />
+            <div
+              className={`text-white text-[clamp(1.05rem,0.75rem+1.5vw,2.3rem)] text-balance my-2 italic`}
+            >
+              (Omni - channel Development Strategic)
+            </div>
+            <div
+              className={`font-bold mt-10 text-[clamp(1.05rem,0.75rem+1.5vw,2.3rem)] text-balance`}
+            >
+              {lang == "Viet" ? "Nội dung chi tiết:" : "Detailed content:"}
+            </div>
+            <ul
+              className={`list-disc list-inside pl-5 lg:pl-15 text-[clamp(1.05rem,0.75rem+1.5vw,1.75rem)] leading-loose lg:mr-[15vw]`}
+            >
+              <li>
+                {lang == "Viet"
+                  ? "Tư vấn trọn gói phát triển kênh phân phối cho doanh nghiệp"
+                  : "Comprehensive consulting for developing distribution channels for businesses"}
+              </li>
+              <li>
+                {lang == "Viet"
+                  ? "Xây dựng toàn diện hệ thống phát triển kênh phân phối"
+                  : "End-to-end development of distribution channel systems"}
+              </li>
+            </ul>
+            <div
+              className={`flex flex-col lg:flex-row w-full justify-center items-center gap-5 lg:gap-10! mt-5 lg:mt-10 lg:mb-10`}
+            >
+              <a
+                href="/MinhHungPortfolio/documents/FMCGPlaybook.pdf" // Đường dẫn file trong thư mục public
+                download="FMCG Omnichannel Playbook & Retail Operations Blueprint 2026.pdf" // Tên file khi tải về máy
+                target="_blank"
+              >
+                <Button
+                  unstyled
+                  className={`bg-linear-to-r from-[#4C5409]/50 from-74% to-[#B0B266]/50 to-100% text-white text-[clamp(1rem,1rem+2.5vw,1.75rem)] font-bold rounded-full py-2 px-6 hover:cursor-pointer transition-all duration-300 hover:scale-110`}
+                  label={lang == "Viet" ? "TÌM HIỂU THÊM" : "EXPLORE MORE"}
+                />
+              </a>
+              <Button
+                unstyled
+                onClick={openContactForm}
+                className={`bg-linear-to-r from-[#4C5409] from-74% to-[#B0B266] to-100% text-white text-[clamp(1rem,1rem+2.5vw,1.75rem)] font-bold rounded-full py-2 px-6 hover:cursor-pointer transition-all duration-300 hover:scale-110`}
+                label={lang == "Viet" ? "TƯ VẤN NGAY" : "CONTACT NOW"}
+              />
+            </div>
+          </div>
+          <div className={`w-full lg:w-1/2 flex items-end`}>
+            <Image
+              src={BuildSystemImage}
+              alt="Build System Image"
+              className={`w-full h-auto`}
+            />
+          </div>
+        </div>
+        <div
+          className={`grid! grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-5 px-5 lg:px-10 mt-10 lg:mt-0 animate-light-heartbeat `}
+        >
+          {/* Build 1 */}
+          <div className={`${BuildSystemStyles.cardContainer} font-`}>
+            <div>
+              <div className={`${BuildSystemStyles.title}`}>
+                {lang == "Viet" ? "MODERN TRADE (MT)" : "MODERN TRADE (MT)"}
+              </div>
+              <div className={`${BuildSystemStyles.content}`}>
+                {lang == "Viet"
+                  ? "Tư vấn giải pháp và hỗ trợ kết nối sản phẩm vào hệ thống kênh thương mại hiện đại (MT), mở rộng độ phủ tại các chuỗi bán lẻ."
+                  : "Consulting solutions and support to connect products into modern trade (MT) channels, expanding brand presence across retail chains."}
+              </div>
+            </div>
+            <div className={`flex grow items-center justify-center`}>
+              <Image
+                src={BuildSystemSubImage1}
+                alt="Build System Image 1"
+                className={`${BuildSystemStyles.image} my-auto`}
+              />
+            </div>
+          </div>
+          {/* Build 2 */}
+          <div className={`${BuildSystemStyles.cardContainerReverse}`}>
+            <div>
+              <div className={`${BuildSystemStyles.title}`}>
+                {lang == "Viet" ? "GENERAL TRADE (GT)" : "GENERAL TRADE (GT)"}
+              </div>
+              <div className={`${BuildSystemStyles.content}`}>
+                {lang == "Viet"
+                  ? "Tư vấn chiến lược và hỗ trợ xây dựng hệ thống nhà phân phối trên toàn quốc trong kênh thương mại truyền thống."
+                  : "Providing strategic consulting and support to build a nationwide distributor network within traditional trade channels."}
+              </div>
+            </div>
+            <div className={`flex grow items-center justify-center`}>
+              <Image
+                src={BuildSystemSubImage2}
+                alt="Build System Image 2"
+                className={`${BuildSystemStyles.image}`}
+              />
+            </div>
+          </div>
+          {/* Build 3 */}
+          <div className={`${BuildSystemStyles.cardContainer}`}>
+            <div>
+              <div className={`${BuildSystemStyles.title}`}>
+                {lang == "Viet" ? "ECOMMERCE" : "ECOMMERCE"}
+              </div>
+              <div className={`${BuildSystemStyles.content}`}>
+                {lang == "Viet"
+                  ? "Cung cấp giải pháp phát triển kinh doanh trên nền tảng thương mại điện tử, bao gồm livestream bán hàng và các kênh như TikTok, Shopee,..."
+                  : "Providing business development solutions on e-commerce platforms, including livestream selling and channels such as TikTok, Shopee, and more."}
+              </div>
+            </div>
+            <div className={`flex grow items-center justify-center`}>
+              <Image
+                src={BuildSystemSubImage3}
+                alt="Build System Image 3"
+                className={`${BuildSystemStyles.image}`}
+              />
+            </div>
+          </div>
+          {/* Build 4 */}
+          <div className={`${BuildSystemStyles.cardContainerReverse}`}>
+            <div>
+              <div className={`${BuildSystemStyles.title}`}>
+                {lang == "Viet"
+                  ? "INTERNATIONAL BUSINESS"
+                  : "INTERNATIONAL BUSINESS"}
+              </div>
+              <div className={`${BuildSystemStyles.content}`}>
+                {lang == "Viet"
+                  ? "Hỗ trợ kết nối giao thương, xúc tiến hoạt động xuất nhập khẩu và mở rộng thị trường quốc tế."
+                  : "Supporting trade connections and promoting import-export activities, helping businesses expand into international markets."}
+              </div>
+            </div>
+            <div className={`flex grow items-center justify-center`}>
+              <Image
+                src={BuildSystemSubImage4}
+                alt="Build System Image 4"
+                className={`${BuildSystemStyles.image}`}
+              />
+            </div>
+          </div>
+        </div>
       </div>
       <Image
         src={lang == "Viet" ? NewestCourseText : NewestCourseTextEN}
@@ -1437,7 +1636,7 @@ const NewestCouresSection = () => {
               <ul className={`${PathStyles.content}`}>
                 <li>
                   {lang == "Viet"
-                    ? "5 buổi offline (120 phút), 5 buổi online và 1 quà tặng (sách, ebook, vé tham gia workshop))"
+                    ? "5 buổi offline (120 phút), 5 buổi online và 1 quà tặng (sách, ebook, vé tham gia workshop)"
                     : "5 offline sessions (120 minutes each), 5 online sessions, and 1 bonus gift (book, ebook, or workshop ticket)"}
                 </li>
               </ul>
@@ -1522,8 +1721,8 @@ const NewestCouresSection = () => {
               <ul className={`${PathStyles.content}`}>
                 <li>
                   {lang == "Viet"
-                    ? "6 - 8 buổi (2 - 3 tháng)"
-                    : "6 - 8 sessions (2 - 3 months)"}
+                    ? "12 buổi offline, 12 buổi online và 1 quà tặng (sách, ebook, vé tham gia workshop) (2 - 4 tháng)"
+                    : "12 offline sessions, 12 online sessions, and 1 bonus gift (book, ebook, or workshop ticket) (2 - 4 months)"}
                 </li>
               </ul>
               <div className={`${PathStyles.contentTitle}`}>

@@ -106,7 +106,7 @@ const HotTopicSection = () => {
   const renderLeftColItem = (item: TopicData) => {
     return (
       <div
-        className="w-19/20 sm:w-9/10 flex flex-row gap-3 md:gap-5 self-end items-start"
+        className="w-19/20 sm:w-9/10 flex flex-row gap-3 md:gap-5 self-end items-start lg:mt-20"
         key={item[lang].index}
       >
         <div className="flex flex-col">
@@ -207,7 +207,7 @@ const HotTopicSection = () => {
   const HotTopicBlockDesktop = () => (
     <div className="w-full flex-row items-center flex">
       {/* Phần bên trái: Chiếm 1 phần diện tích còn lại (3.5/10) */}
-      <div className="flex-1 min-w-0 flex flex-col gap-20 2xl:gap-60! items-end">
+      <div className="flex-1 min-w-0 flex flex-col gap-20 2xl:gap-40! items-end">
         {topics
           .filter((item) => parseInt(item.Viet.index) % 2 !== 0)
           .map((item) => renderLeftColItem(item))}
@@ -220,7 +220,7 @@ const HotTopicSection = () => {
       </div>
 
       {/* Phần bên phải: Chiếm 1 phần diện tích còn lại (3.5/10) */}
-      <div className="flex-1 min-w-0 flex flex-col gap-30 2xl:gap-70! items-start">
+      <div className="flex-1 min-w-0 flex flex-col gap-30 2xl:gap-40! items-start">
         {topics
           .filter((item) => parseInt(item[lang].index) % 2 === 0)
           .map((item) => renderRightColItem(item))}

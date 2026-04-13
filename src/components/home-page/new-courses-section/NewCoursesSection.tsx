@@ -30,7 +30,7 @@ const NewCoursesSection = () => {
         <Image
           src={EventMain1Image}
           alt="Newest Course Text"
-          className="w-4/5 h-auto mx-auto animate-light-heartbeat"
+          className="w-7/10 h-auto mx-auto animate-light-heartbeat"
         />
         <a
           href="https://smartdeliveryvietnam.com/hcmc"
@@ -39,7 +39,7 @@ const NewCoursesSection = () => {
         >
           <Button
             unstyled
-            className="bg-linear-to-r from-[#4c5409] to-[#afb165] text-white px-10 py-2 md:py-3 text-xl sm:text-3xl md:text-6xl font-bold rounded-3xl hover:scale-110 transition-all duration-300"
+            className="bg-linear-to-r from-[#4c5409] to-[#afb165] text-white px-10 py-2 md:py-3 text-xl sm:text-3xl md:text-6xl font-bold rounded-3xl hover:scale-110 transition-all duration-300 hover:cursor-pointer"
             label={lang == "Viet" ? "TÌM HIỂU NGAY" : "DISCOVER NOW"}
           />
         </a>
