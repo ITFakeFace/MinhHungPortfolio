@@ -15,6 +15,7 @@ import { ContactProvider } from "@/context/ContactContext";
 import { useLanguage } from "@/context/LanguageContext";
 import NewestCouresSection from "@/components/home-page/newest-courses-section/NewestCouresSection";
 import SHESection from "@/components/home-page/she-section/SHESection";
+import BelowSHESection from "@/components/home-page/below-she-section/BelowSHESection";
 
 export default function Home() {
   const { lang } = useLanguage();
@@ -32,6 +33,7 @@ export default function Home() {
         <CertificateSection />
         <TrainingPartnersSection />
         <SHESection />
+        <BelowSHESection />
         <StrategicPartnerSection />
         <SharingExpSection />
         <VideoSection />

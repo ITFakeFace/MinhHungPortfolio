@@ -31,8 +31,8 @@ import CareerChoiceText from "@/assets/home-page/text/CareerChoiceText-1.png";
 import CareerChoiceTextEN from "@/assets/home-page/text/CareerChoiceTextEN-1.png";
 import PersonalCareerText from "@/assets/home-page/text/PersonalCareerText-1.png";
 import PersonalCareerTextEN from "@/assets/home-page/text/PersonalCareerTextEN-1.png";
-import SolutionImage2 from "@/assets/home-page/assets/SolutionImage-2.png";
-import SolutionImage2EN from "@/assets/home-page/assets/SolutionImageEN-2.png";
+import SolutionImage2 from "@/assets/home-page/assets/SolutionImage-3.png";
+import SolutionImage2EN from "@/assets/home-page/assets/SolutionImageEN-3.png";
 import MsHung from "@/assets/home-page/assets/NewestCourseMsHung-1.png";
 import MsHung2 from "@/assets/home-page/assets/NewestCourseMsHung-3.png";
 import MsHungEN from "@/assets/home-page/assets/NewestCourseMsHungEN-1.png";
@@ -42,6 +42,7 @@ import SolutionImage from "@/assets/home-page/assets/SolutionImage-1.png";
 import EventLinkedInImage from "@/assets/home-page/assets/EventLinkedIn-2.jpg";
 import EventDecryptImage from "@/assets/home-page/assets/EventDecrypt-1.jpg";
 import EventGenZImage from "@/assets/home-page/assets/EventGenZ-1.jpg";
+import CareerStrategicImage from "@/assets/home-page/assets/EventCareerStrategic-1.jpg";
 import CourseBookImage from "@/assets/home-page/assets/EbookImage-1.png";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
@@ -332,11 +333,42 @@ const NewestCouresSection = () => {
       </div>
     </div>
   );
+  const CareerStrategicCourse: React.ReactNode = (
+    <div>
+      <Image
+        src={CareerStrategicImage}
+        alt="Event Career Strategic Image"
+        className={`w-8/10 md:w-full mx-auto mt-10 `}
+      />
+      <div
+        className={`flex flex-col lg:flex-row gap-3 lg:gap-20! justify-center items-center mt-5 lg:mt-10 mb-5 lg:mb-0`}
+      >
+        <a
+          href="/MinhHungPortfolio/documents/CareerStrategicDoc.pdf" // Đường dẫn file trong thư mục public
+          download="X2 Career Strategic Blueprint.pdf" // Tên file khi tải về máy
+          target="_blank"
+        >
+          <Button
+            unstyled
+            className={`bg-transparent border-2 border-[#4C5409] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-lg lg:text-6xl font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110`}
+            label={lang == "Viet" ? "TÌM HIỂU THÊM" : "EXPLORE MORE"}
+          />
+        </a>
+        <Button
+          onClick={openContactForm}
+          unstyled
+          className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-xl lg:text-6xl font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110`}
+          label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
+        />
+      </div>
+    </div>
+  );
 
   const courses: React.ReactNode[] = [
     LinkedInCourse,
     DecryptCourse,
     GenZCourse,
+    CareerStrategicCourse,
   ];
   const renderCourseItem = (course: React.ReactNode) => {
     return course;
