@@ -35,7 +35,7 @@ const BelowSHESection = () => {
           className={`w-9/10 mx-auto mt-2 lg:mt-0`}
         />
         <div
-          className={`text-white text-center italic text-[clamp(0.75rem,4vw,1rem)] lg:text-[clamp(0.5rem,5vw,1.5rem)] mt-2 lg:mt-3`}
+          className={`text-white text-center italic text-[clamp(0.75rem,4vw,1rem)] lg:text-[clamp(0.5rem,5vw,1.5rem)] mt-2 lg:mt-3 w-4/5 lg:w-full mx-auto`}
         >
           {lang == "Viet"
             ? "Một khóa học từ SHE Global Community & Top Creator LinkedIn Vietnam"
@@ -46,7 +46,7 @@ const BelowSHESection = () => {
           className={`flex flex-col lg:flex-row justify-center items-center w-full lg:px-10 lg:mt-5 gap-5 lg:gap-0 text-white`}
         >
           <div
-            className={`lg:flex-6 bg-black/85 border-4 border-[#8D7234] rounded-4xl lg:rounded-[80px] mt-0 mx-2 lg:mx-auto px-3 lg:px-10! py-4 lg:py-7! `}
+            className={`lg:flex-6 bg-black/85 border-4 border-[#8D7234] rounded-4xl lg:rounded-[80px] mt-3 mx-2 lg:mx-auto px-3 lg:px-10! py-4 lg:py-7! `}
           >
             <div className={`${customStyles.listItem}`}>
               <span className={`${customStyles.listTitle}`}>
