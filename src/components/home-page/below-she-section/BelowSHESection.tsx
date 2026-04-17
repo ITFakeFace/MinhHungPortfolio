@@ -41,7 +41,7 @@ const BelowSHESection = () => {
           className={`w-9/10 mx-auto mt-2 lg:mt-0 block md:hidden`}
         />
         <div
-          className={`text-white text-center italic text-[clamp(0.75rem,4vw,1rem)] lg:text-[clamp(0.5rem,5vw,1.5rem)] mt-2 lg:mt-3 w-4/5 lg:w-full mx-auto`}
+          className={`text-white text-center italic text-[clamp(0.75rem,4vw,0.75rem)] lg:text-[clamp(0.5rem,5vw,1.5rem)] mt-2 lg:mt-3 w-3/5 lg:w-full mx-auto`}
         >
           {lang == "Viet"
             ? "Một khóa học từ SHE Global Community & Top Creator LinkedIn Vietnam"
