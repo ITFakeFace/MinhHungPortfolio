@@ -42,7 +42,7 @@ import SolutionImage from "@/assets/home-page/assets/SolutionImage-1.png";
 import EventLinkedInImage from "@/assets/home-page/assets/EventLinkedIn-2.jpg";
 import EventDecryptImage from "@/assets/home-page/assets/EventDecrypt-1.jpg";
 import EventGenZImage from "@/assets/home-page/assets/EventGenZ-1.jpg";
-import CareerStrategicImage from "@/assets/home-page/assets/EventCareerStrategic-1.jpg";
+import CareerStrategicImage from "@/assets/home-page/assets/EventCareerStrategic-2.jpg";
 import CourseBookImage from "@/assets/home-page/assets/EbookImage-1.png";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";

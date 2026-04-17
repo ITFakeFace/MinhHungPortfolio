@@ -1,7 +1,7 @@
-$color-start: #030301;
+$color-start: #000000;
 $color-middle: #747428;
-$color-middle2: #aaaa57;
-$color-end: #ffffe1;
+$color-middle2: #747428;
+$color-end: #000000;
 
 .container {
   width: 100%;
@@ -13,8 +13,8 @@ $color-end: #ffffe1;
     linear-gradient(
     to bottom,
     $color-start 0%,
-    $color-middle 50%,
-    $color-middle2 70%,
+    $color-middle 40%,
+    $color-middle2 50%,
     $color-end 100%
   ); // Gradient 3 màu
 

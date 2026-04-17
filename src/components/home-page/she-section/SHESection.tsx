@@ -29,9 +29,9 @@ const SHESection = () => {
   };
   const MoreInfoButton = () => (
     <a
-      href="/MinhHungPortfolio/documents/SHEDoc.pdf"
-      download="SHE PLAN 2026.pdf"
+      href="https://www.linkedin.com/company/she-global-community/"
       target="_blank"
+      rel="noopener noreferrer"
     >
       <div className="group relative w-full max-w-[500px] cursor-pointer transition-all duration-300 hover:scale-105 active:scale-100 mx-auto md:mx-0 mt-10">
         {/* Lớp nền Gradient */}
