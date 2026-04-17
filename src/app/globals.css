@@ -17,7 +17,7 @@
 @theme {
   --breakpoint-3xl: 125rem; /* 2000px */
   --breakpoint-4xl: 160rem;
-  --breakpoint-fhd: 1900px;
+  --breakpoint-fhd: 118.75rem;
 
   @keyframes marquee {
     from {

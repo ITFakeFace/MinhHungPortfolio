@@ -2,6 +2,7 @@
 import { div } from "framer-motion/client";
 import styles from "./BelowSHESection.module.scss";
 import BelowSheText from "@/assets/home-page/text/BelowSheText-1.png";
+import BelowSheTextMobile from "@/assets/home-page/text/BelowSheTextMobile-1.png";
 import BelowSheImage from "@/assets/home-page/assets/BelowSheImage-2.png";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
@@ -32,7 +33,12 @@ const BelowSHESection = () => {
         <Image
           src={BelowSheText}
           alt="Below SHE Text"
-          className={`w-9/10 mx-auto mt-2 lg:mt-0`}
+          className={`w-9/10 mx-auto mt-2 lg:mt-0 md:block hidden`}
+        />
+        <Image
+          src={BelowSheTextMobile}
+          alt="Below SHE Text Mobile"
+          className={`w-9/10 mx-auto mt-2 lg:mt-0 block md:hidden`}
         />
         <div
           className={`text-white text-center italic text-[clamp(0.75rem,4vw,1rem)] lg:text-[clamp(0.5rem,5vw,1.5rem)] mt-2 lg:mt-3 w-4/5 lg:w-full mx-auto`}
@@ -43,10 +49,10 @@ const BelowSHESection = () => {
         </div>
 
         <div
-          className={`flex flex-col lg:flex-row justify-center items-center w-full lg:px-10 lg:mt-5 gap-5 lg:gap-0 text-white`}
+          className={`flex flex-col lg:flex-row justify-around items-center w-full lg:w-19/20! lg:px-10 lg:mt-5 gap-5 lg:gap-10 fhd: text-white mx-auto`}
         >
           <div
-            className={`lg:flex-6 bg-black/85 border-4 border-[#8D7234] rounded-4xl lg:rounded-[80px] mt-3 mx-2 lg:mx-auto px-3 lg:px-10! py-4 lg:py-7! `}
+            className={`lg:flex-6 bg-black/85 border-4 border-[#8D7234] lg:max-w-13/20 rounded-4xl lg:rounded-[80px] mt-3 mx-2 lg:mx-auto px-3 lg:px-10! py-4 lg:py-7! `}
           >
             <div className={`${customStyles.listItem}`}>
               <span className={`${customStyles.listTitle}`}>
@@ -78,7 +84,7 @@ const BelowSHESection = () => {
             </ul>
           </div>
           <div
-            className={`lg:flex-4 px-5 lg:px-0 flex flex-col gap-3 lg:gap-5`}
+            className={`w-fit lg: px-5 lg:px-0 flex flex-col gap-3 lg:gap-5`}
           >
             <a
               href="/MinhHungPortfolio/documents/SHEDoc.pdf"
