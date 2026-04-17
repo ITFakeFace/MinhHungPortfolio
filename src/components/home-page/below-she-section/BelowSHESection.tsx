@@ -13,15 +13,15 @@ const BelowSHESection = () => {
   const { openContactForm } = useContactForm();
   const customStyles: Record<string, string> = {
     listUl:
-      "list-inside list-disc pl-5 lg:pl-10 leading-relaxed lg:leading-loose",
+      "list-inside list-disc pl-5 lg:pl-10 leading-relaxed lg:leading-relaxed",
     listTitle:
-      "text-[clamp(0.8rem,1.25rem+0.5vw,1.1rem)] lg:text-[clamp(1.65rem,1.5vw+0.5rem,2.15rem)] font-semibold mt-5 lg:mt-10 mb-3",
+      "text-[clamp(0.8rem,1.25rem+0.5vw,1.1rem)] lg:text-[clamp(1.65rem,1.5vw+0.5rem,2rem)] font-semibold mt-5 lg:mt-10 mb-3 lg:leading-tight",
     listItem:
-      "text-[clamp(0.7rem,1.25rem+0.5vw,1rem)] lg:text-[clamp(1.5rem,1.5vw+0.5rem,2rem)]",
+      "text-[clamp(0.7rem,1.25rem+0.5vw,1rem)] lg:text-[clamp(1.5rem,1.5vw+0.5rem,1.85rem)]",
   };
   return (
     <div className={styles.container}>
-      <div className={`max-w-[1920px] `}>
+      <div className={`max-w-[1920px]`}>
         <div
           className={`mt-15 lg:mt-0 text-[clamp(0.5rem,10vw,1.15rem)] lg:text-[clamp(1rem,10vw,2rem)] text-center italic text-white text-balance`}
         >
@@ -35,25 +35,25 @@ const BelowSHESection = () => {
           className={`w-9/10 mx-auto mt-2 lg:mt-0`}
         />
         <div
-          className={`text-white text-center italic text-[clamp(0.75rem,4vw,1rem)] lg:text-[clamp(0.5rem,5vw,1.5rem)] mt-3 lg:mt-3`}
+          className={`text-white text-center italic text-[clamp(0.75rem,4vw,1rem)] lg:text-[clamp(0.5rem,5vw,1.5rem)] mt-2 lg:mt-3`}
         >
           {lang == "Viet"
-            ? "Một khóa học từ SHE Global Community"
-            : "A course by SHE Global Community"}
+            ? "Một khóa học từ SHE Global Community & Top Creator LinkedIn Vietnam"
+            : "A course by SHE Global Community & Top Creator LinkedIn Vietnam"}
         </div>
 
         <div
           className={`flex flex-col lg:flex-row justify-center items-center w-full lg:px-10 lg:mt-5 gap-5 lg:gap-0 text-white`}
         >
           <div
-            className={`lg:flex-6 bg-black/85 border-4 border-[#8D7234] rounded-4xl lg:rounded-[80px] mt-10 mx-2 lg:mx-auto px-3 lg:px-15! py-4 lg:py-10! `}
+            className={`lg:flex-6 bg-black/85 border-4 border-[#8D7234] rounded-4xl lg:rounded-[80px] mt-0 mx-2 lg:mx-auto px-3 lg:px-10! py-4 lg:py-7! `}
           >
             <div className={`${customStyles.listItem}`}>
               <span className={`${customStyles.listTitle}`}>
                 {lang == "Viet" ? "Thời lượng: " : "Duration: "}
               </span>
               {lang == "Viet"
-                ? " 06 tuần (Hybrid: Online + 01 Offline Networking SHE Style)"
+                ? "06 tuần (Hybrid: Online + 01 Offline Networking SHE Style)"
                 : "06 weeks (Hybrid: Online + 01 Offline Networking – SHE Style)"}
             </div>
             <div className={`${customStyles.listTitle}`}>
@@ -95,7 +95,7 @@ const BelowSHESection = () => {
             <Button
               onClick={openContactForm}
               unstyled
-              className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-[clamp(1.25rem,4vw,2.15rem)] font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110 mx-auto`}
+              className={`bg-[linear-gradient(to_right,#4C5409_0%,#4C5409_74%,#B0B266_100%)] py-1 lg:py-3 px-3 lg:px-15! rounded-4xl text-white text-[clamp(1.25rem,4vw,2.15rem)] font-bold hover:cursor-pointer transition-all duration-300 hover:scale-110 mx-auto animate-heartbeat`}
               label={lang == "Viet" ? "THAM GIA KHÓA HỌC" : "JOIN THE COURSE"}
             />
           </div>
@@ -104,7 +104,7 @@ const BelowSHESection = () => {
       <Image
         src={BelowSheImage}
         alt="Below SHE Image"
-        className={`w-full mx-auto mt-5 lg:mt-10!`}
+        className={`w-full mx-auto mt-5 lg:mt-3!`}
       />
     </div>
   );

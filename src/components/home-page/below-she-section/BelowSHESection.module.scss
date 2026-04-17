@@ -1,3 +1,4 @@
+$bg-image-url: url("../../../assets/home-page/background/bg-below-she-1.png");
 $color-start: #000000;
 $color-middle: #747428;
 $color-middle2: #747428;
@@ -10,13 +11,15 @@ $color-end: #000000;
   // Thiết lập đa nền (Multi-background)
   background:
     // Ảnh nằm trên cùng, căn giữa và sát đỉnh
+
+    $bg-image-url,
     linear-gradient(
-    to bottom,
-    $color-start 0%,
-    $color-middle 40%,
-    $color-middle2 50%,
-    $color-end 100%
-  ); // Gradient 3 màu
+      to bottom,
+      $color-start 0%,
+      $color-middle 40%,
+      $color-middle2 50%,
+      $color-end 100%
+    ); // Gradient 3 màu
 
   // Cấu hình kích thước riêng biệt cho từng lớp:
   // Lớp 1 (Ảnh): 100% width, tự động height
