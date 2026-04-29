@@ -5,16 +5,16 @@ import UpperFooterScrollImage1 from "@/assets/home-page/assets/UpperFooterScroll
 import UpperFooterScrollImage2 from "@/assets/home-page/assets/UpperFooterScroll-2.png";
 import UpperFooterScrollImage3 from "@/assets/home-page/assets/UpperFooterScroll-3.png";
 import UpperFooterScrollImage4 from "@/assets/home-page/assets/UpperFooterScroll-4.png";
-import UpperFooterScrollImage5 from "@/assets/home-page/assets/UpperFooterScroll-5.png";
+// import UpperFooterScrollImage5 from "@/assets/home-page/assets/UpperFooterScroll-5.png";
 import UpperFooterScrollImage6 from "@/assets/home-page/assets/UpperFooterScroll-6.png";
-import UpperFooterScrollImage7 from "@/assets/home-page/assets/UpperFooterScroll-7.png";
+// import UpperFooterScrollImage7 from "@/assets/home-page/assets/UpperFooterScroll-7.png";
 import UpperFooterScrollImage8 from "@/assets/home-page/assets/UpperFooterScroll-8.png";
-import UpperFooterScrollImage9 from "@/assets/home-page/assets/UpperFooterScroll-9.png";
-import UpperFooterScrollImage10 from "@/assets/home-page/assets/UpperFooterScroll-10.png";
+import UpperFooterScrollImage9 from "@/assets/home-page/assets/UpperFooterScroll-14.jpg";
+import UpperFooterScrollImage10 from "@/assets/home-page/assets/UpperFooterScroll-13.jpg";
 import UpperFooterScrollImage11 from "@/assets/home-page/assets/UpperFooterScroll-11.png";
 import UpperFooterScrollImage12 from "@/assets/home-page/assets/UpperFooterScroll-12.jpg";
 import FooterScrollImage1 from "@/assets/home-page/assets/FooterFilm-1.jpg";
-import FooterScrollImage2 from "@/assets/home-page/assets/FooterFilm-2.jpg";
+import FooterScrollImage2 from "@/assets/home-page/assets/FooterFilm-13.jpg";
 import FooterScrollImage3 from "@/assets/home-page/assets/FooterFilm-3.jpg";
 import FooterScrollImage4 from "@/assets/home-page/assets/FooterFilm-4.jpg";
 import FooterScrollImage5 from "@/assets/home-page/assets/FooterFilm-5.jpg";
@@ -34,9 +34,7 @@ const VideoSection = () => {
     UpperFooterScrollImage2,
     UpperFooterScrollImage3,
     UpperFooterScrollImage4,
-    UpperFooterScrollImage5,
     UpperFooterScrollImage6,
-    UpperFooterScrollImage7,
     UpperFooterScrollImage8,
     UpperFooterScrollImage9,
     UpperFooterScrollImage10,

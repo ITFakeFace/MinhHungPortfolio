@@ -5,7 +5,7 @@ import SheLogo from "@/assets/home-page/logo/SheLogo-1.png";
 import { useLanguage } from "@/context/LanguageContext";
 import Image, { StaticImageData } from "next/image";
 import styles from "./NewCoursesSection.module.scss";
-import EventMain1Image from "@/assets/home-page/assets/event-11.jpg";
+import EventMain1Image from "@/assets/home-page/assets/event-12.jpg";
 import EventSub1Image from "@/assets/home-page/assets/event-7.png";
 import EventSub2Image from "@/assets/home-page/assets/event-8.png";
 import EventSub3Image from "@/assets/home-page/assets/event-10.jpg";
@@ -32,17 +32,30 @@ const NewCoursesSection = () => {
           alt="Newest Course Text"
           className="w-7/10 h-auto mx-auto animate-light-heartbeat"
         />
-        <a
-          href="https://smartdeliveryvietnam.com/hcmc"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button
-            unstyled
-            className="bg-linear-to-r from-[#4c5409] to-[#afb165] text-white px-10 py-2 md:py-3 text-xl sm:text-3xl md:text-6xl font-bold rounded-3xl hover:scale-110 transition-all duration-300 hover:cursor-pointer"
-            label={lang == "Viet" ? "TÌM HIỂU NGAY" : "DISCOVER NOW"}
-          />
-        </a>
+        <div className={`flex flex-col lg:flex-row gap-3 lg:gap-25!`}>
+          <a
+            href="https://www.facebook.com/share/p/1HtJuxvu9P/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              unstyled
+              className="bg-linear-to-r from-[#4c5409] to-[#afb165] text-white px-10 py-2 md:py-3 text-xl sm:text-3xl md:text-6xl font-bold rounded-3xl hover:scale-110 transition-all duration-300 hover:cursor-pointer"
+              label={lang == "Viet" ? "TÌM HIỂU NGAY" : "DISCOVER NOW"}
+            />
+          </a>
+          <a
+            href="https://www.tramsangtao.ai.vn/chat-gpt-image-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              unstyled
+              className="bg-transparent border-2 border-[#4c5409] text-[#4c5409] px-10 py-2 md:py-3 text-xl sm:text-3xl md:text-6xl font-bold rounded-3xl hover:scale-110 transition-all duration-300 hover:cursor-pointer hover:bg-linear-to-r hover:from-[#4c5409] hover:to-[#afb165] hover:text-white"
+              label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
+            />
+          </a>
+        </div>
       </div>
       <div className="w-7/10 md:w-8/10 flex flex-col md:flex-row items-center justify-between mx-auto gap-20 md:gap-30 mt-10 sm:mt-20!">
         <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13">

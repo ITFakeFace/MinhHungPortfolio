@@ -9,8 +9,11 @@ import Partner3Image from "@/assets/home-page/assets/partner-3.png";
 import Partner4Image from "@/assets/home-page/assets/partner-4.jpg";
 import Partner5Image from "@/assets/home-page/assets/partner-5.png";
 import Partner6Image from "@/assets/home-page/assets/partner-6.jpg";
+import Partner8Image from "@/assets/home-page/assets/partner-7.jpg";
+import Partner7Image from "@/assets/home-page/assets/partner-8.jpg";
 import { Button } from "primereact/button";
 import { useContactForm } from "@/context/ContactContext";
+
 interface TrainingPartnerItem {
   title: string;
   partnerName: string;
@@ -139,6 +142,44 @@ const TrainingPartnersSection = () => {
         programContent:
           "Elevate personal brand positioning for Trainers, Solopreneurs, and SME Leaders, while building a high-impact content system that attracts clients and converts expertise into revenue on LinkedIn.",
         partnerImage: Partner6Image,
+      },
+    },
+    {
+      Viet: {
+        title:
+          "CHUYÊN ĐỀ: XÂY DỰNG MẠNG LƯỚI HOÀN TẤT ĐƠN HÀNG HIỆU QUẢ CHO BÁN LẺ ĐA KÊNH",
+        partnerName: "Smart Delivery Vietnam",
+        position: "Speaker",
+        programContent:
+          "Nội dung chương trình: Buổi thảo luận xoay quanh thách thức hoàn tất đơn hàng đa kênh, nhấn mạnh vai trò tồn kho thời gian thực, AI trong dự báo nhu cầu, tối ưu giao hàng và các mô hình vận hành hiệu quả tại Việt Nam.",
+        partnerImage: Partner7Image,
+      },
+      Eng: {
+        title:
+          "BUILDING EFFICIENT FULFILLMENT NETWORKS FOR OMNICHANNELS RETAIL",
+        partnerName: "Smart Delivery Vietnam",
+        position: "Speaker",
+        programContent:
+          "The discussion focused on the challenges of completing omnichannel orders, highlighting the role of real-time inventory, AI in demand forecasting, delivery optimization, and effective operational models in Vietnam.",
+        partnerImage: Partner7Image,
+      },
+    },
+    {
+      Viet: {
+        title: "AI REVOLUTION SUMMIT VIETNAM 2026",
+        partnerName: "Traicon India Private Limited",
+        position: "Speaker",
+        programContent:
+          "Summit nhấn mạnh AI đã chuyển từ chiến lược sang vận hành thực tế, thúc đẩy hiểu khách hàng, quyết định kinh doanh và tối ưu chuỗi cung ứng. Trọng tâm là bài toán kinh doanh, cá nhân hoá và vai trò leadership trong dẫn dắt chuyển đổi.",
+        partnerImage: Partner8Image,
+      },
+      Eng: {
+        title: "AI REVOLUTION SUMMIT VIETNAM 2026",
+        partnerName: "Traicon India Private Limited",
+        position: "Speaker",
+        programContent:
+          "The summit highlighted AI’s shift from strategy to execution, driving customer insights, business decisions, and supply chain optimization, with a focus on personalization and leadership in transformation.",
+        partnerImage: Partner8Image,
       },
     },
   ];
