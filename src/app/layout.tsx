@@ -50,7 +50,7 @@ export default function RootLayout({
               {/* THANH NAVBAR/HEADER NẰM Ở DƯỚI CÙNG */}
               <ContactSidebar />
             </div>
-            {/* <EventPopup /> */}
+            <EventPopup />
           </LanguageProvider>
         </PrimeReactProvider>
       </body>

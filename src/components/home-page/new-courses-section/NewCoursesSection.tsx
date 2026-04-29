@@ -57,7 +57,7 @@ const NewCoursesSection = () => {
           </a>
         </div>
       </div>
-      <div className="w-7/10 md:w-8/10 flex flex-col md:flex-row items-center justify-between mx-auto gap-20 md:gap-30 mt-10 sm:mt-20!">
+      {/* <div className="w-7/10 md:w-8/10 flex flex-col md:flex-row items-center justify-between mx-auto gap-20 md:gap-30 mt-10 sm:mt-20!">
         <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13">
           <div className="flex flex-col gap-1">
             <Image
@@ -122,7 +122,7 @@ const NewCoursesSection = () => {
             />
           </a>
         </div>
-        {/* <div className="w-full md:w-1/3! flex flex-col justify-between items-center gap-13">
+        <div className="w-full md:w-1/3! flex flex-col justify-between items-center gap-13">
           <div className="flex flex-col gap-1">
             <Image
               src={EventSub3Image}
@@ -155,8 +155,8 @@ const NewCoursesSection = () => {
               label={lang == "Viet" ? "XEM THÊM >>>" : "SEE MORE >>>"}
             />
           </a>
-        </div> */}
-      </div>
+        </div>
+      </div> */}
     </div>
   );
 };

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Dialog } from "primereact/dialog";
 import Image from "next/image";
-import EventImage from "@/assets/home-page/assets/PopUp-1.jpg";
+import EventImage from "@/assets/home-page/assets/event-12.jpg";
 
 const EventPopup = () => {
   const [visible, setVisible] = useState(false);
@@ -26,8 +26,10 @@ const EventPopup = () => {
       /* - Mobile (default): Rộng 85vw, cao tự động theo aspect-square.
          - Desktop (md): Cao 80vh, rộng tự động theo aspect-square để giữ hình vuông.
       */
-      className="border-none p-0 overflow-visible! bg-transparent shadow-none 
-                 w-[85vw] md:w-auto md:h-[80vh] aspect-square"
+      className={`border-none p-0 overflow-visible! bg-transparent shadow-none 
+        md:w-[75vw]! w-[85vw] h-auto 
+        #aspect-square
+        `}
       maskClassName="backdrop-blur-sm bg-black/70 z-[10000]"
       contentClassName="p-0 bg-transparent relative overflow-visible!"
     >
@@ -44,7 +46,7 @@ const EventPopup = () => {
       {/* Nội dung ảnh Event */}
       <div className="w-full h-full relative cursor-pointer group">
         <a
-          href="https://vioapp.vn/vi-vn/event/linkedin-networking-7-your-life-with-linkedin-ai#tickets"
+          href="https://www.facebook.com/share/p/1HtJuxvu9P/"
           target="_blank"
           onClick={() => setVisible(false)}
           className="block w-full h-full"
