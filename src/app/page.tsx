@@ -28,7 +28,7 @@ export default function Home() {
         <CoreValueSection />
         <HotTopicSection />
         <NewestCouresSection />
-        {/* <NewCoursesSection /> */}
+        <NewCoursesSection />
         <EducationMethodSection />
         <CertificateSection />
         <TrainingPartnersSection />

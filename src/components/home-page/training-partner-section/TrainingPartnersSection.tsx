@@ -11,6 +11,7 @@ import Partner5Image from "@/assets/home-page/assets/partner-5.png";
 import Partner6Image from "@/assets/home-page/assets/partner-6.jpg";
 import Partner8Image from "@/assets/home-page/assets/partner-7.jpg";
 import Partner7Image from "@/assets/home-page/assets/partner-8.jpg";
+import Partner9Image from "@/assets/home-page/assets/partner-9.jpg";
 import { Button } from "primereact/button";
 import { useContactForm } from "@/context/ContactContext";
 
@@ -31,6 +32,26 @@ const TrainingPartnersSection = () => {
   const { lang } = useLanguage();
   const { openContactForm } = useContactForm();
   const partners: TrainingPartnerData[] = [
+    {
+      Viet: {
+        title:
+          "THE INNOVATION INSIDER #3: INNOVATING HOW BUSINESS REALLY WORKS",
+        partnerName: "Innoex",
+        position: "SHE Global Community là đối tác cộng đồng đồng hành",
+        programContent:
+          "Sự kiện xoay quanh các giải pháp thực thi vận hành, giúp doanh nghiệp tối ưu hóa bộ máy thông qua công nghệ và đổi mới thực chiến.",
+        partnerImage: Partner9Image,
+      },
+      Eng: {
+        title:
+          "THE INNOVATION INSIDER #3: INNOVATING HOW BUSINESS REALLY WORKS",
+        partnerName: "Innoex",
+        position: "SHE Global Community as Community Partner",
+        programContent:
+          "The event focuses on practical operational solutions, enabling businesses to optimize their structures through technology and hands-on innovation.",
+        partnerImage: Partner9Image,
+      },
+    },
     {
       Viet: {
         title:

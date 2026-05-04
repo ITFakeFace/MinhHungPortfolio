@@ -5,8 +5,8 @@ import SheLogo from "@/assets/home-page/logo/SheLogo-1.png";
 import { useLanguage } from "@/context/LanguageContext";
 import Image, { StaticImageData } from "next/image";
 import styles from "./NewCoursesSection.module.scss";
-import EventMain1Image from "@/assets/home-page/assets/event-12.jpg";
-import EventSub1Image from "@/assets/home-page/assets/event-7.png";
+import EventMain1Image from "@/assets/home-page/assets/event-15.jpg";
+import EventSub1Image from "@/assets/home-page/assets/event-13.jpg";
 import EventSub2Image from "@/assets/home-page/assets/event-8.png";
 import EventSub3Image from "@/assets/home-page/assets/event-10.jpg";
 import { Button } from "primereact/button";
@@ -32,33 +32,35 @@ const NewCoursesSection = () => {
           alt="Newest Course Text"
           className="w-7/10 h-auto mx-auto animate-light-heartbeat"
         />
-        <div className={`flex flex-col lg:flex-row gap-3 lg:gap-25!`}>
+        <div
+          className={`flex flex-col lg:flex-row gap-3 lg:gap-25! items-center`}
+        >
           <a
-            href="https://www.facebook.com/share/p/1HtJuxvu9P/"
+            href="https://www.linkedin.com/posts/minh-hung-le-2a76111a9_aiesec-aiesecinvietnam-globaltalent-activity-7445094621950521344-9czT?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Button
               unstyled
               className="bg-linear-to-r from-[#4c5409] to-[#afb165] text-white px-10 py-2 md:py-3 text-xl sm:text-3xl md:text-6xl font-bold rounded-3xl hover:scale-110 transition-all duration-300 hover:cursor-pointer"
-              label={lang == "Viet" ? "TÌM HIỂU NGAY" : "DISCOVER NOW"}
+              label={lang == "Viet" ? "XEM THÊM >>" : "SEE MORE >>"}
             />
           </a>
           <a
-            href="https://www.tramsangtao.ai.vn/chat-gpt-image-2"
+            href="https://www.facebook.com/groups/dithuctapquoctecungaiesec"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Button
               unstyled
               className="bg-transparent border-2 border-[#4c5409] text-[#4c5409] px-10 py-2 md:py-3 text-xl sm:text-3xl md:text-6xl font-bold rounded-3xl hover:scale-110 transition-all duration-300 hover:cursor-pointer hover:bg-linear-to-r hover:from-[#4c5409] hover:to-[#afb165] hover:text-white"
-              label={lang == "Viet" ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
+              label={lang == "Viet" ? "THAM GIA CỘNG ĐỒNG" : "JOIN COMMUNITY "}
             />
           </a>
         </div>
       </div>
-      {/* <div className="w-7/10 md:w-8/10 flex flex-col md:flex-row items-center justify-between mx-auto gap-20 md:gap-30 mt-10 sm:mt-20!">
-        <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13">
+      <div className="w-7/10 md:w-8/10 flex flex-col md:flex-row items-center justify-between mx-auto gap-20 md:gap-30 mt-10 sm:mt-20!">
+        <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13 mx-auto">
           <div className="flex flex-col gap-1">
             <Image
               src={EventSub1Image}
@@ -66,20 +68,23 @@ const NewCoursesSection = () => {
               className="w-full h-auto max-h-137.5 mx-auto"
             />
             <div className="bg-[#7f8b1f] text-white w-full text-center text-lg sm:text-2xl font-semibold rounded-md p-2">
-              THE YEAR AHEAD - VELOCITY 2026
+              {lang == "Viet"
+                ? "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"
+                : "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"}
             </div>
             <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-white text-md sm:text-lg md:text-xl md:min-h-[9rem]! xl:min-h-[7.6rem] flex flex-col justify-center">
               <div className="text-center">
-                {lang == "Viet" ? "Thời gian: " : "Time: "}10/04/2026
+                {lang == "Viet" ? "Thời gian: " : "Time: "}11/05 - 21/06/2026
               </div>
               <div className="text-center">
-                {lang == "Viet" ? "Địa điểm: " : "Location: "}Thisky Hall, Sala,
-                HCMC
+                {lang == "Viet"
+                  ? "Địa điểm: (Đang cập nhật)"
+                  : "Location: (Updating....)"}
               </div>
             </div>
           </div>
           <a
-            href="https://www.linkedin.com/posts/minh-hung-le-2a76111a9_theyearahead2026-velocity-tya26-activity-7439960254752382976-DGMy?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0"
+            href="https://www.linkedin.com/posts/minh-hung-le-2a76111a9_shespeakershub-aiesecer-headingforthefuture-activity-7456681686467092480-Ja5G?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -90,7 +95,7 @@ const NewCoursesSection = () => {
             />
           </a>
         </div>
-        <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13">
+        {/* <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13">
           <div className="flex flex-col gap-1">
             <Image
               src={EventSub2Image}
@@ -121,8 +126,8 @@ const NewCoursesSection = () => {
               label={lang == "Viet" ? "XEM THÊM >>>" : "SEE MORE >>>"}
             />
           </a>
-        </div>
-        <div className="w-full md:w-1/3! flex flex-col justify-between items-center gap-13">
+        </div> */}
+        {/* <div className="w-full md:w-1/3! flex flex-col justify-between items-center gap-13">
           <div className="flex flex-col gap-1">
             <Image
               src={EventSub3Image}
@@ -155,8 +160,8 @@ const NewCoursesSection = () => {
               label={lang == "Viet" ? "XEM THÊM >>>" : "SEE MORE >>>"}
             />
           </a>
-        </div>
-      </div> */}
+        </div> */}
+      </div>
     </div>
   );
 };
