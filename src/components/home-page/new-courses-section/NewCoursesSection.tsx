@@ -65,14 +65,14 @@ const NewCoursesSection = () => {
             <Image
               src={EventSub1Image}
               alt="Newest Course Text"
-              className="w-full h-auto max-h-137.5 mx-auto"
+              className="w-full h-auto #max-h-137.5 mx-auto"
             />
             <div className="bg-[#7f8b1f] text-white w-full text-center text-lg sm:text-2xl font-semibold rounded-md p-2">
               {lang == "Viet"
                 ? "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"
                 : "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"}
             </div>
-            <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-white text-md sm:text-lg md:text-xl md:min-h-[9rem]! xl:min-h-[7.6rem] flex flex-col justify-center">
+            <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-white text-md sm:text-lg md:text-3xl md:min-h-[9rem]! xl:min-h-[7.6rem] flex flex-col justify-center">
               <div className="text-center">
                 {lang == "Viet" ? "Thời gian: " : "Time: "}11/05 - 21/06/2026
               </div>

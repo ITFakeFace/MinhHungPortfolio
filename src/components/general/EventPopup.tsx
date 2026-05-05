@@ -27,7 +27,7 @@ const EventPopup = () => {
          - Desktop (md): Cao 80vh, rộng tự động theo aspect-square để giữ hình vuông.
       */
       className={`border-none p-0 overflow-visible! bg-transparent shadow-none 
-        md:w-[45vw]! w-[85vw] h-auto 
+        md:w-[40vw]! w-[80vw] h-auto 
         #aspect-square
         `}
       maskClassName="backdrop-blur-sm bg-black/70 z-[10000]"
