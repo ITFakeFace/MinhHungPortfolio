@@ -7,7 +7,7 @@ import Image, { StaticImageData } from "next/image";
 import styles from "./NewCoursesSection.module.scss";
 import EventMain1Image from "@/assets/home-page/assets/event-15.jpg";
 import EventSub1Image from "@/assets/home-page/assets/event-13.jpg";
-import EventSub2Image from "@/assets/home-page/assets/event-8.png";
+import EventSub2Image from "@/assets/home-page/assets/event-16.jpg";
 import EventSub3Image from "@/assets/home-page/assets/event-10.jpg";
 import { Button } from "primereact/button";
 
@@ -60,14 +60,48 @@ const NewCoursesSection = () => {
         </div>
       </div>
       <div className="w-7/10 md:w-8/10 flex flex-col md:flex-row items-center justify-between mx-auto gap-20 md:gap-30 mt-10 sm:mt-20!">
-        <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13 mx-auto">
+        <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13">
+          <div className="flex flex-col gap-1 max-w-[33vw]">
+            <Image
+              src={EventSub1Image}
+              alt="Newest Course Text"
+              className="w-full lg:w-full h-auto lg:max-h-110 mx-auto"
+            />
+            <div className="bg-[#7f8b1f] text-white w-full text-center text-balance text-lg sm:text-2xl font-semibold rounded-md p-2">
+              {lang == "Viet"
+                ? "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"
+                : "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"}
+            </div>
+            <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-md sm:text-lg md:text-xl md:min-h-[9rem]! xl:min-h-[7.6rem] flex flex-col justify-center">
+              <div className="text-white text-center">
+                {lang == "Viet" ? "Thời gian: " : "Time: "}11/05 - 21/06/2026
+              </div>
+              <div className="text-white text-center">
+                {lang == "Viet" ? "Địa điểm: " : "Location: "}Holiday Inn &
+                Suites, TPHCM
+              </div>
+            </div>
+          </div>
+          <a
+            href="https://www.linkedin.com/posts/she-global-community_traicon-yupi-retailtech-activity-7437308984887504896-CYfU?utm_source=share&utm_medium=member_android&rcm=ACoAADCtsV8BMtTLz9Wo3-UW9wOjRF5jyiz85VE"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              unstyled
+              className="bg-linear-to-r from-[#4c5409] to-[#afb165] text-white px-5 py-2 text-2xl md:text-2xl! lg:text-3xl! 2xl:text-4xl! font-bold rounded-xl w-fit mx-auto cursor-pointer hover:scale-110 transition-all duration-300"
+              label={lang == "Viet" ? "XEM THÊM >>>" : "SEE MORE >>>"}
+            />
+          </a>
+        </div>
+        {/* <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13 mx-auto">
           <div className="flex flex-col gap-1">
             <Image
               src={EventSub1Image}
               alt="Newest Course Text"
-              className="w-full h-auto #max-h-137.5 mx-auto"
+              className="w-auto h-auto max-h-110 mx-auto"
             />
-            <div className="bg-[#7f8b1f] text-white w-full text-center text-lg sm:text-2xl font-semibold rounded-md p-2">
+            <div className="bg-[#7f8b1f] text-white w-full text-center text-balance text-lg sm:text-2xl font-semibold rounded-md p-2">
               {lang == "Viet"
                 ? "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"
                 : "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"}
@@ -94,20 +128,21 @@ const NewCoursesSection = () => {
               label={lang == "Viet" ? "XEM THÊM >>>" : "SEE MORE >>>"}
             />
           </a>
-        </div>
-        {/* <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13">
-          <div className="flex flex-col gap-1">
+        </div> */}
+        <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13 ">
+          <div className="flex flex-col gap-1 min-w-[33vw]">
             <Image
               src={EventSub2Image}
               alt="Newest Course Text"
-              className="w-full h-auto max-h-137.5 mx-auto"
+              className="w-full lg:w-auto h-auto max-h-110 mx-auto"
             />
             <div className="bg-[#7f8b1f] text-white w-full text-center text-lg sm:text-2xl font-semibold rounded-md p-2">
-              AI REVOLUTION SUMMIT VIETNAM
+              WORLD DATA CENTRE SUMMIT
             </div>
             <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-md sm:text-lg md:text-xl md:min-h-[9rem]! xl:min-h-[7.6rem] flex flex-col justify-center">
               <div className="text-white text-center">
-                {lang == "Viet" ? "Thời gian: " : "Time: "}24/04/2026
+                {lang == "Viet" ? "Thời gian: " : "Time: "}08:00 - 17:00 |
+                19/06/2026
               </div>
               <div className="text-white text-center">
                 {lang == "Viet" ? "Địa điểm: " : "Location: "}Holiday Inn &
@@ -126,7 +161,7 @@ const NewCoursesSection = () => {
               label={lang == "Viet" ? "XEM THÊM >>>" : "SEE MORE >>>"}
             />
           </a>
-        </div> */}
+        </div>
         {/* <div className="w-full md:w-1/3! flex flex-col justify-between items-center gap-13">
           <div className="flex flex-col gap-1">
             <Image
