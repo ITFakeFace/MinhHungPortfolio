@@ -61,13 +61,13 @@ const NewCoursesSection = () => {
       </div>
       <div className="w-7/10 md:w-8/10 flex flex-col md:flex-row items-center justify-between mx-auto gap-20 md:gap-30 mt-10 sm:mt-20!">
         <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13">
-          <div className="flex flex-col gap-1 max-w-[33vw]">
+          <div className="flex flex-col gap-1 w-full max-w-[525px]">
             <Image
               src={EventSub1Image}
               alt="Newest Course Text"
-              className="w-full lg:w-full h-auto lg:max-h-110 mx-auto"
+              className="w-full h-auto object-cover rounded-md mx-auto"
             />
-            <div className="bg-[#7f8b1f] text-white w-full text-center text-balance text-lg sm:text-2xl font-semibold rounded-md p-2">
+            <div className="bg-[#7f8b1f] text-white w-full text-center text-lg sm:text-2xl font-semibold rounded-md p-2 text-wrap">
               {lang == "Viet"
                 ? "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"
                 : "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"}
@@ -130,11 +130,11 @@ const NewCoursesSection = () => {
           </a>
         </div> */}
         <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13 ">
-          <div className="flex flex-col gap-1 min-w-[33vw]">
+          <div className="flex flex-col gap-1 w-full max-w-[450px]">
             <Image
               src={EventSub2Image}
               alt="Newest Course Text"
-              className="w-full lg:w-auto h-auto max-h-110 mx-auto"
+              className="w-full h-auto object-cover rounded-md mx-auto"
             />
             <div className="bg-[#7f8b1f] text-white w-full text-center text-lg sm:text-2xl font-semibold rounded-md p-2">
               WORLD DATA CENTRE SUMMIT
