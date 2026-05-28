@@ -27,7 +27,7 @@ const EventPopup = () => {
          - Desktop (md): Cao 80vh, rộng tự động theo aspect-square để giữ hình vuông.
       */
       className={`border-none p-0 overflow-visible! bg-transparent shadow-none 
-        md:w-[40vw]! w-[80vw] h-auto 
+        md:w-[35vw]! w-[80vw] h-auto 
         #aspect-square
         `}
       maskClassName="backdrop-blur-sm bg-black/70 z-[10000]"
@@ -55,7 +55,7 @@ const EventPopup = () => {
             src={EventImage}
             alt="Newest Event"
             /* h-full w-full kết hợp aspect-square đảm bảo ảnh vuông khít khung Dialog */
-            className="w-full h-full object-cover rounded-xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+            className="w-full h-full object-cover rounded-xl shadow-2xl transition-all duration-500 group-hover:scale-[1.02]"
             priority
           />
         </a>
