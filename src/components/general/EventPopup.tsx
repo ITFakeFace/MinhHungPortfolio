@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Dialog } from "primereact/dialog";
 import Image from "next/image";
-import EventImage from "@/assets/home-page/assets/event-14.jpg";
+import EventImage from "@/assets/home-page/assets/event-17.jpg";
 
 const EventPopup = () => {
   const [visible, setVisible] = useState(false);
@@ -46,7 +46,7 @@ const EventPopup = () => {
       {/* Nội dung ảnh Event */}
       <div className="w-full h-full relative cursor-pointer group">
         <a
-          href="https://www.linkedin.com/posts/minh-hung-le-2a76111a9_aiesec-aiesecinvietnam-globaltalent-activity-7445094621950521344-9czT?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAD1t6NcB8uGFvBjMG1iEdjvS794c0SIPOq0"
+          href="https://datacenterinnovationseries.com/vietnam/"
           target="_blank"
           onClick={() => setVisible(false)}
           className="block w-full h-full"

@@ -11,6 +11,7 @@ import SheLogo from "@/assets/home-page/logo/SheLogo-1.png";
 import LogoLine from "@/assets/home-page/logo/LogoLine-1.png";
 import CocaColaLogo from "@/assets/home-page/logo/CocaColaLogo-2.png";
 import NestleWatersLogo from "@/assets/home-page/logo/NestleWatersLogo-1.png";
+import PNPLogo from "@/assets/home-page/logo/PNPLogo-1.png";
 import LogoLine2 from "@/assets/home-page/logo/LogoLine-2.png";
 import QuoteEndText from "@/assets/QuoteEndText-1.png";
 import ExpScrollImage1 from "@/assets/home-page/assets/ExpScroll-1.png";
@@ -30,6 +31,7 @@ const ExperienceSection = () => {
     "text-xl md:text-3xl text-[#4C5409] font-semibold leading-snug ";
   // Giả sử đây là mảng dữ liệu của bạn
   const events = [
+    { id: "pnp_group", color: "#4c5409", icon: "pi pi-users" },
     { id: "yupi_group", color: "#4c5409", icon: "pi pi-users" },
     { id: "thp_she", color: "#4c5409", icon: "pi pi-users" },
     { id: "coca_cola", color: "#4c5409", icon: "pi pi-briefcase" },
@@ -42,6 +44,28 @@ const ExperienceSection = () => {
       <i className={item.icon}></i>
     </span>
   );
+
+  const PNPContent = () => {
+    // Xác định text thời gian dựa trên ngôn ngữ
+    const durationText = "2026";
+    const text1 =
+      lang === "Viet"
+        ? "Giám đốc điều hành tại PNP Việt Nam"
+        : "Managing Director at PNP Vietnam";
+    return (
+      <div className="flex flex-col gap-3">
+        <div className={durationClass}>{durationText}</div>
+        <div className={`${contentTextClass} text-center`}>{text1}</div>
+        <div className="flex justify-center items-center w-full mt-2">
+          <Image
+            src={PNPLogo}
+            alt="PNP"
+            className="h-30 sm:h-40 md:h-40 w-auto object-contain"
+          />
+        </div>
+      </div>
+    );
+  };
 
   const YupiContent = () => {
     // Xác định text thời gian dựa trên ngôn ngữ
@@ -250,6 +274,8 @@ const ExperienceSection = () => {
     // 1. Hàm chọn nội dung dựa trên ID (hoặc duration)
     const renderInnerContent = () => {
       switch (item.id) {
+        case "pnp_group":
+          return <PNPContent />;
         case "yupi_group":
           return <YupiContent />;
         case "thp_she":

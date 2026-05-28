@@ -151,7 +151,7 @@ const NewCoursesSection = () => {
             </div>
           </div>
           <a
-            href="https://www.linkedin.com/posts/she-global-community_traicon-yupi-retailtech-activity-7437308984887504896-CYfU?utm_source=share&utm_medium=member_android&rcm=ACoAADCtsV8BMtTLz9Wo3-UW9wOjRF5jyiz85VE"
+            href="https://datacenterinnovationseries.com/vietnam/"
             target="_blank"
             rel="noopener noreferrer"
           >
