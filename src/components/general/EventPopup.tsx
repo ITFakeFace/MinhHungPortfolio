@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Dialog } from "primereact/dialog";
 import Image from "next/image";
-import EventImage from "@/assets/home-page/assets/event-17.jpg";
+import EventImage from "@/assets/home-page/assets/event-18.jpg";
 
 const EventPopup = () => {
   const [visible, setVisible] = useState(false);
@@ -46,7 +46,7 @@ const EventPopup = () => {
       {/* Nội dung ảnh Event */}
       <div className="w-full h-full relative cursor-pointer group">
         <a
-          href="https://datacenterinnovationseries.com/vietnam/"
+          href="https://successtraining.vn/ws-edu-gamification/"
           target="_blank"
           onClick={() => setVisible(false)}
           className="block w-full h-full"

@@ -7,7 +7,7 @@ import Image, { StaticImageData } from "next/image";
 import styles from "./NewCoursesSection.module.scss";
 import EventMain1Image from "@/assets/home-page/assets/event-15.jpg";
 import EventSub1Image from "@/assets/home-page/assets/event-13.jpg";
-import EventSub2Image from "@/assets/home-page/assets/event-16.jpg";
+import EventSub2Image from "@/assets/home-page/assets/event-18.jpg";
 import EventSub3Image from "@/assets/home-page/assets/event-10.jpg";
 import { Button } from "primereact/button";
 
@@ -137,21 +137,25 @@ const NewCoursesSection = () => {
               className="w-full h-auto object-cover rounded-md mx-auto"
             />
             <div className="bg-[#7f8b1f] text-white w-full text-center text-lg sm:text-2xl font-semibold rounded-md p-2">
-              WORLD DATA CENTRE SUMMIT
+              {lang == "Viet"
+                ? "AI & EDU.GAMES TRONG ĐÀO TẠO HIỆN ĐẠI:"
+                : "AI & EDU.GAMES IN MODERN LEARNING"}
             </div>
             <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-md sm:text-lg md:text-xl md:min-h-[9rem]! xl:min-h-[7.6rem] flex flex-col justify-center">
               <div className="text-white text-center">
-                {lang == "Viet" ? "Thời gian: " : "Time: "}08:00 - 17:00 |
-                19/06/2026
+                {lang == "Viet"
+                  ? "Thời gian: 08:00 - 18:00 | 26, 27/06/2026"
+                  : "Time: 08:00 AM – 06:00 PM | June 26–27, 2026"}
               </div>
               <div className="text-white text-center">
-                {lang == "Viet" ? "Địa điểm: " : "Location: "}Holiday Inn &
-                Suites, TPHCM
+                {lang == "Viet"
+                  ? "Địa điểm: Khách sạn Viễn Đông, 275A Phạm Ngũ Lão, TPHCM"
+                  : "Location: Vien Dong Hotel, 275A Pham Ngu Lao Street, Ho Chi Minh City, Vietnam"}
               </div>
             </div>
           </div>
           <a
-            href="https://datacenterinnovationseries.com/vietnam/"
+            href="https://successtraining.vn/ws-edu-gamification/"
             target="_blank"
             rel="noopener noreferrer"
           >
