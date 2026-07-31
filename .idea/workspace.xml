@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f904ebf-6b88-41ff-97ac-97217f0cd86f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/HungFullBody.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home-page/about-section/AboutSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home-page/experience-section/ExperienceSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home-page/hero-section/HeroSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/navbar/NavBar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/navbar/NavBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/LanguageContext.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/content.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/LanguageContextType.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/content.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="8f904ebf-6b88-41ff-97ac-97217f0cd86f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,6 +108,7 @@
       <updated>1774256226368</updated>
       <workItem from="1774256230481" duration="4472000" />
       <workItem from="1774277897977" duration="5462000" />
+      <workItem from="1784083524133" duration="21000" />
     </task>
     <servers />
   </component>

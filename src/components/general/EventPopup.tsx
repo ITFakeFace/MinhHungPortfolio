@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Dialog } from "primereact/dialog";
 import Image from "next/image";
-import EventImage from "@/assets/home-page/assets/event-18.jpg";
+import EventImage from "@/assets/home-page/assets/event-19.jpg";
 
 const EventPopup = () => {
   const [visible, setVisible] = useState(false);

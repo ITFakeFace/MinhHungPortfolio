@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import Image, { StaticImageData } from "next/image";
 import styles from "./NewCoursesSection.module.scss";
 import EventMain1Image from "@/assets/home-page/assets/event-15.jpg";
-import EventSub1Image from "@/assets/home-page/assets/event-13.jpg";
+import EventSub1Image from "@/assets/home-page/assets/event-19.jpg";
 import EventSub2Image from "@/assets/home-page/assets/event-18.jpg";
 import EventSub3Image from "@/assets/home-page/assets/event-10.jpg";
 import { Button } from "primereact/button";
@@ -59,7 +59,7 @@ const NewCoursesSection = () => {
           </a>
         </div>
       </div>
-      <div className="w-7/10 md:w-8/10 flex flex-col md:flex-row items-center justify-between mx-auto gap-20 md:gap-30 mt-10 sm:mt-20!">
+      <div className="w-7/10 md:w-8/10 flex flex-col md:flex-row items-center justify-center #justify-between mx-auto gap-20 md:gap-30 mt-10 sm:mt-20!">
         <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13">
           <div className="flex flex-col gap-1 w-full max-w-[525px]">
             <Image
@@ -69,21 +69,25 @@ const NewCoursesSection = () => {
             />
             <div className="bg-[#7f8b1f] text-white w-full text-center text-lg sm:text-2xl font-semibold rounded-md p-2 text-wrap">
               {lang == "Viet"
-                ? "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"
-                : "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"}
+                ? "WORKSHOP: HIỂU ĐÚNG KÊNH, CHỌN ĐÚNG CHIẾN LƯỢC"
+                : "WORKSHOP: Master the Right Channels, Build the Right Strategy"}
             </div>
             <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-md sm:text-lg md:text-xl md:min-h-[9rem]! xl:min-h-[7.6rem] flex flex-col justify-center">
               <div className="text-white text-center">
-                {lang == "Viet" ? "Thời gian: " : "Time: "}11/05 - 21/06/2026
+                {lang == "Viet"
+                  ? "Thời gian: 09:00 - 11:30 | Thứ 7, 01/08/2026"
+                  : "Time: 09:00 AM – 11:30 AM |Saturday, August 1, 2026"}
+                11/05 - 21/06/2026
               </div>
               <div className="text-white text-center">
-                {lang == "Viet" ? "Địa điểm: " : "Location: "}Holiday Inn &
-                Suites, TPHCM
+                {lang == "Viet"
+                  ? "Địa điểm: Webinar Online"
+                  : "Location: Online Webinar"}
               </div>
             </div>
           </div>
           <a
-            href="https://www.linkedin.com/posts/she-global-community_traicon-yupi-retailtech-activity-7437308984887504896-CYfU?utm_source=share&utm_medium=member_android&rcm=ACoAADCtsV8BMtTLz9Wo3-UW9wOjRF5jyiz85VE"
+            href="https://www.facebook.com/profile.php?id=61588955832972"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -103,17 +107,19 @@ const NewCoursesSection = () => {
             />
             <div className="bg-[#7f8b1f] text-white w-full text-center text-balance text-lg sm:text-2xl font-semibold rounded-md p-2">
               {lang == "Viet"
-                ? "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"
-                : "HEAD FOR THE FUTURE PROJECT: BUSINESS MANAGEMENT ACADEMY"}
+                ? "WORKSHOP: HIỂU ĐÚNG KÊNH, CHỌN ĐÚNG CHIẾN LƯỢC"
+                : "WORKSHOP: Master the Right Channels, Build the Right Strategy"}
             </div>
             <div className="bg-linear-to-b from-[#7f8b1f] to-[#040501]/70 rounded-md p-2 text-white text-md sm:text-lg md:text-3xl md:min-h-[9rem]! xl:min-h-[7.6rem] flex flex-col justify-center">
               <div className="text-center">
-                {lang == "Viet" ? "Thời gian: " : "Time: "}11/05 - 21/06/2026
+                {lang == "Viet"
+                  ? "Thời gian: 09:00 - 11:30 | Thứ 7, 01/08/2026"
+                  : "Time: 09:00 AM – 11:30 AM |Saturday, August 1, 2026"}
               </div>
               <div className="text-center">
                 {lang == "Viet"
-                  ? "Địa điểm: (Đang cập nhật)"
-                  : "Location: (Updating....)"}
+                  ? "Địa điểm: Webinar Online"
+                  : "Location: Online Webinar"}
               </div>
             </div>
           </div>
@@ -129,7 +135,7 @@ const NewCoursesSection = () => {
             />
           </a>
         </div> */}
-        <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13 ">
+        {/* <div className="w-full md:w-1/2! flex flex-col justify-between items-center gap-13 ">
           <div className="flex flex-col gap-1 w-full max-w-[450px]">
             <Image
               src={EventSub2Image}
@@ -165,7 +171,7 @@ const NewCoursesSection = () => {
               label={lang == "Viet" ? "XEM THÊM >>>" : "SEE MORE >>>"}
             />
           </a>
-        </div>
+        </div> */}
         {/* <div className="w-full md:w-1/3! flex flex-col justify-between items-center gap-13">
           <div className="flex flex-col gap-1">
             <Image
